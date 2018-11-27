@@ -1,0 +1,60 @@
+---
+swagger: "2.0"
+info:
+  description: "An API to build, play and teach bricks"
+  version: "1.0.0"
+  title: "Learning Fortress"
+  termsOfService: ""
+  contact:
+    email: "lindsaymacvean@scholar6.org"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "api.scholar6.org"
+basePath: "/v1"
+tags:
+- name: "brick"
+  description: "Retrieve a brick"
+schemes:
+- "https"
+paths:
+  /brick:
+    post:
+      summary: "create a brick"
+      description: ""
+      operationId: "brickPOST"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successfully created a brick"
+      x-swagger-router-controller: "Default"
+  /brick/:id:
+    get:
+      summary: "Retrieve a brick"
+      description: ""
+      operationId: "brickidGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "brick object"
+      x-swagger-router-controller: "Default"
+  /brickattempt/:id:
+    get:
+      summary: "Finds a brick attempt"
+      description: ""
+      operationId: "brickattemptidGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Returned brickattempt"
+      x-swagger-router-controller: "Default"
+definitions: {}
+externalDocs:
+  description: "Find out more about Learning fortress"
+  url: "https://github.com/scholar-6/learning-fortress-backend"
