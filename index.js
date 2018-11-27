@@ -2,12 +2,14 @@
 
 var fs = require('fs'),
     path = require('path'),
-    http = require('http');
+    http = require('http'),
+    https = require('https');
 
 var app = require('connect')();
 var swaggerTools = require('swagger-tools');
 var jsyaml = require('js-yaml');
 var serverPort = 8080;
+var swaggerDoc;
 
 // swaggerRouter configuration
 var options = {
@@ -17,8 +19,17 @@ var options = {
 };
 
 // The Swagger document (require it, build it programmatically, fetch it from a URL, ...)
-var spec = fs.readFileSync(path.join(__dirname,'api/swagger.yaml'), 'utf8');
-var swaggerDoc = jsyaml.safeLoad(spec);
+// var spec = fs.readFileSync(path.join(__dirname,'api/swagger.yaml'), 'utf8');
+var spec = https.get("https://raw.githubusercontent.com/Scholar-6/api/master/api/swagger.yaml", function (res) {
+    res.setEncoding('utf8');
+
+    var data = "";
+    res.on('data', function (chunk) {
+        data += chunk;
+    });
+    res.on("end", function () {
+        console.log(data);
+	swaggerDoc = jsyaml.safeLoad(data);
 
 // Initialize the Swagger middleware
 swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
@@ -42,3 +53,8 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
   });
 
 });
+
+});
+});
+
+
