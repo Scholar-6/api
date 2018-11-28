@@ -30,6 +30,18 @@ paths:
         200:
           description: "successfully created a brick"
       x-swagger-router-controller: "Default"
+  /bricks:
+    get:
+      summary: "get a list of all brick ids and titles"
+      description: ""
+      operationId: "bricksGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successfully get bricks"
+      x-swagger-router-controller: "Default"
   /brick/:id:
     get:
       summary: "Retrieve a brick"
@@ -41,6 +53,62 @@ paths:
       responses:
         200:
           description: "brick object"
+      x-swagger-router-controller: "Default"
+    put:
+      summary: "Update a brick"
+      description: ""
+      operationId: "brickidPUT"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "brick object"
+      x-swagger-router-controller: "Default"
+    delete:
+      summary: "delete a brick"
+      description: ""
+      operationId: "brickidDELETE"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "brick object"
+      x-swagger-router-controller: "Default"
+  /brick/:id/question/:id:
+    post:
+      summary: "create a new question"
+      description: ""
+      operationId: "questionIdPOST"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successfully created a question"
+      x-swagger-router-controller: "Default"
+    put:
+      summary: "update a question"
+      description: ""
+      operationId: "questionIdPUT"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successfully updated a question"
+      x-swagger-router-controller: "Default"
+    delete:
+      summary: "delete a question"
+      description: ""
+      operationId: "questionIdDELETE"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successfully deleted a brick"
       x-swagger-router-controller: "Default"
   /brickattempt/:id:
     get:
