@@ -19,3 +19,6 @@ open http://localhost:8080/docs
 
 This project leverages the mega-awesome [swagger-tools](https://github.com/apigee-127/swagger-tools) middleware which does most all the work.
 
+open http://localhost:8080/brick to get all bricks
+open http://localhost:8080/brick/:id to get brick by id
+open http://localhost:8080/brick/:id/question/:id to get question by brick id and question id
