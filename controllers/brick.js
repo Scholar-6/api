@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  res.send('create new brick');
+  brickFirebase.createBrick(req.body).then(id => res.send('brick created ' + id));
 });
 
 router.get('/:brickId', function(req, res) {
@@ -25,16 +25,19 @@ router.delete('/:brickId', function(req, res) {
   res.send('delete brick by id = ' + req.params.brickId);
 });
 
+
+router.get('/:brickId/question/:questionId', function (req, res) {
+  questionFirebase.getQuestion(req.params.brickId, req.params.questionId).then(question => res.send(question));
+});
+
 router.post('/:brickId/question/:questionId', function (req, res) {
-  res.send('create new question by id = ' + req.params.questionId + ' where brick id = ' + req.params.brickId);
+  questionFirebase.createQuestion(req.params.brickId, req.body).then(questionId => {
+    res.send('created question by id = ' + req.params.questionId + ' where brick id = ' + questionId);
+  });
 });
 
 router.put('/:brickId/question/:questionId', function (req, res) {
   res.send('update question by id = ' + req.params.questionId + ' where brick id = ' + req.params.brickId);
-});
-
-router.get('/:brickId/question/:questionId', function (req, res) {
-  questionFirebase.getQuestion(req.params.brickId, req.params.questionId).then(question => res.send(question));
 });
 
 module.exports = router

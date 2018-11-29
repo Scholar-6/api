@@ -28,3 +28,10 @@ exports.getBrick = function (id) {
     }
   });
 }
+
+/**
+ * Create brick
+ */
+exports.createBrick = function (brickObj) {
+  return brickRef.add(brickObj).then(ref => ref.id);
+}

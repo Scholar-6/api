@@ -3,14 +3,12 @@
 var fs = require('fs'),
     path = require('path'),
     express = require('express'),
+    bodyParser = require('body-parser'),
     http = require('http');
 
-var app = express();
-var swaggerTools = require('swagger-tools');
-var jsyaml = require('js-yaml');
-var serverPort = 8080;
-var swaggerDoc;
 
+var app = express();
+app.use(bodyParser.json({ type: 'application/json' }))
 app.use(express.static(__dirname + '/api'));
 
 // swaggerRouter configuration
@@ -24,6 +22,9 @@ app.use(require('./controllers'));
 
 /* Swagger things */
 // The Swagger document (require it, build it programmatically, fetch it from a URL, ...)
+var serverPort = 8080;
+var swaggerTools = require('swagger-tools');
+var jsyaml = require('js-yaml');
 var documentData = fs.readFileSync(path.join(__dirname,'api/swagger.yaml'), 'utf8');
 var swaggerDoc = jsyaml.safeLoad(documentData);
 // Initialize the Swagger middleware
