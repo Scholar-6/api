@@ -1,11 +1,10 @@
 'use strict';
 
 var fs = require('fs'),
-    path = require('path'),
-    express = require('express'),
-    bodyParser = require('body-parser'),
-    http = require('http');
-
+  path = require('path'),
+  express = require('express'),
+  bodyParser = require('body-parser'),
+  http = require('http');
 
 var app = express();
 app.use(bodyParser.json({ type: 'application/json' }))
@@ -46,5 +45,4 @@ swaggerTools.initializeMiddleware(swaggerDoc, function (middleware) {
     console.log('Your server is listening on port %d (http://localhost:%d)', serverPort, serverPort);
     console.log('Swagger-ui is available on http://localhost:%d/docs', serverPort);
   });
-
 });
