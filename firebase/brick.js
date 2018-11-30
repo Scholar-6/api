@@ -1,12 +1,14 @@
 const firestore = require('./firestore');
-const brickRef = firestore.collection('bricks');
+const bricksRef = firestore.collection('bricks');
+
+function brickRef(brickId) { return bricksRef.doc(brickId); }
 
 /**
  * Get all bricks
- * @returns all bricks
+ * @returns {Object[]} All Bricks
  */
 exports.getBricks = function () {
-  return brickRef.get().then(brickSnapshots => {
+  return bricksRef.get().then(brickSnapshots => {
     var bricks = [];
     brickSnapshots.forEach(brick => bricks.push(brick.data()));
     return bricks;
@@ -15,11 +17,11 @@ exports.getBricks = function () {
 
 /**
  * Get one brick by id
- * @param {string} id Brick id.
- * @returns brick
+ * @param {string} brickId Brick id.
+ * @returns {Object} brick
  */
-exports.getBrick = function (id) {
-  return brickRef.doc(id).get().then(brick => {
+exports.getBrick = function (brickId) {
+  return brickRef.get().then(brick => {
     if (!brick.exists) {
       return {};
     } else {
@@ -36,5 +38,24 @@ exports.getBrick = function (id) {
 exports.createBrick = function (brickObj) {
   brickObj.argScope = 0;
   brickObj.creationDate = new Date();
-  return brickRef.add(brickObj).then(ref => ref.id);
+  return bricksRef.add(brickObj).then(ref => ref.id);
+}
+
+/**
+ * Update brick
+ * @param {string} brickId Brick Id
+ * @param {object} brickObj object
+ * @return {string} Brick Id
+ */
+exports.updateBrick = function (brickId, brickObj) {
+  return brickRef(brickId).set(brickObj).then(ref => ref.id);
+}
+
+/**
+ * Delete brick
+ * @param {string} brickId Brick Id
+ * @return {string} Brick Id
+ */
+exports.deleteBrick = function (brickId) {
+  return brickRef(brickId).delete().then(ref => ref.id);
 }
