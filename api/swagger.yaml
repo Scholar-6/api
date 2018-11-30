@@ -13,12 +13,18 @@ info:
 host: "localhost:8080"
 tags:
 - name: "brick"
-  description: "Retrieve a brick"
+  description: "Operations with bricks"
+- name: "question"
+  description: "Operations with questions"
+- name: "brickattempt"
+  description: "Operations with brickattempts"
 schemes:
 - "http"
 paths:
   /brick:
     post:
+      tags:
+      - "brick"
       summary: "create a brick"
       description: ""
       produces:
@@ -26,7 +32,7 @@ paths:
       parameters:
       - in: "body"
         name: "body"
-        description: "Pet object that needs to be added to the store"
+        description: "Brick data"
         required: true
         schema:
           $ref: "#/definitions/Brick"
@@ -35,6 +41,8 @@ paths:
           description: "successfully created a brick"
       x-swagger-router-controller: "brick"
     get:
+      tags:
+      - "brick"
       summary: "get a list of all brick ids and titles"
       description: ""
       produces:
@@ -44,82 +52,147 @@ paths:
         200:
           description: "successfully get bricks"
       x-swagger-router-controller: "brick"
-  /brick/:id:
+  /brick/{brickId}:
     get:
+      tags:
+      - "brick"
       summary: "Retrieve a brick"
       description: ""
-      operationId: "brickidGET"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+        - in: path
+          name: brickId
+          type: string
+          required: true
       responses:
         200:
           description: "brick object"
       x-swagger-router-controller: "brick"
     put:
+      tags:
+      - "brick"
       summary: "Update a brick"
       description: ""
-      operationId: "brickidPUT"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: path
+        name: brickId
+        type: string
+        required: true
+      - in: "body"
+        name: "body"
+        description: "New brick data"
+        required: true
+        schema:
+          $ref: "#/definitions/Brick"
       responses:
         200:
           description: "brick object"
       x-swagger-router-controller: "brick"
     delete:
+      tags:
+      - "brick"
       summary: "delete a brick"
       description: ""
-      operationId: "brickidDELETE"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: path
+        name: brickId
+        type: string
+        required: true
       responses:
         200:
           description: "brick object"
       x-swagger-router-controller: "brick"
-  /brick/:id/question/:id:
+  /brick/{brickId}/question/{questionId}:
     post:
+      tags:
+      - "question"
       summary: "create a new question"
       description: ""
-      operationId: "questionIdPOST"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: path
+        name: brickId
+        type: string
+        required: true
+      - in: path
+        name: questionId
+        type: string
+        required: true
+      - in: "body"
+        name: "body"
+        description: "Question data"
+        required: true
+        schema:
+          $ref: "#/definitions/Question"
       responses:
         200:
           description: "successfully created a question"
       x-swagger-router-controller: "brick"
     put:
+      tags:
+      - "question"
       summary: "update a question"
       description: ""
-      operationId: "questionIdPUT"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: path
+        name: brickId
+        type: string
+        required: true
+      - in: path
+        name: questionId
+        type: string
+        required: true
+      - in: "body"
+        name: "body"
+        description: "Question data"
+        required: true
+        schema:
+          $ref: "#/definitions/Question"
       responses:
         200:
           description: "successfully updated a question"
       x-swagger-router-controller: "brick"
     delete:
+      tags:
+      - "question"
       summary: "delete a question"
       description: ""
-      operationId: "questionIdDELETE"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: path
+        name: brickId
+        type: string
+        required: true
+      - in: path
+        name: questionId
+        type: string
+        required: true
       responses:
         200:
           description: "successfully deleted a brick"
       x-swagger-router-controller: "brick"
-  /brickattempt/:id:
+  /brickattempt/{brickattemptId}:
     get:
+      tags:
+      - "brickattempt"
       summary: "Finds a brick attempt"
       description: ""
-      operationId: "brickattemptidGET"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: path
+        name: brickattemptId
+        type: string
+        required: true
       responses:
         200:
           description: "Returned brickattempt"
@@ -153,27 +226,23 @@ definitions:
       type: 1
   Question:
     type: "object"
-    required:
-    - "components"
     properties:
       components:
         type: "array"
         items:
           $ref: "#/definitions/Component"
-      name:
-        type: "string"
+      number:
+        type: "integer"
     example:
       components: [
         {
           data: {
-            type: "Text of component"
+            text: "Some text"
           },
-          name: "Some component"
+          name: "Component Name"
         }
       ]
-      id: 1
-    xml:
-      name: "Brick"
+      number: 1
   Component:
     type: "object"
     properties:

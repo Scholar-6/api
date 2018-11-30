@@ -24,7 +24,7 @@ exports.getBricks = function () {
  * @returns {Object} brick
  */
 exports.getBrick = function (brickId) {
-  return brickRef.get().then(brick => {
+  return brickRef(brickId).get().then(brick => {
     if (!brick.exists) {
       return {};
     } else {
