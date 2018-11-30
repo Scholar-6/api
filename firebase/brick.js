@@ -1,5 +1,4 @@
 const firestore = require('./firestore');
-
 const brickRef = firestore.collection('bricks');
 
 /**
@@ -31,7 +30,11 @@ exports.getBrick = function (id) {
 
 /**
  * Create brick
+ * @param {object} Brick object
+ * @return {string} Brick Id
  */
 exports.createBrick = function (brickObj) {
+  brickObj.argScope = 0;
+  brickObj.creationDate = new Date();
   return brickRef.add(brickObj).then(ref => ref.id);
 }

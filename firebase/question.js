@@ -1,21 +1,17 @@
 const firestore = require('./firestore');
-
 const brickRef = firestore.collection('bricks');
 
-
 /**
- * Get Question sub-collection of Brick collection
+ * Get Question ref
  * @param {String} brickId Brick Id
- * @return {Promise} promise with question sub-collection
+ * @return {QuestionRef} reference to question collection
  */
-function getQuestionSubcollectionPromise(brickId) {
-  return brickRef.doc(brickId).getCollections().then(collections => {
-    for (let i = 0; i < collections.length; i++) {
-        if (collections[i] && collections[i].id == 'questions') {
-            return collections[i];
-        }
-    }
-  });
+function questionsRef(brickId) {
+  return brickRef.doc(brickId).collection('questions');
+}
+
+function questionRef(brickId, questionId) {
+  return questionsRef(brickId).doc(questionId);
 }
 
 /**
@@ -25,9 +21,7 @@ function getQuestionSubcollectionPromise(brickId) {
  * @returns question
  */
 exports.getQuestion = function (brickId, questionId) {
-  return getQuestionSubcollectionPromise(brickId).then(question => {
-    return question.doc(questionId).get().then(question => question.data());
-  });
+  return questionRef(brickId, questionId).get().then(question => question.data());
 }
 
 /**
@@ -37,5 +31,24 @@ exports.getQuestion = function (brickId, questionId) {
  * @returns questionId
  */
 exports.createQuestion = function (brickId, questionObj) {
-  return brickRef.doc(brickId).collection('questions').add(questionObj).then(ref => ref.id);
+  return questionsRef(brickId).add(questionObj).then(ref => ref.id);
+}
+
+/**
+ * Update question
+ * @param {string} brickId Brick Id.
+ * @param {string} questionId Question Id.
+ * @param {object} question Question object.
+ */
+exports.updateQuestion = function (brickId, questionId, questionObj) {
+  return questionRef(brickId, questionId).set(questionObj);
+}
+
+/**
+ * Delete question
+ * @param {string} brickId Brick Id.
+ * @param {string} questionId Question Id.
+ */
+exports.deleteQuestion = function (brickId, questionId) {
+  return questionRef(brickId, questionId).delete();
 }
