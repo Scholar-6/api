@@ -10,38 +10,40 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "api.scholar6.org"
-basePath: "/v1"
+host: "localhost:8080"
 tags:
 - name: "brick"
   description: "Retrieve a brick"
 schemes:
-- "https"
+- "http"
 paths:
   /brick:
     post:
       summary: "create a brick"
       description: ""
-      operationId: "brickPOST"
       produces:
       - "application/json"
-      parameters: []
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Pet object that needs to be added to the store"
+        required: true
+        schema:
+          $ref: "#/definitions/Brick"
       responses:
         200:
           description: "successfully created a brick"
-      x-swagger-router-controller: "Default"
-  /bricks:
+      x-swagger-router-controller: "brick"
     get:
       summary: "get a list of all brick ids and titles"
       description: ""
-      operationId: "bricksGET"
       produces:
       - "application/json"
       parameters: []
       responses:
         200:
           description: "successfully get bricks"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
   /brick/:id:
     get:
       summary: "Retrieve a brick"
@@ -53,7 +55,7 @@ paths:
       responses:
         200:
           description: "brick object"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
     put:
       summary: "Update a brick"
       description: ""
@@ -64,7 +66,7 @@ paths:
       responses:
         200:
           description: "brick object"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
     delete:
       summary: "delete a brick"
       description: ""
@@ -75,7 +77,7 @@ paths:
       responses:
         200:
           description: "brick object"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
   /brick/:id/question/:id:
     post:
       summary: "create a new question"
@@ -87,7 +89,7 @@ paths:
       responses:
         200:
           description: "successfully created a question"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
     put:
       summary: "update a question"
       description: ""
@@ -98,7 +100,7 @@ paths:
       responses:
         200:
           description: "successfully updated a question"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
     delete:
       summary: "delete a question"
       description: ""
@@ -109,7 +111,7 @@ paths:
       responses:
         200:
           description: "successfully deleted a brick"
-      x-swagger-router-controller: "Default"
+      x-swagger-router-controller: "brick"
   /brickattempt/:id:
     get:
       summary: "Finds a brick attempt"
@@ -121,8 +123,67 @@ paths:
       responses:
         200:
           description: "Returned brickattempt"
-      x-swagger-router-controller: "Default"
-definitions: {}
+      x-swagger-router-controller: "brick"
+definitions:
+  Brick:
+    type: "object"
+    properties:
+      brief:
+        type: "string"
+      prep:
+        type: "string"
+      creator:
+        type: "string"
+      summary:
+        type: "string"
+      title:
+        type: "string"
+      totalUsers:
+        type: "integer"
+      type:
+        type: "integer"
+    example:
+      brief: "ShortAnswer Brief"
+      creator: "Andriy"
+      prep: "Some prep"
+      subject: "Some subject"
+      summary: "Some summary"
+      title: "Some title"
+      totalUsers: 43220
+      type: 1
+  Question:
+    type: "object"
+    required:
+    - "components"
+    properties:
+      components:
+        type: "array"
+        items:
+          $ref: "#/definitions/Component"
+      name:
+        type: "string"
+    example:
+      components: [
+        {
+          data: {
+            type: "Text of component"
+          },
+          name: "Some component"
+        }
+      ]
+      id: 1
+    xml:
+      name: "Brick"
+  Component:
+    type: "object"
+    properties:
+      data:
+        type: "object"
+        properties:
+          text:
+            type: "string"
+      name:
+        type: "string"
 externalDocs:
   description: "Find out more about Learning fortress"
   url: "https://github.com/scholar-6/learning-fortress-backend"

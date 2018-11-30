@@ -5,12 +5,15 @@ function brickRef(brickId) { return bricksRef.doc(brickId); }
 
 /**
  * Get all bricks
- * @returns {Object[]} All Bricks
+ * @returns {Object[]} All Bricks ids and titles
  */
 exports.getBricks = function () {
   return bricksRef.get().then(brickSnapshots => {
-    var bricks = [];
-    brickSnapshots.forEach(brick => bricks.push(brick.data()));
+    const bricks = [];
+    brickSnapshots.forEach(brickSnapshoot => {
+      const title = brickSnapshoot.data().title;
+      bricks.push({id: brickSnapshoot.id, title});
+    });
     return bricks;
   });
 }
