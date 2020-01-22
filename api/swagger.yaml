@@ -1,16 +1,16 @@
 ---
 swagger: "2.0"
 info:
-  description: "brillder api"
+  description: "An API to build, play and teach bricks"
   version: "1.0.0"
-  title: "Swagger brillder"
+  title: "Brillder"
   termsOfService: ""
   contact:
-    email: "andriyromakh@gmail.com"
+    email: "lindsaymacvean@scholar6.org"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "test"
+host: "35.177.96.218"
 basePath: "/v2"
 tags:
 - name: "brick"
@@ -148,5 +148,5 @@ definitions:
       message:
         type: "string"
 externalDocs:
-  description: "Find out more about Swagger"
-  url: "http://swagger.io"
+  description: "Find out more about Brillder"
+  url: "https://github.com/Scholar-6/api"
