@@ -1,6 +1,6 @@
 {
-  "name": "Scholar 6 API",
-  "version": "1.0.0",
+  "name": "Scholar6-API",
+  "version": "1.0.1",
   "description": "This is a definition for the Scholar 6 API. It includes the Brillder application and access to build and play bricks.",
   "main": "index.js",
   "scripts": {
@@ -10,11 +10,10 @@
   "keywords": [
     "swagger"
   ],
-  "license": "Unlicense",
-  "private": true,
+  "license": "Apache 2.0",
   "dependencies": {
-    "connect": "^3.2.0",
-    "js-yaml": "^3.3.0",
+    "connect": "^3.7.0",
+    "js-yaml": "^3.13.1",
     "swagger-tools": "^0.10.4"
   }
 }
