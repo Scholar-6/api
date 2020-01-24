@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: "An API to build, play and teach bricks"
   version: "1.0.0"
-  title: "Learning Fortress"
+  title: "Brillder"
   termsOfService: ""
   contact:
     email: "lindsaymacvean@scholar6.org"
@@ -11,50 +11,142 @@ info:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
 host: "api.scholar6.org"
-basePath: "/v1"
+basePath: "/v2"
 tags:
 - name: "brick"
-  description: "Retrieve a brick"
+  description: "Bricks functionality"
 schemes:
 - "https"
+- "http"
 paths:
   /brick:
     post:
-      summary: "create a brick"
+      tags:
+      - "brick"
+      summary: "Add a new brick"
       description: ""
-      operationId: "brickPOST"
-      produces:
+      operationId: "addBrick"
+      consumes:
       - "application/json"
-      parameters: []
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Brick object that needs to be added"
+        required: true
+        schema:
+          $ref: "#/definitions/Brick"
       responses:
-        200:
-          description: "successfully created a brick"
-      x-swagger-router-controller: "Default"
-  /brick/:id:
-    get:
-      summary: "Retrieve a brick"
+        "405":
+          description: "Invalid input"
+      security:
+      - brillder_auth:
+        - "write:bricks"
+        - "read:bricks"
+      x-swagger-router-controller: "Brick"
+    put:
+      tags:
+      - "brick"
+      summary: "Update an existing brick"
       description: ""
-      operationId: "brickidGET"
-      produces:
+      operationId: "updateBrick"
+      consumes:
       - "application/json"
-      parameters: []
-      responses:
-        200:
-          description: "brick object"
-      x-swagger-router-controller: "Default"
-  /brickattempt/:id:
-    get:
-      summary: "Finds a brick attempt"
-      description: ""
-      operationId: "brickattemptidGET"
+      - "application/xml"
       produces:
+      - "application/xml"
       - "application/json"
-      parameters: []
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Brick object that needs to be updated"
+        required: true
+        schema:
+          $ref: "#/definitions/Brick"
       responses:
-        200:
-          description: "Returned brickattempt"
-      x-swagger-router-controller: "Default"
-definitions: {}
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Brick not found"
+        "405":
+          description: "Validation exception"
+      security:
+      - brillder_auth:
+        - "write:bricks"
+        - "read:bricks"
+      x-swagger-router-controller: "Brick"
+securityDefinitions:
+  brillder_auth:
+    type: "oauth2"
+    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    flow: "implicit"
+    scopes:
+      write:bricks: "modify bricks in your account"
+      read:bricks: "read your bricks"
+  api_key:
+    type: "apiKey"
+    name: "api_key"
+    in: "header"
+definitions:
+  Brick:
+    type: "object"
+    required:
+    - "questions"
+    - "subTopic"
+    - "subject"
+    - "title"
+    - "type"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      type:
+        type: "string"
+      subject:
+        type: "string"
+      subTopic:
+        type: "string"
+      alternativeTopics:
+        type: "string"
+      title:
+        type: "string"
+      investigationBrief:
+        type: "string"
+      preparationBrief:
+        type: "string"
+      synthesis:
+        type: "string"
+      revisionLog:
+        type: "string"
+      questions:
+        type: "string"
+    xml:
+      name: "Brick"
+    example:
+      subTopic: "subTopic"
+      synthesis: "synthesis"
+      preparationBrief: "preparationBrief"
+      subject: "subject"
+      alternativeTopics: "alternativeTopics"
+      questions: "questions"
+      revisionLog: "revisionLog"
+      id: 0
+      investigationBrief: "investigationBrief"
+      type: "type"
+      title: "title"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
 externalDocs:
-  description: "Find out more about Learning fortress"
-  url: "https://github.com/scholar-6/learning-fortress-backend"
+  description: "Find out more about Brillder"
+  url: "https://github.com/Scholar-6/brillder"
