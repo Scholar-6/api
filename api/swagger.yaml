@@ -10,7 +10,7 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "35.177.96.218"
+host: "api.scholar6.org"
 basePath: "/v2"
 tags:
 - name: "brick"
@@ -149,4 +149,4 @@ definitions:
         type: "string"
 externalDocs:
   description: "Find out more about Brillder"
-  url: "https://github.com/Scholar-6/api"
+  url: "https://github.com/Scholar-6/brillder"
