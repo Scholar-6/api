@@ -13,7 +13,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "35.177.96.218",
+  "host": "api.scholar6.org",
   "basePath": "/v2",
   "tags": [
     {
@@ -26,100 +26,139 @@
     "http"
   ],
   "paths": {
-	"/brick": {
-		"post": {
-			"tags": [
-			  "brick"
-			],
-			"summary": "Add a new brick",
-			"description": "",
-			"operationId": "addBrick",
-			"consumes": [
-			  "application/json",
-			  "application/xml"
-			],
-			"produces": [
-			  "application/xml",
-			  "application/json"
-			],
-			"parameters": [
-			  {
-				"in": "body",
-				"name": "body",
-				"description": "Brick object that needs to be added",
-				"required": true,
-				"schema": {
-				  "$ref": "#/definitions/Brick"
-				}
-			  }
-			],
-			"responses": {
-			  "405": {
-				"description": "Invalid input"
-			  }
-			},
-			"security": [
-			  {
-				"brillder_auth": [
-				  "write:bricks",
-				  "read:bricks"
-				]
-			  }
-			]
-		  },
-		"put": {
-		
-			"tags": [
-			  "brick"
-			],
-			"summary": "Update an existing brick",
-			"description": "",
-			"operationId": "updateBrick",
-			"consumes": [
-			  "application/json",
-			  "application/xml"
-			],
-			"produces": [
-			  "application/xml",
-			  "application/json"
-			],
-			"parameters": [
-			  {
-				"in": "body",
-				"name": "body",
-				"description": "Brick object that needs to be updated",
-				"required": true,
-				"schema": {
-				  "$ref": "#/definitions/Brick"
-				}
-			  }
-			],
-			"responses": {
-			  "400": {
-				"description": "Invalid ID supplied"
-			  },
-			  "404": {
-				"description": "Brick not found"
-			  },
-			  "405": {
-				"description": "Validation exception"
-			  }
-			},
-			"security": [
-			  {
-				"brillder_auth": [
-				  "write:bricks",
-				  "read:bricks"
-				]
-			  }
-			]
-		}
-	}
+    "/brick/{id}": {
+      "get": {
+        "tags": [
+          "brick"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "summary": "Get specific brick by id",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/Brick"
+            }
+          }
+        }
+      }
+    },
+    "/brick": {
+      "get": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Get all bricks",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfBricks"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Add a new brick",
+        "description": "",
+        "operationId": "addBrick",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Brick object that needs to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Brick"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/Brick"
+            }
+          }
+        },
+        "security": [
+          {
+            "brillder_auth": [
+              "write:bricks",
+              "read:bricks"
+            ]
+          }
+        ],
+        "x-swagger-router-controller": "Brick"
+      },
+      "put": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Update an existing brick",
+        "description": "",
+        "operationId": "updateBrick",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Brick object that needs to be updated",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Brick"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/Brick"
+            }
+          }
+        },
+        "security": [
+          {
+            "brillder_auth": [
+              "write:bricks",
+              "read:bricks"
+            ]
+          }
+        ],
+        "x-swagger-router-controller": "Brick"
+      }
+    }
   },
   "securityDefinitions": {
     "brillder_auth": {
       "type": "oauth2",
-      "authorizationUrl": "http://petstore.swagger.io/oauth/dialog",
+      "authorizationUrl": "https://example.com/oauth/authorize",
       "flow": "implicit",
       "scopes": {
         "write:bricks": "modify bricks in your account",
@@ -133,14 +172,20 @@
     }
   },
   "definitions": {
+    "ArrayOfBricks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Brick"
+      }
+    },
     "Brick": {
       "type": "object",
       "required": [
-		"type",
-		"subject",
-		"subTopic",
-		"title",
-		"questions"
+        "questions",
+        "subTopic",
+        "subject",
+        "title",
+        "type"
       ],
       "properties": {
         "id": {
@@ -148,38 +193,55 @@
           "format": "int64"
         },
         "type": {
-           "type": "string"
+          "type": "string"
         },
-		"subject": {
-           "type": "string"
+        "subject": {
+          "type": "string"
         },
-		"subTopic": {
-           "type": "string"
+        "topic": {
+          "type": "string"
         },
-		"alternativeTopics": {
-           "type": "string"
+        "subTopic": {
+          "type": "string"
         },
-		"title": {
-           "type": "string"
+        "alternativeTopics": {
+          "type": "string"
         },
-		"investigationBrief": {
-           "type": "string"
+        "title": {
+          "type": "string"
         },
-		"preparationBrief": {
-           "type": "string"
+        "investigationBrief": {
+          "type": "string"
         },
-		"synthesis": {
-           "type": "string"
+        "preparationBrief": {
+          "type": "string"
         },
-		"revisionLog": {
-           "type": "string"
+        "synthesis": {
+          "type": "string"
         },
-		"questions": {
-           "type": "string"
-		}
+        "revisionLog": {
+          "type": "string"
+        },
+        "questions": {
+          "type": "string"
+        }
       },
       "xml": {
         "name": "Brick"
+      },
+      "example": {
+        "topic": "topic",
+        "subTopic": "subTopic",
+        "synthesis": "synthesis",
+        "preparationBrief": "preparationBrief",
+        "subject": "subject",
+        "alternativeTopics": "alternativeTopics",
+        "questions": "questions",
+        "revisionLog": "revisionLog",
+        "id": 0,
+        "investigationBrief": "investigationBrief",
+        "type": "type",
+        "title": "title"
       }
     },
     "ApiResponse": {
@@ -200,6 +262,6 @@
   },
   "externalDocs": {
     "description": "Find out more about Brillder",
-    "url": "https://github.com/Scholar-6/api"
+    "url": "https://github.com/Scholar-6/brillder"
   }
 }
