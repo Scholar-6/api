@@ -17,7 +17,3 @@ open http://localhost:8080/docs
 ```
 
 This project leverages the mega-awesome [swagger-tools](https://github.com/apigee-127/swagger-tools) middleware which does most all the work.
-
-
-## Running on production
-According to [this](https://www.reddit.com/r/linuxquestions/comments/5pien9/iptables_vs_nginx_for_port_forwarding_and_load/dcrzfb3/) article it is best to proxy all incoming 80/443 requests to the middleware using nginx. An nginx server can be found in the [infrastructure](https://github.com/Scholar-6/infrastructure) repository.
