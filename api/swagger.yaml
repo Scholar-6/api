@@ -19,7 +19,36 @@ schemes:
 - "https"
 - "http"
 paths:
+  /brick/{id}:
+    get:
+      tags:
+      - "brick"
+      summary: "Get specific brick by id"
+      operationId: "brickIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      x-swagger-router-controller: "Brick"
   /brick:
+    get:
+      tags:
+      - "brick"
+      summary: "Get all bricks"
+      operationId: "brickGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
     post:
       tags:
       - "brick"
@@ -40,8 +69,10 @@ paths:
         schema:
           $ref: "#/definitions/Brick"
       responses:
-        "405":
-          description: "Invalid input"
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
       security:
       - brillder_auth:
         - "write:bricks"
@@ -67,12 +98,10 @@ paths:
         schema:
           $ref: "#/definitions/Brick"
       responses:
-        "400":
-          description: "Invalid ID supplied"
-        "404":
-          description: "Brick not found"
-        "405":
-          description: "Validation exception"
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
       security:
       - brillder_auth:
         - "write:bricks"
@@ -81,7 +110,7 @@ paths:
 securityDefinitions:
   brillder_auth:
     type: "oauth2"
-    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    authorizationUrl: "https://example.com/oauth/authorize"
     flow: "implicit"
     scopes:
       write:bricks: "modify bricks in your account"
@@ -91,6 +120,10 @@ securityDefinitions:
     name: "api_key"
     in: "header"
 definitions:
+  ArrayOfBricks:
+    type: "array"
+    items:
+      $ref: "#/definitions/Brick"
   Brick:
     type: "object"
     required:
@@ -106,6 +139,8 @@ definitions:
       type:
         type: "string"
       subject:
+        type: "string"
+      topic:
         type: "string"
       subTopic:
         type: "string"
@@ -126,6 +161,7 @@ definitions:
     xml:
       name: "Brick"
     example:
+      topic: "topic"
       subTopic: "subTopic"
       synthesis: "synthesis"
       preparationBrief: "preparationBrief"
