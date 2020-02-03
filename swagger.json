@@ -13,8 +13,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "api.scholar6.org",
-  "basePath": "/v2",
+  "host": "swagger.scholar6.org",
   "tags": [
     {
       "name": "brick",
@@ -26,6 +25,22 @@
     "http"
   ],
   "paths": {
+    "/bricks": {
+      "get": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Get all bricks",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfBricks"
+            }
+          }
+        }
+      }
+    },
     "/brick/{id}": {
       "get": {
         "tags": [
@@ -51,20 +66,6 @@
       }
     },
     "/brick": {
-      "get": {
-        "tags": [
-          "brick"
-        ],
-        "summary": "Get all bricks",
-        "responses": {
-          "200": {
-            "description": "ok",
-            "schema": {
-              "$ref": "#/definitions/ArrayOfBricks"
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "brick"
@@ -178,6 +179,27 @@
         "$ref": "#/definitions/Brick"
       }
     },
+    "ArrayOfQuestions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Question"
+      }
+    },
+    "Question": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "contentBlocks": {
+          "type": "string"
+        }
+      },
+       "xml": {
+        "name": "Question"
+      }
+    },
     "Brick": {
       "type": "object",
       "required": [
@@ -222,26 +244,18 @@
         "revisionLog": {
           "type": "string"
         },
-        "questions": {
+        "openQuestion": {
           "type": "string"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Question"
+          }
         }
       },
       "xml": {
         "name": "Brick"
-      },
-      "example": {
-        "topic": "topic",
-        "subTopic": "subTopic",
-        "synthesis": "synthesis",
-        "preparationBrief": "preparationBrief",
-        "subject": "subject",
-        "alternativeTopics": "alternativeTopics",
-        "questions": "questions",
-        "revisionLog": "revisionLog",
-        "id": 0,
-        "investigationBrief": "investigationBrief",
-        "type": "type",
-        "title": "title"
       }
     },
     "ApiResponse": {

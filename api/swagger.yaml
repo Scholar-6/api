@@ -10,8 +10,7 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "api.scholar6.org"
-basePath: "/v2"
+host: "swagger.scholar6.org"
 tags:
 - name: "brick"
   description: "Bricks functionality"
@@ -19,6 +18,19 @@ schemes:
 - "https"
 - "http"
 paths:
+  /bricks:
+    get:
+      tags:
+      - "brick"
+      summary: "Get all bricks"
+      operationId: "bricksGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /brick/{id}:
     get:
       tags:
@@ -37,18 +49,6 @@ paths:
             $ref: "#/definitions/Brick"
       x-swagger-router-controller: "Brick"
   /brick:
-    get:
-      tags:
-      - "brick"
-      summary: "Get all bricks"
-      operationId: "brickGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/ArrayOfBricks"
-      x-swagger-router-controller: "Brick"
     post:
       tags:
       - "brick"
@@ -124,6 +124,23 @@ definitions:
     type: "array"
     items:
       $ref: "#/definitions/Brick"
+  ArrayOfQuestions:
+    type: "array"
+    items:
+      $ref: "#/definitions/Question"
+  Question:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      contentBlocks:
+        type: "string"
+    xml:
+      name: "Question"
+    example:
+      contentBlocks: "contentBlocks"
+      id: 6
   Brick:
     type: "object"
     required:
@@ -156,23 +173,32 @@ definitions:
         type: "string"
       revisionLog:
         type: "string"
-      questions:
+      openQuestion:
         type: "string"
+      questions:
+        type: "array"
+        items:
+          $ref: "#/definitions/Question"
     xml:
       name: "Brick"
     example:
-      topic: "topic"
       subTopic: "subTopic"
       synthesis: "synthesis"
-      preparationBrief: "preparationBrief"
+      openQuestion: "openQuestion"
       subject: "subject"
-      alternativeTopics: "alternativeTopics"
-      questions: "questions"
+      questions:
+      - contentBlocks: "contentBlocks"
+        id: 6
+      - contentBlocks: "contentBlocks"
+        id: 6
       revisionLog: "revisionLog"
-      id: 0
       investigationBrief: "investigationBrief"
       type: "type"
       title: "title"
+      preparationBrief: "preparationBrief"
+      alternativeTopics: "alternativeTopics"
+      topic: "topic"
+      id: 0
   ApiResponse:
     type: "object"
     properties:

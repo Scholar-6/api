@@ -14,8 +14,9 @@ module.exports.addBrick = function addBrick (req, res, next) {
     });
 };
 
-module.exports.brickGET = function brickGET (req, res, next) {
-  Brick.brickGET()
+module.exports.brickIdGET = function brickIdGET (req, res, next) {
+  var id = req.swagger.params['id'].value;
+  Brick.brickIdGET(id)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -24,9 +25,8 @@ module.exports.brickGET = function brickGET (req, res, next) {
     });
 };
 
-module.exports.brickIdGET = function brickIdGET (req, res, next) {
-  var id = req.swagger.params['id'].value;
-  Brick.brickIdGET(id)
+module.exports.bricksGET = function bricksGET (req, res, next) {
+  Brick.bricksGET()
     .then(function (response) {
       utils.writeJson(res, response);
     })
