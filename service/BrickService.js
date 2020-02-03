@@ -12,37 +12,26 @@ exports.addBrick = function(body) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
-  "topic" : "topic",
   "subTopic" : "subTopic",
   "synthesis" : "synthesis",
-  "preparationBrief" : "preparationBrief",
+  "openQuestion" : "openQuestion",
   "subject" : "subject",
-  "alternativeTopics" : "alternativeTopics",
-  "questions" : "questions",
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 6
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 6
+  } ],
   "revisionLog" : "revisionLog",
-  "id" : 0,
   "investigationBrief" : "investigationBrief",
   "type" : "type",
-  "title" : "title"
+  "title" : "title",
+  "preparationBrief" : "preparationBrief",
+  "alternativeTopics" : "alternativeTopics",
+  "topic" : "topic",
+  "id" : 0
 };
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
-}
-
-
-/**
- * Get all bricks
- *
- * returns ArrayOfBricks
- **/
-exports.brickGET = function() {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = "";
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -62,19 +51,44 @@ exports.brickIdGET = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
-  "topic" : "topic",
   "subTopic" : "subTopic",
   "synthesis" : "synthesis",
-  "preparationBrief" : "preparationBrief",
+  "openQuestion" : "openQuestion",
   "subject" : "subject",
-  "alternativeTopics" : "alternativeTopics",
-  "questions" : "questions",
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 6
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 6
+  } ],
   "revisionLog" : "revisionLog",
-  "id" : 0,
   "investigationBrief" : "investigationBrief",
   "type" : "type",
-  "title" : "title"
+  "title" : "title",
+  "preparationBrief" : "preparationBrief",
+  "alternativeTopics" : "alternativeTopics",
+  "topic" : "topic",
+  "id" : 0
 };
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Get all bricks
+ *
+ * returns ArrayOfBricks
+ **/
+exports.bricksGET = function() {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -95,18 +109,25 @@ exports.updateBrick = function(body) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
-  "topic" : "topic",
   "subTopic" : "subTopic",
   "synthesis" : "synthesis",
-  "preparationBrief" : "preparationBrief",
+  "openQuestion" : "openQuestion",
   "subject" : "subject",
-  "alternativeTopics" : "alternativeTopics",
-  "questions" : "questions",
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 6
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 6
+  } ],
   "revisionLog" : "revisionLog",
-  "id" : 0,
   "investigationBrief" : "investigationBrief",
   "type" : "type",
-  "title" : "title"
+  "title" : "title",
+  "preparationBrief" : "preparationBrief",
+  "alternativeTopics" : "alternativeTopics",
+  "topic" : "topic",
+  "id" : 0
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
