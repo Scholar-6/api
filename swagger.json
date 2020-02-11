@@ -220,6 +220,9 @@
         "subject": {
           "type": "string"
         },
+        "alternativeSubject": {
+          "type": "string"
+        },
         "topic": {
           "type": "string"
         },

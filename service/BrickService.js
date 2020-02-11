@@ -12,6 +12,7 @@ exports.addBrick = function(body) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -51,6 +52,7 @@ exports.brickIdGET = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -109,6 +111,7 @@ exports.updateBrick = function(body) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
