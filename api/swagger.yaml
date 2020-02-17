@@ -14,10 +14,23 @@ host: "swagger.scholar6.org"
 tags:
 - name: "brick"
   description: "Bricks functionality"
+- name: "user"
+  description: "Users functionality"
 schemes:
 - "https"
 - "http"
 paths:
+  /user/tutorialShowed:
+    put:
+      tags:
+      - "user"
+      summary: "Mark tutorial as showed for the current logged user."
+      operationId: "userTutorialShowedPUT"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
   /bricks:
     get:
       tags:
