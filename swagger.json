@@ -224,7 +224,7 @@
             ]
         },
         "type": {
-          "type": "string"
+          "type": "string",
           "enum": [
             "Main"
             ]

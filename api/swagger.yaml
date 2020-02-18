@@ -162,6 +162,8 @@ definitions:
         - "S60mins3"
       type:
         type: "string"
+        enum:
+        - "Main"
       subject:
         type: "string"
       alternativeSubject:
@@ -203,7 +205,7 @@ definitions:
         id: 6
       revisionLog: "revisionLog"
       investigationBrief: "investigationBrief"
-      type: "type"
+      type: "Main"
       title: "title"
       preparationBrief: "preparationBrief"
       brickLength: "None"
