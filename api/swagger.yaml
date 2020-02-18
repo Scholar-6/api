@@ -153,6 +153,13 @@ definitions:
       id:
         type: "integer"
         format: "int64"
+      brickLength:
+        type: "string"
+        enum:
+        - "None"
+        - "S20mins1"
+        - "S40mins2"
+        - "S60mins3"
       type:
         type: "string"
       subject:
@@ -199,6 +206,7 @@ definitions:
       type: "type"
       title: "title"
       preparationBrief: "preparationBrief"
+      brickLength: "None"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
       id: 0

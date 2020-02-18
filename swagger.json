@@ -214,8 +214,20 @@
           "type": "integer",
           "format": "int64"
         },
+        "brickLength": {
+          "type": "string",
+          "enum": [
+            "None", 
+            "S20mins1",
+            "S40mins2",
+            "S60mins3"
+            ]
+        },
         "type": {
           "type": "string"
+          "enum": [
+            "Main"
+            ]
         },
         "subject": {
           "type": "string"
