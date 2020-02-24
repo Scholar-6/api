@@ -192,6 +192,8 @@ definitions:
         type: "string"
       openQuestion:
         type: "string"
+      urls:
+        type: "string"
       questions:
         type: "array"
         items:
@@ -216,6 +218,7 @@ definitions:
       type: "type"
       title: "title"
       preparationBrief: "preparationBrief"
+      urls: "urls"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
       id: 0
