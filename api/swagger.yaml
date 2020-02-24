@@ -156,10 +156,10 @@ definitions:
       brickLength:
         type: "string"
         enum:
-        - "None"
-        - "S20mins1"
-        - "S40mins2"
-        - "S60mins3"
+        - "0"
+        - "20"
+        - "40"
+        - "60"
       type:
         type: "string"
         enum:
@@ -208,7 +208,7 @@ definitions:
       type: "Main"
       title: "title"
       preparationBrief: "preparationBrief"
-      brickLength: "None"
+      brickLength: "0"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
       id: 0

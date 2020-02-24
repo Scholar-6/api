@@ -29,7 +29,7 @@ exports.addBrick = function(body) {
   "type" : "Main",
   "title" : "title",
   "preparationBrief" : "preparationBrief",
-  "brickLength" : "None",
+  "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
   "id" : 0
@@ -70,7 +70,7 @@ exports.brickIdGET = function(id) {
   "type" : "Main",
   "title" : "title",
   "preparationBrief" : "preparationBrief",
-  "brickLength" : "None",
+  "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
   "id" : 0
@@ -130,7 +130,7 @@ exports.updateBrick = function(body) {
   "type" : "Main",
   "title" : "title",
   "preparationBrief" : "preparationBrief",
-  "brickLength" : "None",
+  "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
   "id" : 0
