@@ -136,11 +136,26 @@ definitions:
         format: "int64"
       contentBlocks:
         type: "string"
+      questionType:
+        type: "string"
+        enum:
+        - "None"
+        - "ShortAnswer"
+        - "ChooseOne"
+        - "ChooseSeveral"
+        - "VerticalShuffle"
+        - "HorizontalShuffle"
+        - "PairMatch"
+        - "Categorise"
+        - "MissingWord"
+        - "WordHighlighting"
+        - "LineHighlighting"
     xml:
       name: "Question"
     example:
       contentBlocks: "contentBlocks"
       id: 6
+      questionType: "None"
   Brick:
     type: "object"
     required:
@@ -192,8 +207,10 @@ definitions:
       questions:
       - contentBlocks: "contentBlocks"
         id: 6
+        questionType: "None"
       - contentBlocks: "contentBlocks"
         id: 6
+        questionType: "None"
       revisionLog: "revisionLog"
       investigationBrief: "investigationBrief"
       type: "type"
