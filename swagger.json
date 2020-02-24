@@ -25,22 +25,6 @@
     "http"
   ],
   "paths": {
-<<<<<<< Updated upstream
-=======
-    "/user/tutorialShowed": {
-      "put": {
-        "tags": [
-          "user"
-        ],
-        "summary": "Mark tutorial as showed for the current logged user.",
-        "responses": {
-          "200": {
-            "description": "ok"
-          }
-        }
-      }
-    },
->>>>>>> Stashed changes
     "/bricks": {
       "get": {
         "tags": [
