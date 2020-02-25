@@ -172,6 +172,8 @@ definitions:
         type: "string"
       subject:
         type: "string"
+      locked:
+        type: "boolean"
       alternativeSubject:
         type: "string"
       topic:
@@ -219,6 +221,7 @@ definitions:
       alternativeTopics: "alternativeTopics"
       topic: "topic"
       id: 0
+      locked: true
   ApiResponse:
     type: "object"
     properties:

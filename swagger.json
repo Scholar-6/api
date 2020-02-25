@@ -236,6 +236,9 @@
         "subject": {
           "type": "string"
         },
+        "locked": {
+          "type": "boolean"
+        },
         "alternativeSubject": {
           "type": "string"
         },
