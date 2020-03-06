@@ -168,8 +168,17 @@ definitions:
       id:
         type: "integer"
         format: "int64"
+      brickLength:
+        type: "string"
+        enum:
+        - "0"
+        - "20"
+        - "40"
+        - "60"
       type:
         type: "string"
+        enum:
+        - "Main"
       subject:
         type: "string"
       alternativeSubject:
@@ -213,9 +222,10 @@ definitions:
         questionType: "None"
       revisionLog: "revisionLog"
       investigationBrief: "investigationBrief"
-      type: "type"
+      type: "Main"
       title: "title"
       preparationBrief: "preparationBrief"
+      brickLength: "0"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
       id: 0

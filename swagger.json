@@ -230,8 +230,20 @@
           "type": "integer",
           "format": "int64"
         },
+        "brickLength": {
+          "type": "string",
+          "enum": [
+            "0", 
+            "20",
+            "40",
+            "60"
+            ]
+        },
         "type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Main"
+            ]
         },
         "subject": {
           "type": "string"
