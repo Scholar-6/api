@@ -41,6 +41,22 @@
         }
       }
     },
+    "/bricks/currentUser": {
+      "get": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Get all bricks of current user",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfBricks"
+            }
+          }
+        }
+      }
+    },
     "/brick/{id}": {
       "get": {
         "tags": [

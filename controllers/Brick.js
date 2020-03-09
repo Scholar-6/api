@@ -25,6 +25,16 @@ module.exports.brickIdGET = function brickIdGET (req, res, next) {
     });
 };
 
+module.exports.bricksCurrentUserGET = function bricksCurrentUserGET (req, res, next) {
+  Brick.bricksCurrentUserGET()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.bricksGET = function bricksGET (req, res, next) {
   Brick.bricksGET()
     .then(function (response) {

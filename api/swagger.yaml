@@ -31,6 +31,19 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/currentUser:
+    get:
+      tags:
+      - "brick"
+      summary: "Get all bricks of current user"
+      operationId: "bricksCurrentUserGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /brick/{id}:
     get:
       tags:
