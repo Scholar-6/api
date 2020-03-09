@@ -14,6 +14,7 @@ exports.addBrick = function(body) {
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
+  "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
   "subject" : "subject",
@@ -27,13 +28,12 @@ exports.addBrick = function(body) {
     "questionType" : "None"
   } ],
   "revisionLog" : "revisionLog",
-  "investigationBrief" : "investigationBrief",
   "type" : "Main",
   "title" : "title",
-  "preparationBrief" : "preparationBrief",
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "prep" : "prep",
   "id" : 0
 };
     if (Object.keys(examples).length > 0) {
@@ -57,6 +57,7 @@ exports.brickIdGET = function(id) {
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
+  "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
   "subject" : "subject",
@@ -70,13 +71,12 @@ exports.brickIdGET = function(id) {
     "questionType" : "None"
   } ],
   "revisionLog" : "revisionLog",
-  "investigationBrief" : "investigationBrief",
   "type" : "Main",
   "title" : "title",
-  "preparationBrief" : "preparationBrief",
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "prep" : "prep",
   "id" : 0
 };
     if (Object.keys(examples).length > 0) {
@@ -119,6 +119,7 @@ exports.updateBrick = function(body) {
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
+  "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
   "subject" : "subject",
@@ -132,13 +133,12 @@ exports.updateBrick = function(body) {
     "questionType" : "None"
   } ],
   "revisionLog" : "revisionLog",
-  "investigationBrief" : "investigationBrief",
   "type" : "Main",
   "title" : "title",
-  "preparationBrief" : "preparationBrief",
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "prep" : "prep",
   "id" : 0
 };
     if (Object.keys(examples).length > 0) {

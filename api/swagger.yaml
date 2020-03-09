@@ -191,9 +191,9 @@ definitions:
         type: "string"
       title:
         type: "string"
-      investigationBrief:
+      brief:
         type: "string"
-      preparationBrief:
+      prep:
         type: "string"
       synthesis:
         type: "string"
@@ -210,6 +210,7 @@ definitions:
     example:
       alternativeSubject: "alternativeSubject"
       subTopic: "subTopic"
+      brief: "brief"
       synthesis: "synthesis"
       openQuestion: "openQuestion"
       subject: "subject"
@@ -221,13 +222,12 @@ definitions:
         id: 6
         questionType: "None"
       revisionLog: "revisionLog"
-      investigationBrief: "investigationBrief"
       type: "Main"
       title: "title"
-      preparationBrief: "preparationBrief"
       brickLength: "0"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
+      prep: "prep"
       id: 0
   ApiResponse:
     type: "object"

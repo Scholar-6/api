@@ -263,10 +263,10 @@
         "title": {
           "type": "string"
         },
-        "investigationBrief": {
+        "brief": {
           "type": "string"
         },
-        "preparationBrief": {
+        "prep": {
           "type": "string"
         },
         "synthesis": {
