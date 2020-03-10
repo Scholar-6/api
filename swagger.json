@@ -41,7 +41,42 @@
         }
       }
     },
+    "/bricks/currentUser": {
+      "get": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Get all bricks of current user",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfBricks"
+            }
+          }
+        }
+      }
+    },
     "/brick/{id}": {
+      "delete": {
+        "tags": [
+          "brick"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "summary": "Delete specific brick by id",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      },
       "get": {
         "tags": [
           "brick"
@@ -192,6 +227,10 @@
           "type": "integer",
           "format": "int64"
         },
+        "order": {
+          "type": "integer",
+          "format": "int64"
+        },
         "contentBlocks": {
           "type": "string"
         },
@@ -230,8 +269,20 @@
           "type": "integer",
           "format": "int64"
         },
+        "brickLength": {
+          "type": "string",
+          "enum": [
+            "0", 
+            "20",
+            "40",
+            "60"
+            ]
+        },
         "type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Main"
+            ]
         },
         "subject": {
           "type": "string"
@@ -254,10 +305,10 @@
         "title": {
           "type": "string"
         },
-        "investigationBrief": {
+        "brief": {
           "type": "string"
         },
-        "preparationBrief": {
+        "prep": {
           "type": "string"
         },
         "synthesis": {
