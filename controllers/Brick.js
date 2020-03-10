@@ -14,9 +14,30 @@ module.exports.addBrick = function addBrick (req, res, next) {
     });
 };
 
+module.exports.brickIdDELETE = function brickIdDELETE (req, res, next) {
+  var id = req.swagger.params['id'].value;
+  Brick.brickIdDELETE(id)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.brickIdGET = function brickIdGET (req, res, next) {
   var id = req.swagger.params['id'].value;
   Brick.brickIdGET(id)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.bricksCurrentUserGET = function bricksCurrentUserGET (req, res, next) {
+  Brick.bricksCurrentUserGET()
     .then(function (response) {
       utils.writeJson(res, response);
     })

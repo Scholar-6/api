@@ -31,6 +31,19 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/currentUser:
+    get:
+      tags:
+      - "brick"
+      summary: "Get all bricks of current user"
+      operationId: "bricksCurrentUserGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /brick/{id}:
     get:
       tags:
@@ -47,6 +60,20 @@ paths:
           description: "ok"
           schema:
             $ref: "#/definitions/Brick"
+      x-swagger-router-controller: "Brick"
+    delete:
+      tags:
+      - "brick"
+      summary: "Delete specific brick by id"
+      operationId: "brickIdDELETE"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
       x-swagger-router-controller: "Brick"
   /brick:
     post:
@@ -195,9 +222,9 @@ definitions:
         type: "string"
       title:
         type: "string"
-      investigationBrief:
+      brief:
         type: "string"
-      preparationBrief:
+      prep:
         type: "string"
       synthesis:
         type: "string"
@@ -214,6 +241,7 @@ definitions:
     example:
       alternativeSubject: "alternativeSubject"
       subTopic: "subTopic"
+      brief: "brief"
       synthesis: "synthesis"
       openQuestion: "openQuestion"
       subject: "subject"
@@ -227,13 +255,12 @@ definitions:
         questionType: "None"
         order: 1
       revisionLog: "revisionLog"
-      investigationBrief: "investigationBrief"
       type: "Main"
       title: "title"
-      preparationBrief: "preparationBrief"
       brickLength: "0"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
+      prep: "prep"
       id: 0
   ApiResponse:
     type: "object"

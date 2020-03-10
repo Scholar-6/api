@@ -14,6 +14,7 @@ exports.addBrick = function(body) {
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
+  "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
   "subject" : "subject",
@@ -29,13 +30,12 @@ exports.addBrick = function(body) {
     "order" : 1
   } ],
   "revisionLog" : "revisionLog",
-  "investigationBrief" : "investigationBrief",
   "type" : "Main",
   "title" : "title",
-  "preparationBrief" : "preparationBrief",
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "prep" : "prep",
   "id" : 0
 };
     if (Object.keys(examples).length > 0) {
@@ -43,6 +43,19 @@ exports.addBrick = function(body) {
     } else {
       resolve();
     }
+  });
+}
+
+
+/**
+ * Delete specific brick by id
+ *
+ * id Integer 
+ * no response value expected for this operation
+ **/
+exports.brickIdDELETE = function(id) {
+  return new Promise(function(resolve, reject) {
+    resolve();
   });
 }
 
@@ -59,6 +72,7 @@ exports.brickIdGET = function(id) {
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
+  "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
   "subject" : "subject",
@@ -74,15 +88,32 @@ exports.brickIdGET = function(id) {
     "order" : 1
   } ],
   "revisionLog" : "revisionLog",
-  "investigationBrief" : "investigationBrief",
   "type" : "Main",
   "title" : "title",
-  "preparationBrief" : "preparationBrief",
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "prep" : "prep",
   "id" : 0
 };
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Get all bricks of current user
+ *
+ * returns ArrayOfBricks
+ **/
+exports.bricksCurrentUserGET = function() {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -123,6 +154,7 @@ exports.updateBrick = function(body) {
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
   "subTopic" : "subTopic",
+  "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
   "subject" : "subject",
@@ -138,13 +170,12 @@ exports.updateBrick = function(body) {
     "order" : 1
   } ],
   "revisionLog" : "revisionLog",
-  "investigationBrief" : "investigationBrief",
   "type" : "Main",
   "title" : "title",
-  "preparationBrief" : "preparationBrief",
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "prep" : "prep",
   "id" : 0
 };
     if (Object.keys(examples).length > 0) {
