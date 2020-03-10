@@ -20,11 +20,13 @@ exports.addBrick = function(body) {
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 6,
-    "questionType" : "None"
+    "questionType" : "None",
+    "order" : 1
   }, {
     "contentBlocks" : "contentBlocks",
     "id" : 6,
-    "questionType" : "None"
+    "questionType" : "None",
+    "order" : 1
   } ],
   "revisionLog" : "revisionLog",
   "investigationBrief" : "investigationBrief",
@@ -63,11 +65,13 @@ exports.brickIdGET = function(id) {
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 6,
-    "questionType" : "None"
+    "questionType" : "None",
+    "order" : 1
   }, {
     "contentBlocks" : "contentBlocks",
     "id" : 6,
-    "questionType" : "None"
+    "questionType" : "None",
+    "order" : 1
   } ],
   "revisionLog" : "revisionLog",
   "investigationBrief" : "investigationBrief",
@@ -125,11 +129,13 @@ exports.updateBrick = function(body) {
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 6,
-    "questionType" : "None"
+    "questionType" : "None",
+    "order" : 1
   }, {
     "contentBlocks" : "contentBlocks",
     "id" : 6,
-    "questionType" : "None"
+    "questionType" : "None",
+    "order" : 1
   } ],
   "revisionLog" : "revisionLog",
   "investigationBrief" : "investigationBrief",

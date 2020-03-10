@@ -134,6 +134,9 @@ definitions:
       id:
         type: "integer"
         format: "int64"
+      order:
+        type: "integer"
+        format: "int64"
       contentBlocks:
         type: "string"
       questionType:
@@ -156,6 +159,7 @@ definitions:
       contentBlocks: "contentBlocks"
       id: 6
       questionType: "None"
+      order: 1
   Brick:
     type: "object"
     required:
@@ -217,9 +221,11 @@ definitions:
       - contentBlocks: "contentBlocks"
         id: 6
         questionType: "None"
+        order: 1
       - contentBlocks: "contentBlocks"
         id: 6
         questionType: "None"
+        order: 1
       revisionLog: "revisionLog"
       investigationBrief: "investigationBrief"
       type: "Main"
