@@ -212,6 +212,8 @@ definitions:
         - "Main"
       subject:
         type: "string"
+      locked:
+        type: "boolean"
       alternativeSubject:
         type: "string"
       topic:
@@ -262,6 +264,7 @@ definitions:
       topic: "topic"
       prep: "prep"
       id: 0
+      locked: true
   ApiResponse:
     type: "object"
     properties:

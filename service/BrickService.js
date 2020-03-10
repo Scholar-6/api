@@ -35,8 +35,9 @@ exports.addBrick = function(body) {
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "id" : 0,
+  "locked" : true,
   "prep" : "prep",
-  "id" : 0
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -93,8 +94,9 @@ exports.brickIdGET = function(id) {
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "id" : 0,
+  "locked" : true,
   "prep" : "prep",
-  "id" : 0
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -175,6 +177,7 @@ exports.updateBrick = function(body) {
   "brickLength" : "0",
   "alternativeTopics" : "alternativeTopics",
   "topic" : "topic",
+  "locked" : true,
   "prep" : "prep",
   "id" : 0
 };
