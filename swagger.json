@@ -58,6 +58,25 @@
       }
     },
     "/brick/{id}": {
+      "delete": {
+        "tags": [
+          "brick"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "summary": "Delete specific brick by id",
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      },
       "get": {
         "tags": [
           "brick"
