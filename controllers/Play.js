@@ -4,7 +4,8 @@ var utils = require('../utils/writer.js');
 var Play = require('../service/PlayService');
 
 module.exports.playAttemptPOST = function playAttemptPOST (req, res, next) {
-  Play.playAttemptPOST()
+  var body = req.swagger.params['body'].value;
+  Play.playAttemptPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -14,7 +15,8 @@ module.exports.playAttemptPOST = function playAttemptPOST (req, res, next) {
 };
 
 module.exports.playAttemptPUT = function playAttemptPUT (req, res, next) {
-  Play.playAttemptPUT()
+  var body = req.swagger.params['body'].value;
+  Play.playAttemptPUT(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })

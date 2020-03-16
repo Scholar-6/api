@@ -47,6 +47,17 @@
           "play"
         ],
         "summary": "Create attempt",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "BrickAttempt object that needs to be created",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BrickAttempt"
+            }
+          }
+        ],
         "responses" : {
           "200": {
             "description" : "ok"
@@ -58,6 +69,17 @@
           "play"
         ],
         "summary": "Update attempt",
+          "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "BrickAttempt model object that needs to be updated",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BrickAttemptUpdateModel"
+            }
+          }
+        ],
         "responses" : {
           "200": {
             "description" : "ok"
@@ -425,7 +447,18 @@
         },
       },
       "xml": {
-        "name": "Question"
+        "name": "BrickAttempt"
+      }
+    },
+    "BrickAttemptUpdateModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "body": {
+          "$ref": "#/definitions/BrickAttempt"
+        },
       }
     },
     "ApiResponse": {
