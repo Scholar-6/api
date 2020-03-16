@@ -4,9 +4,10 @@
 /**
  * Create attempt
  *
+ * body BrickAttempt BrickAttempt object that needs to be created
  * no response value expected for this operation
  **/
-exports.playAttemptPOST = function() {
+exports.playAttemptPOST = function(body) {
   return new Promise(function(resolve, reject) {
     resolve();
   });
@@ -16,9 +17,10 @@ exports.playAttemptPOST = function() {
 /**
  * Update attempt
  *
+ * body BrickAttemptUpdateModel BrickAttempt model object that needs to be updated
  * no response value expected for this operation
  **/
-exports.playAttemptPUT = function() {
+exports.playAttemptPUT = function(body) {
   return new Promise(function(resolve, reject) {
     resolve();
   });

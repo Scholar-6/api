@@ -37,7 +37,13 @@ paths:
       - "play"
       summary: "Create attempt"
       operationId: "playAttemptPOST"
-      parameters: []
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "BrickAttempt object that needs to be created"
+        required: true
+        schema:
+          $ref: "#/definitions/BrickAttempt"
       responses:
         "200":
           description: "ok"
@@ -47,7 +53,13 @@ paths:
       - "play"
       summary: "Update attempt"
       operationId: "playAttemptPUT"
-      parameters: []
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "BrickAttempt model object that needs to be updated"
+        required: true
+        schema:
+          $ref: "#/definitions/BrickAttemptUpdateModel"
       responses:
         "200":
           description: "ok"
@@ -338,7 +350,14 @@ definitions:
         items:
           $ref: "#/definitions/ComponentAttempt"
     xml:
-      name: "Question"
+      name: "BrickAttempt"
+  BrickAttemptUpdateModel:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      body:
+        $ref: "#/definitions/BrickAttempt"
   ApiResponse:
     type: "object"
     properties:
