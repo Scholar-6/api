@@ -18,6 +18,40 @@ schemes:
 - "https"
 - "http"
 paths:
+  /play/attempts:
+    get:
+      tags:
+      - "play"
+      summary: "Get all attempts"
+      operationId: "playAttemptsGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBrickAttempts"
+      x-swagger-router-controller: "Play"
+  /play/attempt:
+    post:
+      tags:
+      - "play"
+      summary: "Create attempt"
+      operationId: "playAttemptPOST"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Play"
+    put:
+      tags:
+      - "play"
+      summary: "Update attempt"
+      operationId: "playAttemptPUT"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Play"
   /bricks:
     get:
       tags:
@@ -151,6 +185,10 @@ definitions:
     type: "array"
     items:
       $ref: "#/definitions/Brick"
+  ArrayOfBrickAttempts:
+    type: "array"
+    items:
+      $ref: "#/definitions/BrickAttempt"
   ArrayOfQuestions:
     type: "array"
     items:
@@ -265,6 +303,42 @@ definitions:
       prep: "prep"
       id: 0
       locked: true
+  ComponentAttempt:
+    type: "object"
+    properties:
+      answer:
+        type: "object"
+        properties: {}
+      correct:
+        type: "boolean"
+      marks:
+        type: "number"
+      maxMarks:
+        type: "number"
+  BrickAttempt:
+    type: "object"
+    properties:
+      brickId:
+        type: "integer"
+        format: "int64"
+      score:
+        type: "integer"
+        format: "int64"
+      oldScore:
+        type: "integer"
+        format: "int64"
+      maxScore:
+        type: "integer"
+        format: "int64"
+      studentId:
+        type: "integer"
+        format: "int64"
+      answers:
+        type: "array"
+        items:
+          $ref: "#/definitions/ComponentAttempt"
+    xml:
+      name: "Question"
   ApiResponse:
     type: "object"
     properties:

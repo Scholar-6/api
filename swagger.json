@@ -25,6 +25,46 @@
     "http"
   ],
   "paths": {
+    "/play/attempts": {
+      "get": {
+        "tags": [
+          "play"
+        ],
+        "summary": "Get all attempts",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfBrickAttempts"
+            }
+          }
+        }
+      }
+    },
+    "/play/attempt": {
+      "post" : {
+        "tags": [
+          "play"
+        ],
+        "summary": "Create attempt",
+        "responses" : {
+          "200": {
+            "description" : "ok"
+          }
+        }
+      },
+       "put" : {
+        "tags": [
+          "play"
+        ],
+        "summary": "Update attempt",
+        "responses" : {
+          "200": {
+            "description" : "ok"
+          }
+        }
+      }
+    },
     "/bricks": {
       "get": {
         "tags": [
@@ -214,6 +254,12 @@
         "$ref": "#/definitions/Brick"
       }
     },
+    "ArrayOfBrickAttempts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/BrickAttempt"
+      }
+    },
     "ArrayOfQuestions": {
       "type": "array",
       "items": {
@@ -329,6 +375,57 @@
       },
       "xml": {
         "name": "Brick"
+      }
+    },
+    "ComponentAttempt" : {
+      "type": "object",
+      "properties": {
+        "answer" : {
+          "type": "object"
+        },
+        "correct": {
+          "type": "boolean"
+        },
+        "marks": {
+          "type": "number"
+        },
+        "maxMarks": {
+          "type": "number"
+        }
+      }
+    },
+    "BrickAttempt": {
+      "type": "object",
+      "properties": {
+        "brickId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "score": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "oldScore": {
+          "type": "integer",
+          "format": "int64"
+        },
+       "maxScore": {
+          "type": "integer",
+          "format": "int64"
+        },
+       "studentId": {
+          "type": "integer",
+          "format": "int64"
+        },
+       "answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ComponentAttempt"
+          }
+        },
+      },
+      "xml": {
+        "name": "Question"
       }
     },
     "ApiResponse": {
