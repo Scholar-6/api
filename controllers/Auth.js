@@ -3,8 +3,9 @@
 var utils = require('../utils/writer.js');
 var Auth = require('../service/AuthService');
 
-module.exports.authGoogleGET = function authGoogleGET (req, res, next) {
-  Auth.authGoogleGET()
+module.exports.authGoogleLoginreturnUrlGET = function authGoogleLoginreturnUrlGET (req, res, next) {
+  var returnUrl = req.swagger.params['returnUrl'].value;
+  Auth.authGoogleLoginreturnUrlGET(returnUrl)
     .then(function (response) {
       utils.writeJson(res, response);
     })

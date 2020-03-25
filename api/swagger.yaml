@@ -80,13 +80,17 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Auth"
-  /auth/google:
+  /auth/google/login/:returnUrl:
     get:
       tags:
       - "auth"
       summary: "Login by Google"
-      operationId: "authGoogleGET"
-      parameters: []
+      operationId: "authGoogleLoginreturnUrlGET"
+      parameters:
+      - name: "returnUrl"
+        in: "path"
+        required: true
+        type: "string"
       responses:
         "200":
           description: "ok"

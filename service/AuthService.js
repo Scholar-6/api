@@ -4,9 +4,10 @@
 /**
  * Login by Google
  *
+ * returnUrl String 
  * no response value expected for this operation
  **/
-exports.authGoogleGET = function() {
+exports.authGoogleLoginreturnUrlGET = function(returnUrl) {
   return new Promise(function(resolve, reject) {
     resolve();
   });

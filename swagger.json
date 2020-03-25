@@ -150,12 +150,20 @@
         }
       }
     },
-    "/auth/google": {
+    "/auth/google/login/:returnUrl": {
       "get": {
         "tags": [
           "auth"
         ],
         "summary": "Login by Google",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "returnUrl",
+            "type": "string",
+            "required": true
+          }
+        ],
         "responses": {
           "200": {
             "description": "ok",
