@@ -18,6 +18,147 @@ schemes:
 - "https"
 - "http"
 paths:
+  /auth/login:
+    post:
+      tags:
+      - "auth"
+      summary: "Login user"
+      operationId: "authLoginPOST"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User password"
+        required: true
+        schema:
+          $ref: "#/definitions/body"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Auth"
+  /auth/login/:userType:
+    post:
+      tags:
+      - "auth"
+      summary: "Login user"
+      operationId: "authLoginuserTypePOST"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User password"
+        required: true
+        schema:
+          $ref: "#/definitions/body_1"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Auth"
+  /auth/signUp:
+    post:
+      tags:
+      - "auth"
+      summary: "Login user"
+      operationId: "authSignUpPOST"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User password"
+        required: true
+        schema:
+          $ref: "#/definitions/body_2"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Auth"
+  /auth/logout:
+    post:
+      tags:
+      - "auth"
+      summary: "Login out current user"
+      operationId: "authLogoutPOST"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Auth"
+  /auth/google:
+    get:
+      tags:
+      - "auth"
+      summary: "Login by Google"
+      operationId: "authGoogleGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Auth"
+  /fileUpload:
+    post:
+      tags:
+      - "file"
+      summary: "Uploads a file."
+      operationId: "fileUploadPOST"
+      consumes:
+      - "multipart/form-data"
+      parameters:
+      - name: "file"
+        in: "formData"
+        description: "The file to upload."
+        required: false
+        type: "file"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "File"
+  /user/tutorialShowed:
+    put:
+      tags:
+      - "user"
+      summary: "Mark tutoria as showed for current user"
+      operationId: "userTutorialShowedPUT"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
+  /user/current:
+    get:
+      tags:
+      - "user"
+      summary: "Get user by id"
+      operationId: "userCurrentGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/User"
+      x-swagger-router-controller: "User"
+  /user/:userId:
+    get:
+      tags:
+      - "user"
+      summary: "Get current user"
+      operationId: "useruserIdGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/User"
+      x-swagger-router-controller: "User"
+  /play/brickSummary/:brickId:
+    get:
+      tags:
+      - "play"
+      summary: "Get brick summary"
+      operationId: "playBrickSummarybrickIdGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/BrickSummaryModel"
+      x-swagger-router-controller: "Play"
   /play/attempts:
     get:
       tags:
@@ -351,6 +492,159 @@ definitions:
           $ref: "#/definitions/ComponentAttempt"
     xml:
       name: "BrickAttempt"
+  Subject:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+    xml:
+      name: "Subject"
+    example:
+      name: "name"
+      id: 5
+  User:
+    type: "object"
+    properties:
+      createBricks:
+        type: "array"
+        items:
+          $ref: "#/definitions/Brick"
+      editedBricks:
+        type: "array"
+        items:
+          $ref: "#/definitions/Brick"
+      subjects:
+        type: "array"
+        items:
+          $ref: "#/definitions/Subject"
+      email:
+        type: "string"
+      firstName:
+        type: "string"
+      id:
+        type: "integer"
+        format: "int64"
+      lastName:
+        type: "string"
+      tutorialPassed:
+        type: "boolean"
+      type:
+        type: "integer"
+    xml:
+      name: "User"
+    example:
+      editedBricks:
+      - alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject: "subject"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        revisionLog: "revisionLog"
+        type: "Main"
+        title: "title"
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+      - alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject: "subject"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        revisionLog: "revisionLog"
+        type: "Main"
+        title: "title"
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+      firstName: "firstName"
+      lastName: "lastName"
+      subjects:
+      - name: "name"
+        id: 5
+      - name: "name"
+        id: 5
+      createBricks:
+      - alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject: "subject"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        revisionLog: "revisionLog"
+        type: "Main"
+        title: "title"
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+      - alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject: "subject"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        revisionLog: "revisionLog"
+        type: "Main"
+        title: "title"
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+      id: 5
+      type: 2
+      tutorialPassed: true
+      email: "email"
   BrickAttemptUpdateModel:
     type: "object"
     properties:
@@ -358,6 +652,46 @@ definitions:
         type: "string"
       body:
         $ref: "#/definitions/BrickAttempt"
+  BrickSummaryModel:
+    type: "object"
+    properties:
+      totalUsers:
+        type: "integer"
+      averageScore:
+        type: "integer"
+      highScore:
+        type: "integer"
+      brick:
+        $ref: "#/definitions/Brick"
+    example:
+      highScore: 1
+      totalUsers: 0
+      brick:
+        alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject: "subject"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        - contentBlocks: "contentBlocks"
+          id: 6
+          questionType: "None"
+          order: 1
+        revisionLog: "revisionLog"
+        type: "Main"
+        title: "title"
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+      averageScore: 6
   ApiResponse:
     type: "object"
     properties:
@@ -367,6 +701,39 @@ definitions:
       type:
         type: "string"
       message:
+        type: "string"
+  body:
+    type: "object"
+    required:
+    - "email"
+    - "password"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+  body_1:
+    type: "object"
+    required:
+    - "email"
+    - "password"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+  body_2:
+    type: "object"
+    required:
+    - "confirmPassword"
+    - "email"
+    - "password"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+      confirmPassword:
         type: "string"
 externalDocs:
   description: "Find out more about Brillder"

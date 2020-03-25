@@ -25,6 +25,229 @@
     "http"
   ],
   "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login user",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User password",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "email",
+                "password"
+              ],
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/auth/login/:userType": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login user",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User password",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "email",
+                "password"
+              ],
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/auth/signUp": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login user",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User password",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": [
+                "email",
+                "password",
+                "confirmPassword"
+              ],
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "confirmPassword": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login out current user",
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/auth/google": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login by Google",
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/fileUpload": {
+      "post": {
+        "tags": [
+          "file"
+        ],
+        "summary": "Uploads a file.",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file",
+            "description": "The file to upload."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/user/tutorialShowed": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Mark tutoria as showed for current user",
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/user/current": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get user by id",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/user/:userId": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Get current user",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/play/brickSummary/:brickId": {
+      "get": {
+        "tags": [
+          "play"
+        ],
+        "summary": "Get brick summary",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/BrickSummaryModel"
+            }
+          }
+        }
+      }
+    },
     "/play/attempts": {
       "get": {
         "tags": [
@@ -42,7 +265,7 @@
       }
     },
     "/play/attempt": {
-      "post" : {
+      "post": {
         "tags": [
           "play"
         ],
@@ -58,18 +281,18 @@
             }
           }
         ],
-        "responses" : {
+        "responses": {
           "200": {
-            "description" : "ok"
+            "description": "ok"
           }
         }
       },
-       "put" : {
+      "put": {
         "tags": [
           "play"
         ],
         "summary": "Update attempt",
-          "parameters": [
+        "parameters": [
           {
             "in": "body",
             "name": "body",
@@ -80,9 +303,9 @@
             }
           }
         ],
-        "responses" : {
+        "responses": {
           "200": {
-            "description" : "ok"
+            "description": "ok"
           }
         }
       }
@@ -340,17 +563,17 @@
         "brickLength": {
           "type": "string",
           "enum": [
-            "0", 
+            "0",
             "20",
             "40",
             "60"
-            ]
+          ]
         },
         "type": {
           "type": "string",
           "enum": [
             "Main"
-            ]
+          ]
         },
         "subject": {
           "type": "string"
@@ -399,10 +622,10 @@
         "name": "Brick"
       }
     },
-    "ComponentAttempt" : {
+    "ComponentAttempt": {
       "type": "object",
       "properties": {
-        "answer" : {
+        "answer": {
           "type": "object"
         },
         "correct": {
@@ -431,15 +654,15 @@
           "type": "integer",
           "format": "int64"
         },
-       "maxScore": {
+        "maxScore": {
           "type": "integer",
           "format": "int64"
         },
-       "studentId": {
+        "studentId": {
           "type": "integer",
           "format": "int64"
         },
-       "answers": {
+        "answers": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ComponentAttempt"
@@ -450,6 +673,72 @@
         "name": "BrickAttempt"
       }
     },
+    "Subject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string",
+        },
+      },
+      "xml": {
+        "name": "Subject"
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "createBricks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Brick"
+          }
+        },
+        "editedBricks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Brick"
+          }
+        },
+        "subjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Subject"
+          }
+        },
+        "email": {
+          "type": "string",
+        },
+        "firstName": {
+          "type": "string",
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "tutorialPassed": {
+          "type": "boolean",
+        },
+        "type": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
     "BrickAttemptUpdateModel": {
       "type": "object",
       "properties": {
@@ -458,6 +747,23 @@
         },
         "body": {
           "$ref": "#/definitions/BrickAttempt"
+        },
+      }
+    },
+    "BrickSummaryModel": {
+      "type": "object",
+      "properties": {
+        "totalUsers": {
+          "type": "integer"
+        },
+        "averageScore": {
+          "type": "integer"
+        },
+        "highScore": {
+          "type": "integer"
+        },
+        "brick": {
+          "$ref": "#/definitions/Brick"
         },
       }
     },

@@ -44,3 +44,53 @@ exports.playAttemptsGET = function() {
   });
 }
 
+
+/**
+ * Get brick summary
+ *
+ * returns BrickSummaryModel
+ **/
+exports.playBrickSummarybrickIdGET = function() {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "highScore" : 1,
+  "totalUsers" : 0,
+  "brick" : {
+    "alternativeSubject" : "alternativeSubject",
+    "subTopic" : "subTopic",
+    "brief" : "brief",
+    "synthesis" : "synthesis",
+    "openQuestion" : "openQuestion",
+    "subject" : "subject",
+    "questions" : [ {
+      "contentBlocks" : "contentBlocks",
+      "id" : 6,
+      "questionType" : "None",
+      "order" : 1
+    }, {
+      "contentBlocks" : "contentBlocks",
+      "id" : 6,
+      "questionType" : "None",
+      "order" : 1
+    } ],
+    "revisionLog" : "revisionLog",
+    "type" : "Main",
+    "title" : "title",
+    "brickLength" : "0",
+    "alternativeTopics" : "alternativeTopics",
+    "topic" : "topic",
+    "prep" : "prep",
+    "id" : 0,
+    "locked" : true
+  },
+  "averageScore" : 6
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+

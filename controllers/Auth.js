@@ -1,11 +1,21 @@
 'use strict';
 
 var utils = require('../utils/writer.js');
-var Play = require('../service/PlayService');
+var Auth = require('../service/AuthService');
 
-module.exports.playAttemptPOST = function playAttemptPOST (req, res, next) {
+module.exports.authGoogleGET = function authGoogleGET (req, res, next) {
+  Auth.authGoogleGET()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.authLoginPOST = function authLoginPOST (req, res, next) {
   var body = req.swagger.params['body'].value;
-  Play.playAttemptPOST(body)
+  Auth.authLoginPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -14,9 +24,9 @@ module.exports.playAttemptPOST = function playAttemptPOST (req, res, next) {
     });
 };
 
-module.exports.playAttemptPUT = function playAttemptPUT (req, res, next) {
+module.exports.authLoginuserTypePOST = function authLoginuserTypePOST (req, res, next) {
   var body = req.swagger.params['body'].value;
-  Play.playAttemptPUT(body)
+  Auth.authLoginuserTypePOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -25,8 +35,8 @@ module.exports.playAttemptPUT = function playAttemptPUT (req, res, next) {
     });
 };
 
-module.exports.playAttemptsGET = function playAttemptsGET (req, res, next) {
-  Play.playAttemptsGET()
+module.exports.authLogoutPOST = function authLogoutPOST (req, res, next) {
+  Auth.authLogoutPOST()
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -35,8 +45,9 @@ module.exports.playAttemptsGET = function playAttemptsGET (req, res, next) {
     });
 };
 
-module.exports.playBrickSummarybrickIdGET = function playBrickSummarybrickIdGET (req, res, next) {
-  Play.playBrickSummarybrickIdGET()
+module.exports.authSignUpPOST = function authSignUpPOST (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  Auth.authSignUpPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })
