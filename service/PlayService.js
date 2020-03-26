@@ -65,18 +65,19 @@ exports.playBrickSummarybrickIdGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",

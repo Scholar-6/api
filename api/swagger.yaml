@@ -400,9 +400,9 @@ definitions:
       name: "Question"
     example:
       contentBlocks: "contentBlocks"
-      id: 6
+      id: 1
       questionType: "None"
-      order: 1
+      order: 5
   Brick:
     type: "object"
     required:
@@ -413,6 +413,9 @@ definitions:
     - "type"
     properties:
       id:
+        type: "integer"
+        format: "int64"
+      attemptsCount:
         type: "integer"
         format: "int64"
       brickLength:
@@ -465,16 +468,17 @@ definitions:
       subject: "subject"
       questions:
       - contentBlocks: "contentBlocks"
-        id: 6
+        id: 1
         questionType: "None"
-        order: 1
+        order: 5
       - contentBlocks: "contentBlocks"
-        id: 6
+        id: 1
         questionType: "None"
-        order: 1
+        order: 5
       revisionLog: "revisionLog"
       type: "Main"
       title: "title"
+      attemptsCount: 6
       brickLength: "0"
       alternativeTopics: "alternativeTopics"
       topic: "topic"
@@ -570,16 +574,17 @@ definitions:
         subject: "subject"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
         topic: "topic"
@@ -594,16 +599,17 @@ definitions:
         subject: "subject"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
         topic: "topic"
@@ -626,16 +632,17 @@ definitions:
         subject: "subject"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
         topic: "topic"
@@ -650,24 +657,25 @@ definitions:
         subject: "subject"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
         topic: "topic"
         prep: "prep"
         id: 0
         locked: true
-      id: 5
-      type: 2
+      id: 2
+      type: 7
       tutorialPassed: true
       email: "email"
   BrickAttemptUpdateModel:
@@ -700,16 +708,17 @@ definitions:
         subject: "subject"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         - contentBlocks: "contentBlocks"
-          id: 6
+          id: 1
           questionType: "None"
-          order: 1
+          order: 5
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
         topic: "topic"

@@ -19,18 +19,19 @@ exports.userCurrentGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -46,18 +47,19 @@ exports.userCurrentGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -83,18 +85,19 @@ exports.userCurrentGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -110,18 +113,19 @@ exports.userCurrentGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -129,8 +133,8 @@ exports.userCurrentGET = function() {
     "id" : 0,
     "locked" : true
   } ],
-  "id" : 5,
-  "type" : 2,
+  "id" : 2,
+  "type" : 7,
   "tutorialPassed" : true,
   "email" : "email"
 };
@@ -173,18 +177,19 @@ exports.useruserIdGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -200,18 +205,19 @@ exports.useruserIdGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -237,18 +243,19 @@ exports.useruserIdGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -264,18 +271,19 @@ exports.useruserIdGET = function() {
     "subject" : "subject",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 6,
+      "id" : 1,
       "questionType" : "None",
-      "order" : 1
+      "order" : 5
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
     "topic" : "topic",
@@ -283,8 +291,8 @@ exports.useruserIdGET = function() {
     "id" : 0,
     "locked" : true
   } ],
-  "id" : 5,
-  "type" : 2,
+  "id" : 2,
+  "type" : 7,
   "tutorialPassed" : true,
   "email" : "email"
 };

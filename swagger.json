@@ -594,6 +594,10 @@
           "type": "integer",
           "format": "int64"
         },
+        "attemptsCount": {
+          "type": "integer",
+          "format": "int64"
+        },
         "brickLength": {
           "type": "string",
           "enum": [
