@@ -222,6 +222,27 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/{status}:
+    get:
+      tags:
+      - "brick"
+      summary: "Get all bricks"
+      operationId: "bricksStatusGET"
+      parameters:
+      - name: "status"
+        in: "path"
+        required: true
+        type: "integer"
+        enum:
+        - 1
+        - 2
+        - 3
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /bricks/currentUser:
     get:
       tags:

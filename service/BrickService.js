@@ -144,6 +144,25 @@ exports.bricksGET = function() {
 
 
 /**
+ * Get all bricks
+ *
+ * status Integer 
+ * returns ArrayOfBricks
+ **/
+exports.bricksStatusGET = function(status) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Update an existing brick
  * 
  *
