@@ -108,6 +108,25 @@ exports.brickIdGET = function(id) {
 
 
 /**
+ * Get all bricks
+ *
+ * status Integer 
+ * returns ArrayOfBricks
+ **/
+exports.bricksByStatusStatusGET = function(status) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Get all bricks of current user
  *
  * returns ArrayOfBricks
@@ -131,25 +150,6 @@ exports.bricksCurrentUserGET = function() {
  * returns ArrayOfBricks
  **/
 exports.bricksGET = function() {
-  return new Promise(function(resolve, reject) {
-    var examples = {};
-    examples['application/json'] = "";
-    if (Object.keys(examples).length > 0) {
-      resolve(examples[Object.keys(examples)[0]]);
-    } else {
-      resolve();
-    }
-  });
-}
-
-
-/**
- * Get all bricks
- *
- * status Integer 
- * returns ArrayOfBricks
- **/
-exports.bricksStatusGET = function(status) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = "";

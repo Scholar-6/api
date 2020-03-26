@@ -222,12 +222,12 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
-  /bricks/{status}:
+  /bricks/byStatus/{status}:
     get:
       tags:
       - "brick"
       summary: "Get all bricks"
-      operationId: "bricksStatusGET"
+      operationId: "bricksByStatusStatusGET"
       parameters:
       - name: "status"
         in: "path"

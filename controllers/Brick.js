@@ -36,6 +36,17 @@ module.exports.brickIdGET = function brickIdGET (req, res, next) {
     });
 };
 
+module.exports.bricksByStatusStatusGET = function bricksByStatusStatusGET (req, res, next) {
+  var status = req.swagger.params['status'].value;
+  Brick.bricksByStatusStatusGET(status)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.bricksCurrentUserGET = function bricksCurrentUserGET (req, res, next) {
   Brick.bricksCurrentUserGET()
     .then(function (response) {
@@ -48,17 +59,6 @@ module.exports.bricksCurrentUserGET = function bricksCurrentUserGET (req, res, n
 
 module.exports.bricksGET = function bricksGET (req, res, next) {
   Brick.bricksGET()
-    .then(function (response) {
-      utils.writeJson(res, response);
-    })
-    .catch(function (response) {
-      utils.writeJson(res, response);
-    });
-};
-
-module.exports.bricksStatusGET = function bricksStatusGET (req, res, next) {
-  var status = req.swagger.params['status'].value;
-  Brick.bricksStatusGET(status)
     .then(function (response) {
       utils.writeJson(res, response);
     })

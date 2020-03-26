@@ -334,7 +334,7 @@
         }
       }
     },
-    "/bricks/{status}": {
+    "/bricks/byStatus/{status}": {
       "get": {
         "tags": [
           "brick"
