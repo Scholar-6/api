@@ -150,7 +150,7 @@
         }
       }
     },
-    "/auth/google/login/:returnUrl": {
+    "/auth/google/login/{returnUrl}": {
       "get": {
         "tags": [
           "auth"
