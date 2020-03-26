@@ -25,6 +25,22 @@
     "http"
   ],
   "paths": {
+    "/subjects": {
+      "get": {
+        "tags": [
+          "subject"
+        ],
+        "summary": "Get all subjects",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfSubjects"
+            }
+          }
+        }
+      }
+    },
     "/auth/login": {
       "post": {
         "tags": [
@@ -345,7 +361,7 @@
             "in": "path",
             "name": "status",
             "type": "integer",
-            "enum": [1,2,3
+            "enum": [1,2,3, 4
             ],
             "required": true
           }
@@ -533,6 +549,12 @@
         "$ref": "#/definitions/Brick"
       }
     },
+    "ArrayOfSubjects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Subject"
+      }
+    },
     "ArrayOfBrickAttempts": {
       "type": "array",
       "items": {
@@ -613,8 +635,11 @@
             "Main"
           ]
         },
+        "subjectId": {
+          "type": "integer"
+        },
         "subject": {
-          "type": "string"
+          "$ref": "#/definitions/Subject"
         },
         "locked": {
           "type": "boolean"
@@ -744,7 +769,7 @@
         "subjects": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Subject"
+            "$ref": "#/definitions/ArrayOfSubjects"
           }
         },
         "email": {

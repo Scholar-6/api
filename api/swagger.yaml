@@ -18,6 +18,19 @@ schemes:
 - "https"
 - "http"
 paths:
+  /subjects:
+    get:
+      tags:
+      - "subject"
+      summary: "Get all subjects"
+      operationId: "subjectsGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfSubjects"
+      x-swagger-router-controller: "Subject"
   /auth/login:
     post:
       tags:
@@ -237,6 +250,7 @@ paths:
         - 1
         - 2
         - 3
+        - 4
       responses:
         "200":
           description: "ok"
@@ -363,6 +377,10 @@ definitions:
     type: "array"
     items:
       $ref: "#/definitions/Brick"
+  ArrayOfSubjects:
+    type: "array"
+    items:
+      $ref: "#/definitions/Subject"
   ArrayOfBrickAttempts:
     type: "array"
     items:
@@ -400,9 +418,9 @@ definitions:
       name: "Question"
     example:
       contentBlocks: "contentBlocks"
-      id: 1
+      id: 5
       questionType: "None"
-      order: 5
+      order: 2
   Brick:
     type: "object"
     required:
@@ -429,8 +447,10 @@ definitions:
         type: "string"
         enum:
         - "Main"
+      subjectId:
+        type: "integer"
       subject:
-        type: "string"
+        $ref: "#/definitions/Subject"
       locked:
         type: "boolean"
       alternativeSubject:
@@ -465,19 +485,22 @@ definitions:
       brief: "brief"
       synthesis: "synthesis"
       openQuestion: "openQuestion"
-      subject: "subject"
+      subject:
+        name: "name"
+        id: 5
       questions:
       - contentBlocks: "contentBlocks"
-        id: 1
+        id: 5
         questionType: "None"
-        order: 5
+        order: 2
       - contentBlocks: "contentBlocks"
-        id: 1
+        id: 5
         questionType: "None"
-        order: 5
+        order: 2
       revisionLog: "revisionLog"
       type: "Main"
       title: "title"
+      subjectId: 1
       attemptsCount: 6
       brickLength: "0"
       alternativeTopics: "alternativeTopics"
@@ -548,7 +571,7 @@ definitions:
       subjects:
         type: "array"
         items:
-          $ref: "#/definitions/Subject"
+          $ref: "#/definitions/ArrayOfSubjects"
       email:
         type: "string"
       firstName:
@@ -571,19 +594,22 @@ definitions:
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
-        subject: "subject"
+        subject:
+          name: "name"
+          id: 5
         questions:
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        subjectId: 1
         attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
@@ -596,19 +622,22 @@ definitions:
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
-        subject: "subject"
+        subject:
+          name: "name"
+          id: 5
         questions:
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        subjectId: 1
         attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
@@ -619,29 +648,30 @@ definitions:
       firstName: "firstName"
       lastName: "lastName"
       subjects:
-      - name: "name"
-        id: 5
-      - name: "name"
-        id: 5
+      - ""
+      - ""
       createBricks:
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
-        subject: "subject"
+        subject:
+          name: "name"
+          id: 5
         questions:
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        subjectId: 1
         attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
@@ -654,19 +684,22 @@ definitions:
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
-        subject: "subject"
+        subject:
+          name: "name"
+          id: 5
         questions:
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        subjectId: 1
         attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
@@ -674,8 +707,8 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
-      id: 2
-      type: 7
+      id: 7
+      type: 9
       tutorialPassed: true
       email: "email"
   BrickAttemptUpdateModel:
@@ -705,19 +738,22 @@ definitions:
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
-        subject: "subject"
+        subject:
+          name: "name"
+          id: 5
         questions:
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         - contentBlocks: "contentBlocks"
-          id: 1
+          id: 5
           questionType: "None"
-          order: 5
+          order: 2
         revisionLog: "revisionLog"
         type: "Main"
         title: "title"
+        subjectId: 1
         attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"

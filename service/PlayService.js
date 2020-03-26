@@ -62,21 +62,25 @@ exports.playBrickSummarybrickIdGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",

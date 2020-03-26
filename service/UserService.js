@@ -16,21 +16,25 @@ exports.userCurrentGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -44,21 +48,25 @@ exports.userCurrentGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -69,34 +77,32 @@ exports.userCurrentGET = function() {
   } ],
   "firstName" : "firstName",
   "lastName" : "lastName",
-  "subjects" : [ {
-    "name" : "name",
-    "id" : 5
-  }, {
-    "name" : "name",
-    "id" : 5
-  } ],
+  "subjects" : [ "", "" ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -110,21 +116,25 @@ exports.userCurrentGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -133,8 +143,8 @@ exports.userCurrentGET = function() {
     "id" : 0,
     "locked" : true
   } ],
-  "id" : 2,
-  "type" : 7,
+  "id" : 7,
+  "type" : 9,
   "tutorialPassed" : true,
   "email" : "email"
 };
@@ -174,21 +184,25 @@ exports.useruserIdGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -202,21 +216,25 @@ exports.useruserIdGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -227,34 +245,32 @@ exports.useruserIdGET = function() {
   } ],
   "firstName" : "firstName",
   "lastName" : "lastName",
-  "subjects" : [ {
-    "name" : "name",
-    "id" : 5
-  }, {
-    "name" : "name",
-    "id" : 5
-  } ],
+  "subjects" : [ "", "" ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -268,21 +284,25 @@ exports.useruserIdGET = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "subject" : "subject",
+    "subject" : {
+      "name" : "name",
+      "id" : 5
+    },
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 1,
+      "id" : 5,
       "questionType" : "None",
-      "order" : 5
+      "order" : 2
     } ],
     "revisionLog" : "revisionLog",
     "type" : "Main",
     "title" : "title",
+    "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -291,8 +311,8 @@ exports.useruserIdGET = function() {
     "id" : 0,
     "locked" : true
   } ],
-  "id" : 2,
-  "type" : 7,
+  "id" : 7,
+  "type" : 9,
   "tutorialPassed" : true,
   "email" : "email"
 };
