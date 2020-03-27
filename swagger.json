@@ -674,6 +674,12 @@
         "openQuestion": {
           "type": "string"
         },
+        "created": {
+          "type": "string"
+        },
+        "updated": {
+          "type": "string"
+        },
         "questions": {
           "type": "array",
           "items": {

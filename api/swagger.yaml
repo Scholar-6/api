@@ -473,6 +473,10 @@ definitions:
         type: "string"
       openQuestion:
         type: "string"
+      created:
+        type: "string"
+      updated:
+        type: "string"
       questions:
         type: "array"
         items:
@@ -488,6 +492,7 @@ definitions:
       subject:
         name: "name"
         id: 5
+      created: "created"
       questions:
       - contentBlocks: "contentBlocks"
         id: 5
@@ -508,6 +513,7 @@ definitions:
       prep: "prep"
       id: 0
       locked: true
+      updated: "updated"
   ComponentAttempt:
     type: "object"
     properties:
@@ -597,6 +603,7 @@ definitions:
         subject:
           name: "name"
           id: 5
+        created: "created"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -617,6 +624,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
+        updated: "updated"
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
         brief: "brief"
@@ -625,6 +633,7 @@ definitions:
         subject:
           name: "name"
           id: 5
+        created: "created"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -645,6 +654,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
+        updated: "updated"
       firstName: "firstName"
       lastName: "lastName"
       subjects:
@@ -659,6 +669,7 @@ definitions:
         subject:
           name: "name"
           id: 5
+        created: "created"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -679,6 +690,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
+        updated: "updated"
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
         brief: "brief"
@@ -687,6 +699,7 @@ definitions:
         subject:
           name: "name"
           id: 5
+        created: "created"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -707,6 +720,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
+        updated: "updated"
       id: 7
       type: 9
       tutorialPassed: true
@@ -741,6 +755,7 @@ definitions:
         subject:
           name: "name"
           id: 5
+        created: "created"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -761,6 +776,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
+        updated: "updated"
       averageScore: 6
   ApiResponse:
     type: "object"

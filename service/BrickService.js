@@ -21,6 +21,7 @@ exports.addBrick = function(body) {
     "name" : "name",
     "id" : 5
   },
+  "created" : "created",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 5,
@@ -42,7 +43,8 @@ exports.addBrick = function(body) {
   "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
-  "locked" : true
+  "locked" : true,
+  "updated" : "updated"
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -85,6 +87,7 @@ exports.brickIdGET = function(id) {
     "name" : "name",
     "id" : 5
   },
+  "created" : "created",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 5,
@@ -106,7 +109,8 @@ exports.brickIdGET = function(id) {
   "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
-  "locked" : true
+  "locked" : true,
+  "updated" : "updated"
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -192,6 +196,7 @@ exports.updateBrick = function(body) {
     "name" : "name",
     "id" : 5
   },
+  "created" : "created",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 5,
@@ -213,7 +218,8 @@ exports.updateBrick = function(body) {
   "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
-  "locked" : true
+  "locked" : true,
+  "updated" : "updated"
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);

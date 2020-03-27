@@ -20,6 +20,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -41,7 +42,8 @@ exports.userCurrentGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -52,6 +54,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -73,7 +76,8 @@ exports.userCurrentGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   } ],
   "firstName" : "firstName",
   "lastName" : "lastName",
@@ -88,6 +92,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -109,7 +114,8 @@ exports.userCurrentGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -120,6 +126,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -141,7 +148,8 @@ exports.userCurrentGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   } ],
   "id" : 7,
   "type" : 9,
@@ -188,6 +196,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -209,7 +218,8 @@ exports.useruserIdGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -220,6 +230,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -241,7 +252,8 @@ exports.useruserIdGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   } ],
   "firstName" : "firstName",
   "lastName" : "lastName",
@@ -256,6 +268,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -277,7 +290,8 @@ exports.useruserIdGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -288,6 +302,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -309,7 +324,8 @@ exports.useruserIdGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   } ],
   "id" : 7,
   "type" : 9,

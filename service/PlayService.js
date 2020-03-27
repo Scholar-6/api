@@ -66,6 +66,7 @@ exports.playBrickSummarybrickIdGET = function() {
       "name" : "name",
       "id" : 5
     },
+    "created" : "created",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -87,7 +88,8 @@ exports.playBrickSummarybrickIdGET = function() {
     "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
-    "locked" : true
+    "locked" : true,
+    "updated" : "updated"
   },
   "averageScore" : 6
 };
