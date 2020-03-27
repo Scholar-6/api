@@ -475,8 +475,10 @@ definitions:
         type: "string"
       created:
         type: "string"
+        format: "date-time"
       updated:
         type: "string"
+        format: "date-time"
       questions:
         type: "array"
         items:
@@ -492,7 +494,7 @@ definitions:
       subject:
         name: "name"
         id: 5
-      created: "created"
+      created: "2000-01-23T04:56:07.000+00:00"
       questions:
       - contentBlocks: "contentBlocks"
         id: 5
@@ -513,7 +515,7 @@ definitions:
       prep: "prep"
       id: 0
       locked: true
-      updated: "updated"
+      updated: "2000-01-23T04:56:07.000+00:00"
   ComponentAttempt:
     type: "object"
     properties:
@@ -603,7 +605,7 @@ definitions:
         subject:
           name: "name"
           id: 5
-        created: "created"
+        created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -624,7 +626,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
-        updated: "updated"
+        updated: "2000-01-23T04:56:07.000+00:00"
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
         brief: "brief"
@@ -633,7 +635,7 @@ definitions:
         subject:
           name: "name"
           id: 5
-        created: "created"
+        created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -654,7 +656,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
-        updated: "updated"
+        updated: "2000-01-23T04:56:07.000+00:00"
       firstName: "firstName"
       lastName: "lastName"
       subjects:
@@ -669,7 +671,7 @@ definitions:
         subject:
           name: "name"
           id: 5
-        created: "created"
+        created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -690,7 +692,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
-        updated: "updated"
+        updated: "2000-01-23T04:56:07.000+00:00"
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
         brief: "brief"
@@ -699,7 +701,7 @@ definitions:
         subject:
           name: "name"
           id: 5
-        created: "created"
+        created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -720,7 +722,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
-        updated: "updated"
+        updated: "2000-01-23T04:56:07.000+00:00"
       id: 7
       type: 9
       tutorialPassed: true
@@ -755,7 +757,7 @@ definitions:
         subject:
           name: "name"
           id: 5
-        created: "created"
+        created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
           id: 5
@@ -776,7 +778,7 @@ definitions:
         prep: "prep"
         id: 0
         locked: true
-        updated: "updated"
+        updated: "2000-01-23T04:56:07.000+00:00"
       averageScore: 6
   ApiResponse:
     type: "object"

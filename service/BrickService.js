@@ -21,7 +21,7 @@ exports.addBrick = function(body) {
     "name" : "name",
     "id" : 5
   },
-  "created" : "created",
+  "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 5,
@@ -44,7 +44,7 @@ exports.addBrick = function(body) {
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
-  "updated" : "updated"
+  "updated" : "2000-01-23T04:56:07.000+00:00"
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -87,7 +87,7 @@ exports.brickIdGET = function(id) {
     "name" : "name",
     "id" : 5
   },
-  "created" : "created",
+  "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 5,
@@ -110,7 +110,7 @@ exports.brickIdGET = function(id) {
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
-  "updated" : "updated"
+  "updated" : "2000-01-23T04:56:07.000+00:00"
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -196,7 +196,7 @@ exports.updateBrick = function(body) {
     "name" : "name",
     "id" : 5
   },
-  "created" : "created",
+  "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 5,
@@ -219,7 +219,7 @@ exports.updateBrick = function(body) {
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
-  "updated" : "updated"
+  "updated" : "2000-01-23T04:56:07.000+00:00"
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);

@@ -20,7 +20,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -43,7 +43,7 @@ exports.userCurrentGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -54,7 +54,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -77,7 +77,7 @@ exports.userCurrentGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstName" : "firstName",
   "lastName" : "lastName",
@@ -92,7 +92,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -115,7 +115,7 @@ exports.userCurrentGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -126,7 +126,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -149,7 +149,7 @@ exports.userCurrentGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "id" : 7,
   "type" : 9,
@@ -196,7 +196,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -219,7 +219,7 @@ exports.useruserIdGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -230,7 +230,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -253,7 +253,7 @@ exports.useruserIdGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstName" : "firstName",
   "lastName" : "lastName",
@@ -268,7 +268,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -291,7 +291,7 @@ exports.useruserIdGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -302,7 +302,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "id" : 5
     },
-    "created" : "created",
+    "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
       "id" : 5,
@@ -325,7 +325,7 @@ exports.useruserIdGET = function() {
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
-    "updated" : "updated"
+    "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "id" : 7,
   "type" : 9,
