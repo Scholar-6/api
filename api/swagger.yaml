@@ -301,6 +301,90 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Brick"
+  /brick/build/{id}:
+    post:
+      tags:
+      - "brick"
+      summary: "Set brick to build status"
+      description: ""
+      operationId: "brickBuildIdPOST"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      security:
+      - brillder_auth:
+        - "write:bricks"
+        - "read:bricks"
+      x-swagger-router-controller: "Brick"
+  /brick/review/{id}:
+    post:
+      tags:
+      - "brick"
+      summary: "Set brick to review status"
+      description: ""
+      operationId: "brickReviewIdPOST"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      security:
+      - brillder_auth:
+        - "write:bricks"
+        - "read:bricks"
+      x-swagger-router-controller: "Brick"
+  /brick/publish/{id}:
+    post:
+      tags:
+      - "brick"
+      summary: "Set brick to publish status"
+      description: ""
+      operationId: "brickPublishIdPOST"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      security:
+      - brillder_auth:
+        - "write:bricks"
+        - "read:bricks"
+      x-swagger-router-controller: "Brick"
   /brick:
     post:
       tags:

@@ -14,6 +14,17 @@ module.exports.addBrick = function addBrick (req, res, next) {
     });
 };
 
+module.exports.brickBuildIdPOST = function brickBuildIdPOST (req, res, next) {
+  var id = req.swagger.params['id'].value;
+  Brick.brickBuildIdPOST(id)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.brickIdDELETE = function brickIdDELETE (req, res, next) {
   var id = req.swagger.params['id'].value;
   Brick.brickIdDELETE(id)
@@ -28,6 +39,28 @@ module.exports.brickIdDELETE = function brickIdDELETE (req, res, next) {
 module.exports.brickIdGET = function brickIdGET (req, res, next) {
   var id = req.swagger.params['id'].value;
   Brick.brickIdGET(id)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.brickPublishIdPOST = function brickPublishIdPOST (req, res, next) {
+  var id = req.swagger.params['id'].value;
+  Brick.brickPublishIdPOST(id)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.brickReviewIdPOST = function brickReviewIdPOST (req, res, next) {
+  var id = req.swagger.params['id'].value;
+  Brick.brickReviewIdPOST(id)
     .then(function (response) {
       utils.writeJson(res, response);
     })

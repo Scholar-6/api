@@ -56,6 +56,60 @@ exports.addBrick = function(body) {
 
 
 /**
+ * Set brick to build status
+ * 
+ *
+ * id Integer 
+ * returns Brick
+ **/
+exports.brickBuildIdPOST = function(id) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
+  "subTopic" : "subTopic",
+  "brief" : "brief",
+  "synthesis" : "synthesis",
+  "openQuestion" : "openQuestion",
+  "subject" : {
+    "name" : "name",
+    "id" : 5
+  },
+  "created" : "2000-01-23T04:56:07.000+00:00",
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 5,
+    "questionType" : "None",
+    "order" : 2
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 5,
+    "questionType" : "None",
+    "order" : 2
+  } ],
+  "revisionLog" : "revisionLog",
+  "type" : "Main",
+  "title" : "title",
+  "subjectId" : 1,
+  "attemptsCount" : 6,
+  "brickLength" : "0",
+  "alternativeTopics" : "alternativeTopics",
+  "topic" : "topic",
+  "prep" : "prep",
+  "id" : 0,
+  "locked" : true,
+  "updated" : "2000-01-23T04:56:07.000+00:00"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Delete specific brick by id
  *
  * id Integer 
@@ -75,6 +129,114 @@ exports.brickIdDELETE = function(id) {
  * returns Brick
  **/
 exports.brickIdGET = function(id) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
+  "subTopic" : "subTopic",
+  "brief" : "brief",
+  "synthesis" : "synthesis",
+  "openQuestion" : "openQuestion",
+  "subject" : {
+    "name" : "name",
+    "id" : 5
+  },
+  "created" : "2000-01-23T04:56:07.000+00:00",
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 5,
+    "questionType" : "None",
+    "order" : 2
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 5,
+    "questionType" : "None",
+    "order" : 2
+  } ],
+  "revisionLog" : "revisionLog",
+  "type" : "Main",
+  "title" : "title",
+  "subjectId" : 1,
+  "attemptsCount" : 6,
+  "brickLength" : "0",
+  "alternativeTopics" : "alternativeTopics",
+  "topic" : "topic",
+  "prep" : "prep",
+  "id" : 0,
+  "locked" : true,
+  "updated" : "2000-01-23T04:56:07.000+00:00"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Set brick to publish status
+ * 
+ *
+ * id Integer 
+ * returns Brick
+ **/
+exports.brickPublishIdPOST = function(id) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
+  "subTopic" : "subTopic",
+  "brief" : "brief",
+  "synthesis" : "synthesis",
+  "openQuestion" : "openQuestion",
+  "subject" : {
+    "name" : "name",
+    "id" : 5
+  },
+  "created" : "2000-01-23T04:56:07.000+00:00",
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 5,
+    "questionType" : "None",
+    "order" : 2
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 5,
+    "questionType" : "None",
+    "order" : 2
+  } ],
+  "revisionLog" : "revisionLog",
+  "type" : "Main",
+  "title" : "title",
+  "subjectId" : 1,
+  "attemptsCount" : 6,
+  "brickLength" : "0",
+  "alternativeTopics" : "alternativeTopics",
+  "topic" : "topic",
+  "prep" : "prep",
+  "id" : 0,
+  "locked" : true,
+  "updated" : "2000-01-23T04:56:07.000+00:00"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Set brick to review status
+ * 
+ *
+ * id Integer 
+ * returns Brick
+ **/
+exports.brickReviewIdPOST = function(id) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
