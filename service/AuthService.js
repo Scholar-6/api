@@ -58,7 +58,7 @@ exports.authLogoutPOST = function() {
  * body Body_2 User password
  * no response value expected for this operation
  **/
-exports.authSignUpPOST = function(body) {
+exports.authSignUpuserTypePOST = function(body) {
   return new Promise(function(resolve, reject) {
     resolve();
   });

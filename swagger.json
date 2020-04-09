@@ -113,7 +113,7 @@
         }
       }
     },
-    "/auth/signUp": {
+    "/auth/signUp/:userType": {
       "post": {
         "tags": [
           "auth"

@@ -46,9 +46,9 @@ module.exports.authLogoutPOST = function authLogoutPOST (req, res, next) {
     });
 };
 
-module.exports.authSignUpPOST = function authSignUpPOST (req, res, next) {
+module.exports.authSignUpuserTypePOST = function authSignUpuserTypePOST (req, res, next) {
   var body = req.swagger.params['body'].value;
-  Auth.authSignUpPOST(body)
+  Auth.authSignUpuserTypePOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })

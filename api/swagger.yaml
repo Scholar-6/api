@@ -65,12 +65,12 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Auth"
-  /auth/signUp:
+  /auth/signUp/:userType:
     post:
       tags:
       - "auth"
       summary: "Login user"
-      operationId: "authSignUpPOST"
+      operationId: "authSignUpuserTypePOST"
       parameters:
       - in: "body"
         name: "body"
