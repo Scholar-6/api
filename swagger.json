@@ -755,12 +755,6 @@
             "60"
           ]
         },
-        "type": {
-          "type": "string",
-          "enum": [
-            "Main"
-          ]
-        },
         "subjectId": {
           "type": "integer"
         },

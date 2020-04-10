@@ -512,7 +512,6 @@ definitions:
     - "subTopic"
     - "subject"
     - "title"
-    - "type"
     properties:
       id:
         type: "integer"
@@ -527,10 +526,6 @@ definitions:
         - "20"
         - "40"
         - "60"
-      type:
-        type: "string"
-        enum:
-        - "Main"
       subjectId:
         type: "integer"
       subject:
@@ -589,7 +584,6 @@ definitions:
         questionType: "None"
         order: 2
       revisionLog: "revisionLog"
-      type: "Main"
       title: "title"
       subjectId: 1
       attemptsCount: 6
@@ -700,7 +694,6 @@ definitions:
           questionType: "None"
           order: 2
         revisionLog: "revisionLog"
-        type: "Main"
         title: "title"
         subjectId: 1
         attemptsCount: 6
@@ -730,7 +723,6 @@ definitions:
           questionType: "None"
           order: 2
         revisionLog: "revisionLog"
-        type: "Main"
         title: "title"
         subjectId: 1
         attemptsCount: 6
@@ -766,7 +758,6 @@ definitions:
           questionType: "None"
           order: 2
         revisionLog: "revisionLog"
-        type: "Main"
         title: "title"
         subjectId: 1
         attemptsCount: 6
@@ -796,7 +787,6 @@ definitions:
           questionType: "None"
           order: 2
         revisionLog: "revisionLog"
-        type: "Main"
         title: "title"
         subjectId: 1
         attemptsCount: 6
@@ -852,7 +842,6 @@ definitions:
           questionType: "None"
           order: 2
         revisionLog: "revisionLog"
-        type: "Main"
         title: "title"
         subjectId: 1
         attemptsCount: 6

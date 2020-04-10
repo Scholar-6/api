@@ -33,7 +33,6 @@ exports.userCurrentGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -67,7 +66,6 @@ exports.userCurrentGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -105,7 +103,6 @@ exports.userCurrentGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -139,7 +136,6 @@ exports.userCurrentGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -209,7 +205,6 @@ exports.useruserIdGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -243,7 +238,6 @@ exports.useruserIdGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -281,7 +275,6 @@ exports.useruserIdGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,
@@ -315,7 +308,6 @@ exports.useruserIdGET = function() {
       "order" : 2
     } ],
     "revisionLog" : "revisionLog",
-    "type" : "Main",
     "title" : "title",
     "subjectId" : 1,
     "attemptsCount" : 6,

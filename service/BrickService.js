@@ -34,7 +34,6 @@ exports.addBrick = function(body) {
     "order" : 2
   } ],
   "revisionLog" : "revisionLog",
-  "type" : "Main",
   "title" : "title",
   "subjectId" : 1,
   "attemptsCount" : 6,
@@ -88,7 +87,6 @@ exports.brickBuildIdPOST = function(id) {
     "order" : 2
   } ],
   "revisionLog" : "revisionLog",
-  "type" : "Main",
   "title" : "title",
   "subjectId" : 1,
   "attemptsCount" : 6,
@@ -154,7 +152,6 @@ exports.brickIdGET = function(id) {
     "order" : 2
   } ],
   "revisionLog" : "revisionLog",
-  "type" : "Main",
   "title" : "title",
   "subjectId" : 1,
   "attemptsCount" : 6,
@@ -208,7 +205,6 @@ exports.brickPublishIdPOST = function(id) {
     "order" : 2
   } ],
   "revisionLog" : "revisionLog",
-  "type" : "Main",
   "title" : "title",
   "subjectId" : 1,
   "attemptsCount" : 6,
@@ -262,7 +258,6 @@ exports.brickReviewIdPOST = function(id) {
     "order" : 2
   } ],
   "revisionLog" : "revisionLog",
-  "type" : "Main",
   "title" : "title",
   "subjectId" : 1,
   "attemptsCount" : 6,
@@ -371,7 +366,6 @@ exports.updateBrick = function(body) {
     "order" : 2
   } ],
   "revisionLog" : "revisionLog",
-  "type" : "Main",
   "title" : "title",
   "subjectId" : 1,
   "attemptsCount" : 6,
