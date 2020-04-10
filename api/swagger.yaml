@@ -235,6 +235,31 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/search:
+    post:
+      tags:
+      - "brick"
+      summary: "Search over all bricks"
+      operationId: "bricksSearchPOST"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Search model"
+        required: true
+        schema:
+          $ref: "#/definitions/SearchModel"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /bricks/byStatus/{status}:
     get:
       tags:
@@ -853,6 +878,13 @@ definitions:
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
       averageScore: 6
+  SearchModel:
+    type: "object"
+    properties:
+      searchString:
+        type: "string"
+    example:
+      searchString: "searchString"
   ApiResponse:
     type: "object"
     properties:

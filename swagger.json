@@ -350,6 +350,41 @@
         }
       }
     },
+    "/bricks/search": {
+      "post": {
+        "tags": [
+          "brick"
+        ],
+        "summary": "Search over all bricks",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Search model",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SearchModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/ArrayOfBricks"
+            }
+          }
+        },
+      }
+    },
     "/bricks/byStatus/{status}": {
       "get": {
         "tags": [
@@ -955,6 +990,14 @@
         },
         "brick": {
           "$ref": "#/definitions/Brick"
+        },
+      }
+    },
+    "SearchModel": {
+      "type": "object",
+      "properties": {
+        "searchString": {
+          "type": "string"
         },
       }
     },

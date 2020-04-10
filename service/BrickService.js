@@ -334,6 +334,25 @@ exports.bricksGET = function() {
 
 
 /**
+ * Search over all bricks
+ *
+ * body SearchModel Search model
+ * returns ArrayOfBricks
+ **/
+exports.bricksSearchPOST = function(body) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Update an existing brick
  * 
  *

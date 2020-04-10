@@ -100,6 +100,17 @@ module.exports.bricksGET = function bricksGET (req, res, next) {
     });
 };
 
+module.exports.bricksSearchPOST = function bricksSearchPOST (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  Brick.bricksSearchPOST(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.updateBrick = function updateBrick (req, res, next) {
   var body = req.swagger.params['body'].value;
   Brick.updateBrick(body)
