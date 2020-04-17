@@ -174,6 +174,41 @@ exports.userTutorialShowedPUT = function() {
 
 
 /**
+ * Search users
+ *
+ * body UserSearchModel 
+ * returns List
+ **/
+exports.usersGET = function(body) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = [ {
+  "firstName" : "firstName",
+  "lastName" : "lastName",
+  "subjects" : [ "", "" ],
+  "id" : 0,
+  "type" : 6,
+  "tutorialPassed" : true,
+  "email" : "email"
+}, {
+  "firstName" : "firstName",
+  "lastName" : "lastName",
+  "subjects" : [ "", "" ],
+  "id" : 0,
+  "type" : 6,
+  "tutorialPassed" : true,
+  "email" : "email"
+} ];
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Get current user
  *
  * returns User

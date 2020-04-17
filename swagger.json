@@ -240,6 +240,35 @@
         }
       }
     },
+    "/users": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Search users",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserSearchModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserShort"
+              }
+            }
+          }
+        }
+      }
+    },
     "/user/:userId": {
       "get": {
         "tags": [
@@ -965,6 +994,45 @@
         "name": "User"
       }
     },
+    "UserShort": {
+      "type": "object",
+      "properties": {
+        "subjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ArrayOfSubjects"
+          }
+        },
+        "email": {
+          "type": "string",
+        },
+        "firstName": {
+          "type": "string",
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "tutorialPassed": {
+          "type": "boolean",
+        },
+        "type": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
     "BrickAttemptUpdateModel": {
       "type": "object",
       "properties": {
@@ -999,6 +1067,32 @@
         "searchString": {
           "type": "string"
         },
+      }
+    },
+    "UserSearchModel": {
+      "type": "object",
+      "properties": {
+        "searchString": {
+          "type": "string"
+        },
+        "orderBy": {
+          "type": "string"
+        },
+        "isAscending": {
+          "type": "boolean"
+        },
+        "subjectFilters": {
+          "type": "array",
+          "items": {
+            "type":"integer"
+          }
+        },
+        "roleFilters": {
+          "type": "array",
+          "items": {
+            "type":"integer"
+          }
+        }, 
       }
     },
     "ApiResponse": {

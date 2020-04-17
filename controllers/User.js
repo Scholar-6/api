@@ -23,6 +23,17 @@ module.exports.userTutorialShowedPUT = function userTutorialShowedPUT (req, res,
     });
 };
 
+module.exports.usersGET = function usersGET (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  User.usersGET(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.useruserIdGET = function useruserIdGET (req, res, next) {
   User.useruserIdGET()
     .then(function (response) {

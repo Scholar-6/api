@@ -150,6 +150,26 @@ paths:
           schema:
             $ref: "#/definitions/User"
       x-swagger-router-controller: "User"
+  /users:
+    get:
+      tags:
+      - "user"
+      summary: "Search users"
+      operationId: "usersGET"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/UserSearchModel"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/UserShort"
+      x-swagger-router-controller: "User"
   /user/:userId:
     get:
       tags:
@@ -826,6 +846,38 @@ definitions:
       type: 9
       tutorialPassed: true
       email: "email"
+  UserShort:
+    type: "object"
+    properties:
+      subjects:
+        type: "array"
+        items:
+          $ref: "#/definitions/ArrayOfSubjects"
+      email:
+        type: "string"
+      firstName:
+        type: "string"
+      id:
+        type: "integer"
+        format: "int64"
+      lastName:
+        type: "string"
+      tutorialPassed:
+        type: "boolean"
+      type:
+        type: "integer"
+    xml:
+      name: "User"
+    example:
+      firstName: "firstName"
+      lastName: "lastName"
+      subjects:
+      - ""
+      - ""
+      id: 0
+      type: 6
+      tutorialPassed: true
+      email: "email"
   BrickAttemptUpdateModel:
     type: "object"
     properties:
@@ -885,6 +937,23 @@ definitions:
         type: "string"
     example:
       searchString: "searchString"
+  UserSearchModel:
+    type: "object"
+    properties:
+      searchString:
+        type: "string"
+      orderBy:
+        type: "string"
+      isAscending:
+        type: "boolean"
+      subjectFilters:
+        type: "array"
+        items:
+          type: "integer"
+      roleFilters:
+        type: "array"
+        items:
+          type: "integer"
   ApiResponse:
     type: "object"
     properties:
