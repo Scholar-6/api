@@ -137,6 +137,36 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "User"
+  /user/activate/{userId}:
+    put:
+      tags:
+      - "user"
+      summary: "Activate user by id"
+      operationId: "userActivateUserIdPUT"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
+  /user/deactivate/{userId}:
+    put:
+      tags:
+      - "user"
+      summary: "Dectivate user by id"
+      operationId: "userDeactivateUserIdPUT"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
   /user/current:
     get:
       tags:

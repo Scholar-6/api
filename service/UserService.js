@@ -2,6 +2,19 @@
 
 
 /**
+ * Activate user by id
+ *
+ * userId String 
+ * no response value expected for this operation
+ **/
+exports.userActivateUserIdPUT = function(userId) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Get user by id
  *
  * returns User
@@ -157,6 +170,19 @@ exports.userCurrentGET = function() {
     } else {
       resolve();
     }
+  });
+}
+
+
+/**
+ * Dectivate user by id
+ *
+ * userId String 
+ * no response value expected for this operation
+ **/
+exports.userDeactivateUserIdPUT = function(userId) {
+  return new Promise(function(resolve, reject) {
+    resolve();
   });
 }
 

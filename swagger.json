@@ -224,6 +224,48 @@
         }
       }
     },
+    "/user/activate/{userId}": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Activate user by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/user/deactivate/{userId}": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Dectivate user by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
     "/user/current": {
       "get": {
         "tags": [
