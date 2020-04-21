@@ -1135,6 +1135,12 @@
             "type":"integer"
           }
         }, 
+        "page": {
+            "type":"integer"
+          },
+        "pageSize": {
+            "type":"integer"
+          }
       }
     },
     "ApiResponse": {

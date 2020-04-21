@@ -984,6 +984,10 @@ definitions:
         type: "array"
         items:
           type: "integer"
+      page:
+        type: "integer"
+      pageSize:
+        type: "integer"
   ApiResponse:
     type: "object"
     properties:
