@@ -216,7 +216,30 @@
         "tags": [
           "user"
         ],
-        "summary": "Mark tutoria as showed for current user",
+        "summary": "Mark tutorial as showed for current user",
+        "responses": {
+          "200": {
+            "description": "ok",
+          }
+        }
+      }
+    },
+    "/user": {
+      "put": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Update user info",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserUpdateModel"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "ok",
@@ -1060,6 +1083,39 @@
         },
         "tutorialPassed": {
           "type": "boolean",
+        },
+        "type": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
+    "UserUpdateModel": {
+      "type": "object",
+      "properties": {
+        "subjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ArrayOfSubjects"
+          }
+        },
+        "firstName": {
+          "type": "string",
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lastName": {
+          "type": "string"
         },
         "type": {
           "type": "integer",

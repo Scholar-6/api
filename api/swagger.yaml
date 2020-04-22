@@ -130,9 +130,25 @@ paths:
     put:
       tags:
       - "user"
-      summary: "Mark tutoria as showed for current user"
+      summary: "Mark tutorial as showed for current user"
       operationId: "userTutorialShowedPUT"
       parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
+  /user:
+    put:
+      tags:
+      - "user"
+      summary: "Update user info"
+      operationId: "userPUT"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/UserUpdateModel"
       responses:
         "200":
           description: "ok"
@@ -908,6 +924,24 @@ definitions:
       type: 6
       tutorialPassed: true
       email: "email"
+  UserUpdateModel:
+    type: "object"
+    properties:
+      subjects:
+        type: "array"
+        items:
+          $ref: "#/definitions/ArrayOfSubjects"
+      firstName:
+        type: "string"
+      id:
+        type: "integer"
+        format: "int64"
+      lastName:
+        type: "string"
+      type:
+        type: "integer"
+    xml:
+      name: "User"
   BrickAttemptUpdateModel:
     type: "object"
     properties:

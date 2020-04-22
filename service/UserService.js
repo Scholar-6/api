@@ -188,7 +188,20 @@ exports.userDeactivateUserIdPUT = function(userId) {
 
 
 /**
- * Mark tutoria as showed for current user
+ * Update user info
+ *
+ * body UserUpdateModel 
+ * no response value expected for this operation
+ **/
+exports.userPUT = function(body) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
+ * Mark tutorial as showed for current user
  *
  * no response value expected for this operation
  **/

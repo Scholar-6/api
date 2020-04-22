@@ -35,6 +35,17 @@ module.exports.userDeactivateUserIdPUT = function userDeactivateUserIdPUT (req, 
     });
 };
 
+module.exports.userPUT = function userPUT (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  User.userPUT(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.userTutorialShowedPUT = function userTutorialShowedPUT (req, res, next) {
   User.userTutorialShowedPUT()
     .then(function (response) {
