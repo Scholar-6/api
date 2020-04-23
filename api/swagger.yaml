@@ -197,11 +197,15 @@ paths:
             $ref: "#/definitions/User"
       x-swagger-router-controller: "User"
   /users:
-    get:
+    post:
       tags:
       - "user"
       summary: "Search users"
-      operationId: "usersGET"
+      operationId: "usersPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
       parameters:
       - in: "body"
         name: "body"
@@ -212,9 +216,7 @@ paths:
         "200":
           description: "ok"
           schema:
-            type: "array"
-            items:
-              $ref: "#/definitions/UserShort"
+            $ref: "#/definitions/inline_response_200"
       x-swagger-router-controller: "User"
   /user/:userId:
     get:
@@ -920,8 +922,8 @@ definitions:
       subjects:
       - ""
       - ""
-      id: 0
-      type: 6
+      id: 6
+      type: 1
       tutorialPassed: true
       email: "email"
   UserUpdateModel:
@@ -1022,6 +1024,18 @@ definitions:
         type: "integer"
       pageSize:
         type: "integer"
+    example:
+      searchString: "searchString"
+      subjectFilters:
+      - 0
+      - 0
+      orderBy: "orderBy"
+      pageSize: 5
+      roleFilters:
+      - 6
+      - 6
+      page: 1
+      isAscending: true
   ApiResponse:
     type: "object"
     properties:
@@ -1065,6 +1079,36 @@ definitions:
         type: "string"
       confirmPassword:
         type: "string"
+  inline_response_200:
+    type: "object"
+    properties:
+      totalCount:
+        type: "integer"
+      pageData:
+        type: "array"
+        items:
+          $ref: "#/definitions/UserShort"
+    example:
+      pageData:
+      - firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        id: 6
+        type: 1
+        tutorialPassed: true
+        email: "email"
+      - firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        id: 6
+        type: 1
+        tutorialPassed: true
+        email: "email"
+      totalCount: 0
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"

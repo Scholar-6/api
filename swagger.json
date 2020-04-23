@@ -306,11 +306,17 @@
       }
     },
     "/users": {
-      "get": {
+      "post": {
         "tags": [
           "user"
         ],
         "summary": "Search users",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "body",
@@ -325,9 +331,15 @@
           "200": {
             "description": "ok",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/UserShort"
+              "type": "object",
+              "properties": {
+                "totalCount":{ "type": "integer"},
+                "pageData": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/UserShort"
+                  }
+                }
               }
             }
           }

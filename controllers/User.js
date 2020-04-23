@@ -56,9 +56,9 @@ module.exports.userTutorialShowedPUT = function userTutorialShowedPUT (req, res,
     });
 };
 
-module.exports.usersGET = function usersGET (req, res, next) {
+module.exports.usersPOST = function usersPOST (req, res, next) {
   var body = req.swagger.params['body'].value;
-  User.usersGET(body)
+  User.usersPOST(body)
     .then(function (response) {
       utils.writeJson(res, response);
     })
