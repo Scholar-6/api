@@ -34,7 +34,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -70,7 +70,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -115,7 +115,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -151,7 +151,7 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -294,7 +294,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -330,7 +330,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -375,7 +375,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
@@ -411,7 +411,7 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5.63737665663332876420099637471139430999755859375
+      "bricksCount" : 5
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {

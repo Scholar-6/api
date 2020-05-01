@@ -668,7 +668,7 @@ definitions:
         name: "name"
         checked: true
         id: 5
-        bricksCount: 5.63737665663332876420099637471139430999755859375
+        bricksCount: 5
       created: "2000-01-23T04:56:07.000+00:00"
       questions:
       - contentBlocks: "contentBlocks"
@@ -739,7 +739,8 @@ definitions:
       name:
         type: "string"
       bricksCount:
-        type: "number"
+        type: "integer"
+        format: "int32"
     xml:
       name: "Subject"
     example:
@@ -747,7 +748,7 @@ definitions:
       name: "name"
       checked: true
       id: 5
-      bricksCount: 5.63737665663332876420099637471139430999755859375
+      bricksCount: 5
   User:
     type: "object"
     properties:
@@ -792,7 +793,7 @@ definitions:
           name: "name"
           checked: true
           id: 5
-          bricksCount: 5.63737665663332876420099637471139430999755859375
+          bricksCount: 5
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
@@ -824,7 +825,7 @@ definitions:
           name: "name"
           checked: true
           id: 5
-          bricksCount: 5.63737665663332876420099637471139430999755859375
+          bricksCount: 5
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
@@ -865,7 +866,7 @@ definitions:
           name: "name"
           checked: true
           id: 5
-          bricksCount: 5.63737665663332876420099637471139430999755859375
+          bricksCount: 5
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
@@ -897,7 +898,7 @@ definitions:
           name: "name"
           checked: true
           id: 5
-          bricksCount: 5.63737665663332876420099637471139430999755859375
+          bricksCount: 5
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
@@ -1016,7 +1017,7 @@ definitions:
           name: "name"
           checked: true
           id: 5
-          bricksCount: 5.63737665663332876420099637471139430999755859375
+          bricksCount: 5
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"

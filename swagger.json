@@ -1022,7 +1022,8 @@
           "type": "string",
         },
         "bricksCount":{
-          "type":"number"
+          "type": "integer",
+          "format": "int32"
         }
       },
       "xml": {
