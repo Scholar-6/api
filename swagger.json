@@ -1057,14 +1057,16 @@
         "tutorialPassed": {
           "type": "boolean",
         },
-        "type": {
-          "type": "integer",
-          "enum": [
-            1,
-            2,
-            3,
-            4
-          ]
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+                "roleId": {
+                "type": "integer"
+              }
+            }
+          }
         },
       },
       "xml": {
@@ -1096,14 +1098,16 @@
         "tutorialPassed": {
           "type": "boolean",
         },
-        "type": {
-          "type": "integer",
-          "enum": [
-            1,
-            2,
-            3,
-            4
-          ]
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+                "roleId": {
+                "type": "integer"
+              }
+            }
+          }
         },
       },
       "xml": {
@@ -1116,7 +1120,7 @@
         "subjects": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ArrayOfSubjects"
+            "type": "integer"
           }
         },
         "firstName": {
@@ -1129,14 +1133,20 @@
         "lastName": {
           "type": "string"
         },
-        "type": {
-          "type": "integer",
-          "enum": [
-            1,
-            2,
-            3,
-            4
-          ]
+        "bio": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         },
       },
       "xml": {

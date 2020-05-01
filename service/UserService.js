@@ -93,6 +93,11 @@ exports.userCurrentGET = function() {
   "firstName" : "firstName",
   "lastName" : "lastName",
   "subjects" : [ "", "" ],
+  "roles" : [ {
+    "roleId" : 9
+  }, {
+    "roleId" : 9
+  } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -161,7 +166,6 @@ exports.userCurrentGET = function() {
     "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "id" : 7,
-  "type" : 9,
   "tutorialPassed" : true,
   "email" : "email"
 };
@@ -226,16 +230,24 @@ exports.usersPOST = function(body) {
     "firstName" : "firstName",
     "lastName" : "lastName",
     "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 9
+    }, {
+      "roleId" : 9
+    } ],
     "id" : 6,
-    "type" : 1,
     "tutorialPassed" : true,
     "email" : "email"
   }, {
     "firstName" : "firstName",
     "lastName" : "lastName",
     "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 9
+    }, {
+      "roleId" : 9
+    } ],
     "id" : 6,
-    "type" : 1,
     "tutorialPassed" : true,
     "email" : "email"
   } ],
@@ -329,6 +341,11 @@ exports.useruserIdGET = function() {
   "firstName" : "firstName",
   "lastName" : "lastName",
   "subjects" : [ "", "" ],
+  "roles" : [ {
+    "roleId" : 9
+  }, {
+    "roleId" : 9
+  } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
     "subTopic" : "subTopic",
@@ -397,7 +414,6 @@ exports.useruserIdGET = function() {
     "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "id" : 7,
-  "type" : 9,
   "tutorialPassed" : true,
   "email" : "email"
 };

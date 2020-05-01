@@ -762,8 +762,10 @@ definitions:
         type: "string"
       tutorialPassed:
         type: "boolean"
-      type:
-        type: "integer"
+      roles:
+        type: "array"
+        items:
+          $ref: "#/definitions/User_roles"
     xml:
       name: "User"
     example:
@@ -831,6 +833,9 @@ definitions:
       subjects:
       - ""
       - ""
+      roles:
+      - roleId: 9
+      - roleId: 9
       createBricks:
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
@@ -891,7 +896,6 @@ definitions:
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
       id: 7
-      type: 9
       tutorialPassed: true
       email: "email"
   UserShort:
@@ -912,8 +916,10 @@ definitions:
         type: "string"
       tutorialPassed:
         type: "boolean"
-      type:
-        type: "integer"
+      roles:
+        type: "array"
+        items:
+          $ref: "#/definitions/User_roles"
     xml:
       name: "User"
     example:
@@ -922,8 +928,10 @@ definitions:
       subjects:
       - ""
       - ""
+      roles:
+      - roleId: 9
+      - roleId: 9
       id: 6
-      type: 1
       tutorialPassed: true
       email: "email"
   UserUpdateModel:
@@ -932,7 +940,7 @@ definitions:
       subjects:
         type: "array"
         items:
-          $ref: "#/definitions/ArrayOfSubjects"
+          type: "integer"
       firstName:
         type: "string"
       id:
@@ -940,8 +948,16 @@ definitions:
         format: "int64"
       lastName:
         type: "string"
-      type:
-        type: "integer"
+      bio:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+      roles:
+        type: "array"
+        items:
+          type: "integer"
     xml:
       name: "User"
   BrickAttemptUpdateModel:
@@ -1095,8 +1111,10 @@ definitions:
         subjects:
         - ""
         - ""
+        roles:
+        - roleId: 9
+        - roleId: 9
         id: 6
-        type: 1
         tutorialPassed: true
         email: "email"
       - firstName: "firstName"
@@ -1104,11 +1122,20 @@ definitions:
         subjects:
         - ""
         - ""
+        roles:
+        - roleId: 9
+        - roleId: 9
         id: 6
-        type: 1
         tutorialPassed: true
         email: "email"
       totalCount: 0
+  User_roles:
+    type: "object"
+    properties:
+      roleId:
+        type: "integer"
+    example:
+      roleId: 9
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
