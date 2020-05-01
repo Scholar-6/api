@@ -30,20 +30,23 @@ exports.userCurrentGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -63,20 +66,23 @@ exports.userCurrentGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -94,9 +100,9 @@ exports.userCurrentGET = function() {
   "lastName" : "lastName",
   "subjects" : [ "", "" ],
   "roles" : [ {
-    "roleId" : 9
+    "roleId" : 3
   }, {
-    "roleId" : 9
+    "roleId" : 3
   } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
@@ -105,20 +111,23 @@ exports.userCurrentGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -138,20 +147,23 @@ exports.userCurrentGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -165,7 +177,7 @@ exports.userCurrentGET = function() {
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "id" : 7,
+  "id" : 9,
   "tutorialPassed" : true,
   "email" : "email"
 };
@@ -231,9 +243,9 @@ exports.usersPOST = function(body) {
     "lastName" : "lastName",
     "subjects" : [ "", "" ],
     "roles" : [ {
-      "roleId" : 9
+      "roleId" : 3
     }, {
-      "roleId" : 9
+      "roleId" : 3
     } ],
     "id" : 6,
     "tutorialPassed" : true,
@@ -243,9 +255,9 @@ exports.usersPOST = function(body) {
     "lastName" : "lastName",
     "subjects" : [ "", "" ],
     "roles" : [ {
-      "roleId" : 9
+      "roleId" : 3
     }, {
-      "roleId" : 9
+      "roleId" : 3
     } ],
     "id" : 6,
     "tutorialPassed" : true,
@@ -278,20 +290,23 @@ exports.useruserIdGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -311,20 +326,23 @@ exports.useruserIdGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -342,9 +360,9 @@ exports.useruserIdGET = function() {
   "lastName" : "lastName",
   "subjects" : [ "", "" ],
   "roles" : [ {
-    "roleId" : 9
+    "roleId" : 3
   }, {
-    "roleId" : 9
+    "roleId" : 3
   } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
@@ -353,20 +371,23 @@ exports.useruserIdGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -386,20 +407,23 @@ exports.useruserIdGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -413,7 +437,7 @@ exports.useruserIdGET = function() {
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "id" : 7,
+  "id" : 9,
   "tutorialPassed" : true,
   "email" : "email"
 };

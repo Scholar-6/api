@@ -63,20 +63,23 @@ exports.playBrickSummarybrickIdGET = function() {
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
     "subject" : {
+      "color" : "color",
       "name" : "name",
-      "id" : 5
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5.63737665663332876420099637471139430999755859375
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 5,
+      "id" : 2,
       "questionType" : "None",
-      "order" : 2
+      "order" : 7
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",

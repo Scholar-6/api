@@ -1012,9 +1012,18 @@
           "type": "integer",
           "format": "int64"
         },
+        "color":{
+          "type":"string"
+        },
+        "checked": {
+          "type":"boolean"
+        },
         "name": {
           "type": "string",
         },
+        "bricksCount":{
+          "type":"number"
+        }
       },
       "xml": {
         "name": "Subject"

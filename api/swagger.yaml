@@ -595,9 +595,9 @@ definitions:
       name: "Question"
     example:
       contentBlocks: "contentBlocks"
-      id: 5
+      id: 2
       questionType: "None"
-      order: 2
+      order: 7
   Brick:
     type: "object"
     required:
@@ -664,18 +664,21 @@ definitions:
       synthesis: "synthesis"
       openQuestion: "openQuestion"
       subject:
+        color: "color"
         name: "name"
+        checked: true
         id: 5
+        bricksCount: 5.63737665663332876420099637471139430999755859375
       created: "2000-01-23T04:56:07.000+00:00"
       questions:
       - contentBlocks: "contentBlocks"
-        id: 5
+        id: 2
         questionType: "None"
-        order: 2
+        order: 7
       - contentBlocks: "contentBlocks"
-        id: 5
+        id: 2
         questionType: "None"
-        order: 2
+        order: 7
       revisionLog: "revisionLog"
       title: "title"
       subjectId: 1
@@ -729,13 +732,22 @@ definitions:
       id:
         type: "integer"
         format: "int64"
+      color:
+        type: "string"
+      checked:
+        type: "boolean"
       name:
         type: "string"
+      bricksCount:
+        type: "number"
     xml:
       name: "Subject"
     example:
+      color: "color"
       name: "name"
+      checked: true
       id: 5
+      bricksCount: 5.63737665663332876420099637471139430999755859375
   User:
     type: "object"
     properties:
@@ -776,18 +788,21 @@ definitions:
         synthesis: "synthesis"
         openQuestion: "openQuestion"
         subject:
+          color: "color"
           name: "name"
+          checked: true
           id: 5
+          bricksCount: 5.63737665663332876420099637471139430999755859375
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -805,18 +820,21 @@ definitions:
         synthesis: "synthesis"
         openQuestion: "openQuestion"
         subject:
+          color: "color"
           name: "name"
+          checked: true
           id: 5
+          bricksCount: 5.63737665663332876420099637471139430999755859375
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -834,8 +852,8 @@ definitions:
       - ""
       - ""
       roles:
-      - roleId: 9
-      - roleId: 9
+      - roleId: 3
+      - roleId: 3
       createBricks:
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
@@ -843,18 +861,21 @@ definitions:
         synthesis: "synthesis"
         openQuestion: "openQuestion"
         subject:
+          color: "color"
           name: "name"
+          checked: true
           id: 5
+          bricksCount: 5.63737665663332876420099637471139430999755859375
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -872,18 +893,21 @@ definitions:
         synthesis: "synthesis"
         openQuestion: "openQuestion"
         subject:
+          color: "color"
           name: "name"
+          checked: true
           id: 5
+          bricksCount: 5.63737665663332876420099637471139430999755859375
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -895,7 +919,7 @@ definitions:
         id: 0
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
-      id: 7
+      id: 9
       tutorialPassed: true
       email: "email"
   UserShort:
@@ -929,8 +953,8 @@ definitions:
       - ""
       - ""
       roles:
-      - roleId: 9
-      - roleId: 9
+      - roleId: 3
+      - roleId: 3
       id: 6
       tutorialPassed: true
       email: "email"
@@ -988,18 +1012,21 @@ definitions:
         synthesis: "synthesis"
         openQuestion: "openQuestion"
         subject:
+          color: "color"
           name: "name"
+          checked: true
           id: 5
+          bricksCount: 5.63737665663332876420099637471139430999755859375
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         - contentBlocks: "contentBlocks"
-          id: 5
+          id: 2
           questionType: "None"
-          order: 2
+          order: 7
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -1112,8 +1139,8 @@ definitions:
         - ""
         - ""
         roles:
-        - roleId: 9
-        - roleId: 9
+        - roleId: 3
+        - roleId: 3
         id: 6
         tutorialPassed: true
         email: "email"
@@ -1123,8 +1150,8 @@ definitions:
         - ""
         - ""
         roles:
-        - roleId: 9
-        - roleId: 9
+        - roleId: 3
+        - roleId: 3
         id: 6
         tutorialPassed: true
         email: "email"
@@ -1135,7 +1162,7 @@ definitions:
       roleId:
         type: "integer"
     example:
-      roleId: 9
+      roleId: 3
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
