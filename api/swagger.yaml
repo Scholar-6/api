@@ -537,6 +537,47 @@ paths:
         - "write:bricks"
         - "read:bricks"
       x-swagger-router-controller: "Brick"
+  /question/{id}:
+    get:
+      tags:
+      - "question"
+      summary: "Get specific question by id"
+      operationId: "questionIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Question"
+      x-swagger-router-controller: "Question"
+  /question:
+    put:
+      tags:
+      - "question"
+      summary: "Update an existing question"
+      description: ""
+      operationId: "updateQuestion"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Brick object that needs to be updated"
+        required: true
+        schema:
+          $ref: "#/definitions/Question"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Question"
+      x-swagger-router-controller: "Question"
 securityDefinitions:
   brillder_auth:
     type: "oauth2"

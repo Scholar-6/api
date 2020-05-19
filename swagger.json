@@ -72,7 +72,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -108,7 +108,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -148,7 +148,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -161,7 +161,7 @@
         "summary": "Login out current user",
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -182,7 +182,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -206,7 +206,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -219,7 +219,7 @@
         "summary": "Mark tutorial as showed for current user",
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -242,7 +242,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -263,7 +263,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -284,7 +284,7 @@
         ],
         "responses": {
           "200": {
-            "description": "ok",
+            "description": "ok"
           }
         }
       }
@@ -333,7 +333,9 @@
             "schema": {
               "type": "object",
               "properties": {
-                "totalCount":{ "type": "integer"},
+                "totalCount": {
+                  "type": "integer"
+                },
                 "pageData": {
                   "type": "array",
                   "items": {
@@ -488,7 +490,7 @@
               "$ref": "#/definitions/ArrayOfBricks"
             }
           }
-        },
+        }
       }
     },
     "/bricks/byStatus/{status}": {
@@ -497,12 +499,16 @@
           "brick"
         ],
         "summary": "Get all bricks",
-          "parameters": [
+        "parameters": [
           {
             "in": "path",
             "name": "status",
             "type": "integer",
-            "enum": [1,2,3, 4
+            "enum": [
+              1,
+              2,
+              3,
+              4
             ],
             "required": true
           }
@@ -791,6 +797,66 @@
         ],
         "x-swagger-router-controller": "Brick"
       }
+    },
+    "/question/{id}": {
+      "get": {
+        "tags": [
+          "question"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "summary": "Get specific question by id",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/Question"
+            }
+          }
+        }
+      }
+    },
+    "/question": {
+      "put": {
+        "tags": [
+          "question"
+        ],
+        "summary": "Update an existing question",
+        "description": "",
+        "operationId": "updateQuestion",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Brick object that needs to be updated",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Question"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok",
+            "schema": {
+              "$ref": "#/definitions/Question"
+            }
+          }
+        },
+        "x-swagger-router-controller": "Question"
+      }
     }
   },
   "securityDefinitions": {
@@ -999,7 +1065,7 @@
           "items": {
             "$ref": "#/definitions/ComponentAttempt"
           }
-        },
+        }
       },
       "xml": {
         "name": "BrickAttempt"
@@ -1012,16 +1078,16 @@
           "type": "integer",
           "format": "int64"
         },
-        "color":{
-          "type":"string"
+        "color": {
+          "type": "string"
         },
         "checked": {
-          "type":"boolean"
+          "type": "boolean"
         },
         "name": {
-          "type": "string",
+          "type": "string"
         },
-        "bricksCount":{
+        "bricksCount": {
           "type": "integer",
           "format": "int32"
         }
@@ -1052,10 +1118,10 @@
           }
         },
         "email": {
-          "type": "string",
+          "type": "string"
         },
         "firstName": {
-          "type": "string",
+          "type": "string"
         },
         "id": {
           "type": "integer",
@@ -1065,19 +1131,19 @@
           "type": "string"
         },
         "tutorialPassed": {
-          "type": "boolean",
+          "type": "boolean"
         },
         "roles": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-                "roleId": {
+              "roleId": {
                 "type": "integer"
               }
             }
           }
-        },
+        }
       },
       "xml": {
         "name": "User"
@@ -1093,10 +1159,10 @@
           }
         },
         "email": {
-          "type": "string",
+          "type": "string"
         },
         "firstName": {
-          "type": "string",
+          "type": "string"
         },
         "id": {
           "type": "integer",
@@ -1106,19 +1172,19 @@
           "type": "string"
         },
         "tutorialPassed": {
-          "type": "boolean",
+          "type": "boolean"
         },
         "roles": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-                "roleId": {
+              "roleId": {
                 "type": "integer"
               }
             }
           }
-        },
+        }
       },
       "xml": {
         "name": "User"
@@ -1134,7 +1200,7 @@
           }
         },
         "firstName": {
-          "type": "string",
+          "type": "string"
         },
         "id": {
           "type": "integer",
@@ -1157,7 +1223,7 @@
           "items": {
             "type": "integer"
           }
-        },
+        }
       },
       "xml": {
         "name": "User"
@@ -1171,7 +1237,7 @@
         },
         "body": {
           "$ref": "#/definitions/BrickAttempt"
-        },
+        }
       }
     },
     "BrickSummaryModel": {
@@ -1188,7 +1254,7 @@
         },
         "brick": {
           "$ref": "#/definitions/Brick"
-        },
+        }
       }
     },
     "SearchModel": {
@@ -1196,7 +1262,7 @@
       "properties": {
         "searchString": {
           "type": "string"
-        },
+        }
       }
     },
     "UserSearchModel": {
@@ -1214,21 +1280,21 @@
         "subjectFilters": {
           "type": "array",
           "items": {
-            "type":"integer"
+            "type": "integer"
           }
         },
         "roleFilters": {
           "type": "array",
           "items": {
-            "type":"integer"
+            "type": "integer"
           }
-        }, 
+        },
         "page": {
-            "type":"integer"
-          },
+          "type": "integer"
+        },
         "pageSize": {
-            "type":"integer"
-          }
+          "type": "integer"
+        }
       }
     },
     "ApiResponse": {
