@@ -53,6 +53,19 @@ exports.authLogoutPOST = function() {
 
 
 /**
+ * Reset user password by email.
+ *
+ * email String 
+ * no response value expected for this operation
+ **/
+exports.authResetPasswordEmailPOST = function(email) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Login user
  *
  * body Body_2 User password

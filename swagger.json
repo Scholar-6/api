@@ -153,6 +153,27 @@
         }
       }
     },
+    "/auth/resetPassword/{email}": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Reset user password by email.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "email",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
     "/auth/logout": {
       "post": {
         "tags": [

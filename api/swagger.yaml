@@ -82,6 +82,21 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Auth"
+  /auth/resetPassword/{email}:
+    post:
+      tags:
+      - "auth"
+      summary: "Reset user password by email."
+      operationId: "authResetPasswordEmailPOST"
+      parameters:
+      - name: "email"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Auth"
   /auth/logout:
     post:
       tags:

@@ -46,6 +46,17 @@ module.exports.authLogoutPOST = function authLogoutPOST (req, res, next) {
     });
 };
 
+module.exports.authResetPasswordEmailPOST = function authResetPasswordEmailPOST (req, res, next) {
+  var email = req.swagger.params['email'].value;
+  Auth.authResetPasswordEmailPOST(email)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.authSignUpuserTypePOST = function authSignUpuserTypePOST (req, res, next) {
   var body = req.swagger.params['body'].value;
   Auth.authSignUpuserTypePOST(body)
