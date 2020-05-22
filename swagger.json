@@ -1111,6 +1111,10 @@
         "bricksCount": {
           "type": "integer",
           "format": "int32"
+        },
+        "publishedBricksCount": {
+          "type": "integer",
+          "format": "int32"
         }
       },
       "xml": {

@@ -67,19 +67,20 @@ exports.playBrickSummarybrickIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",

@@ -12,9 +12,9 @@ exports.questionIdGET = function(id) {
     var examples = {};
     examples['application/json'] = {
   "contentBlocks" : "contentBlocks",
-  "id" : 2,
+  "id" : 7,
   "questionType" : "None",
-  "order" : 7
+  "order" : 9
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
@@ -37,9 +37,9 @@ exports.updateQuestion = function(body) {
     var examples = {};
     examples['application/json'] = {
   "contentBlocks" : "contentBlocks",
-  "id" : 2,
+  "id" : 7,
   "questionType" : "None",
-  "order" : 7
+  "order" : 9
 };
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);

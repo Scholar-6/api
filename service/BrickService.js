@@ -22,19 +22,20 @@ exports.addBrick = function(body) {
     "name" : "name",
     "checked" : true,
     "id" : 5,
-    "bricksCount" : 5
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   }, {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   } ],
   "revisionLog" : "revisionLog",
   "title" : "title",
@@ -78,19 +79,20 @@ exports.brickBuildIdPOST = function(id) {
     "name" : "name",
     "checked" : true,
     "id" : 5,
-    "bricksCount" : 5
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   }, {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   } ],
   "revisionLog" : "revisionLog",
   "title" : "title",
@@ -146,19 +148,20 @@ exports.brickIdGET = function(id) {
     "name" : "name",
     "checked" : true,
     "id" : 5,
-    "bricksCount" : 5
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   }, {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   } ],
   "revisionLog" : "revisionLog",
   "title" : "title",
@@ -202,19 +205,20 @@ exports.brickPublishIdPOST = function(id) {
     "name" : "name",
     "checked" : true,
     "id" : 5,
-    "bricksCount" : 5
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   }, {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   } ],
   "revisionLog" : "revisionLog",
   "title" : "title",
@@ -258,19 +262,20 @@ exports.brickReviewIdPOST = function(id) {
     "name" : "name",
     "checked" : true,
     "id" : 5,
-    "bricksCount" : 5
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   }, {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   } ],
   "revisionLog" : "revisionLog",
   "title" : "title",
@@ -388,19 +393,20 @@ exports.updateBrick = function(body) {
     "name" : "name",
     "checked" : true,
     "id" : 5,
-    "bricksCount" : 5
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   }, {
     "contentBlocks" : "contentBlocks",
-    "id" : 2,
+    "id" : 7,
     "questionType" : "None",
-    "order" : 7
+    "order" : 9
   } ],
   "revisionLog" : "revisionLog",
   "title" : "title",

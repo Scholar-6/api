@@ -34,19 +34,20 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -70,19 +71,20 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -100,9 +102,9 @@ exports.userCurrentGET = function() {
   "lastName" : "lastName",
   "subjects" : [ "", "" ],
   "roles" : [ {
-    "roleId" : 3
+    "roleId" : 2
   }, {
-    "roleId" : 3
+    "roleId" : 2
   } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
@@ -115,19 +117,20 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -151,19 +154,20 @@ exports.userCurrentGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -177,7 +181,7 @@ exports.userCurrentGET = function() {
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "id" : 9,
+  "id" : 3,
   "tutorialPassed" : true,
   "email" : "email"
 };
@@ -243,9 +247,9 @@ exports.usersPOST = function(body) {
     "lastName" : "lastName",
     "subjects" : [ "", "" ],
     "roles" : [ {
-      "roleId" : 3
+      "roleId" : 2
     }, {
-      "roleId" : 3
+      "roleId" : 2
     } ],
     "id" : 6,
     "tutorialPassed" : true,
@@ -255,9 +259,9 @@ exports.usersPOST = function(body) {
     "lastName" : "lastName",
     "subjects" : [ "", "" ],
     "roles" : [ {
-      "roleId" : 3
+      "roleId" : 2
     }, {
-      "roleId" : 3
+      "roleId" : 2
     } ],
     "id" : 6,
     "tutorialPassed" : true,
@@ -294,19 +298,20 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -330,19 +335,20 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -360,9 +366,9 @@ exports.useruserIdGET = function() {
   "lastName" : "lastName",
   "subjects" : [ "", "" ],
   "roles" : [ {
-    "roleId" : 3
+    "roleId" : 2
   }, {
-    "roleId" : 3
+    "roleId" : 2
   } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
@@ -375,19 +381,20 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -411,19 +418,20 @@ exports.useruserIdGET = function() {
       "name" : "name",
       "checked" : true,
       "id" : 5,
-      "bricksCount" : 5
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
     },
     "created" : "2000-01-23T04:56:07.000+00:00",
     "questions" : [ {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     }, {
       "contentBlocks" : "contentBlocks",
-      "id" : 2,
+      "id" : 7,
       "questionType" : "None",
-      "order" : 7
+      "order" : 9
     } ],
     "revisionLog" : "revisionLog",
     "title" : "title",
@@ -437,7 +445,7 @@ exports.useruserIdGET = function() {
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   } ],
-  "id" : 9,
+  "id" : 3,
   "tutorialPassed" : true,
   "email" : "email"
 };

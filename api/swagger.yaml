@@ -651,9 +651,9 @@ definitions:
       name: "Question"
     example:
       contentBlocks: "contentBlocks"
-      id: 2
+      id: 7
       questionType: "None"
-      order: 7
+      order: 9
   Brick:
     type: "object"
     required:
@@ -725,16 +725,17 @@ definitions:
         checked: true
         id: 5
         bricksCount: 5
+        publishedBricksCount: 2
       created: "2000-01-23T04:56:07.000+00:00"
       questions:
       - contentBlocks: "contentBlocks"
-        id: 2
+        id: 7
         questionType: "None"
-        order: 7
+        order: 9
       - contentBlocks: "contentBlocks"
-        id: 2
+        id: 7
         questionType: "None"
-        order: 7
+        order: 9
       revisionLog: "revisionLog"
       title: "title"
       subjectId: 1
@@ -797,6 +798,9 @@ definitions:
       bricksCount:
         type: "integer"
         format: "int32"
+      publishedBricksCount:
+        type: "integer"
+        format: "int32"
     xml:
       name: "Subject"
     example:
@@ -805,6 +809,7 @@ definitions:
       checked: true
       id: 5
       bricksCount: 5
+      publishedBricksCount: 2
   User:
     type: "object"
     properties:
@@ -850,16 +855,17 @@ definitions:
           checked: true
           id: 5
           bricksCount: 5
+          publishedBricksCount: 2
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -882,16 +888,17 @@ definitions:
           checked: true
           id: 5
           bricksCount: 5
+          publishedBricksCount: 2
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -909,8 +916,8 @@ definitions:
       - ""
       - ""
       roles:
-      - roleId: 3
-      - roleId: 3
+      - roleId: 2
+      - roleId: 2
       createBricks:
       - alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
@@ -923,16 +930,17 @@ definitions:
           checked: true
           id: 5
           bricksCount: 5
+          publishedBricksCount: 2
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -955,16 +963,17 @@ definitions:
           checked: true
           id: 5
           bricksCount: 5
+          publishedBricksCount: 2
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -976,7 +985,7 @@ definitions:
         id: 0
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
-      id: 9
+      id: 3
       tutorialPassed: true
       email: "email"
   UserShort:
@@ -1010,8 +1019,8 @@ definitions:
       - ""
       - ""
       roles:
-      - roleId: 3
-      - roleId: 3
+      - roleId: 2
+      - roleId: 2
       id: 6
       tutorialPassed: true
       email: "email"
@@ -1074,16 +1083,17 @@ definitions:
           checked: true
           id: 5
           bricksCount: 5
+          publishedBricksCount: 2
         created: "2000-01-23T04:56:07.000+00:00"
         questions:
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         - contentBlocks: "contentBlocks"
-          id: 2
+          id: 7
           questionType: "None"
-          order: 7
+          order: 9
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
@@ -1196,8 +1206,8 @@ definitions:
         - ""
         - ""
         roles:
-        - roleId: 3
-        - roleId: 3
+        - roleId: 2
+        - roleId: 2
         id: 6
         tutorialPassed: true
         email: "email"
@@ -1207,8 +1217,8 @@ definitions:
         - ""
         - ""
         roles:
-        - roleId: 3
-        - roleId: 3
+        - roleId: 2
+        - roleId: 2
         id: 6
         tutorialPassed: true
         email: "email"
@@ -1219,7 +1229,7 @@ definitions:
       roleId:
         type: "integer"
     example:
-      roleId: 3
+      roleId: 2
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
