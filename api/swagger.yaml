@@ -26,7 +26,7 @@ paths:
       operationId: "stripesuccessGET"
       parameters:
       - name: "code"
-        in: "path"
+        in: "query"
         required: true
         type: "string"
       responses:
