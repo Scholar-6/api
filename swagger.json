@@ -25,6 +25,35 @@
     "http"
   ],
   "paths": {
+    "/stripesuccess": {
+      "get": {
+        "tags": [
+          "stripe"
+        ],
+        "summary": "Stripe success for connect activation",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "code",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success, your details have been registered",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "Success, your details have been registered"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/subjects": {
       "get": {
         "tags": [

@@ -18,6 +18,21 @@ schemes:
 - "https"
 - "http"
 paths:
+  /stripesuccess:
+    get:
+      tags:
+      - "stripe"
+      summary: "Stripe success for connect activation"
+      operationId: "stripesuccessGET"
+      parameters:
+      - name: "code"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Success, your details have been registered"
+      x-swagger-router-controller: "Stripe"
   /subjects:
     get:
       tags:
