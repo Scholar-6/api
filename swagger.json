@@ -331,6 +331,27 @@
         }
       }
     },
+    "/user/delete/{userId}": {
+      "delete": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Delete user by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        }
+      }
+    },
     "/user/current": {
       "get": {
         "tags": [

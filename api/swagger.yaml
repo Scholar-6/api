@@ -213,6 +213,21 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "User"
+  /user/delete/{userId}:
+    delete:
+      tags:
+      - "user"
+      summary: "Delete user by id"
+      operationId: "userDeleteUserIdDELETE"
+      parameters:
+      - name: "userId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
   /user/current:
     get:
       tags:

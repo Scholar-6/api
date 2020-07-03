@@ -208,6 +208,19 @@ exports.userDeactivateUserIdPUT = function(userId) {
 
 
 /**
+ * Delete user by id
+ *
+ * userId String 
+ * no response value expected for this operation
+ **/
+exports.userDeleteUserIdDELETE = function(userId) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Update user info
  *
  * body UserUpdateModel 
