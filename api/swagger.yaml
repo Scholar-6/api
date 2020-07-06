@@ -645,7 +645,75 @@ paths:
         "200":
           description: "ok"
           schema:
-            $ref: "#/definitions/NotifyResponse"
+            $ref: "#/definitions/Notification"
+      x-swagger-router-controller: "Notifications"
+  /notifications/markAsRead/{notificationId}:
+    put:
+      tags:
+      - "notifications"
+      summary: "Marks a single notification as read."
+      description: ""
+      operationId: "markNotificationAsRead"
+      parameters:
+        - name: "notificationId"
+          in: "path"
+          required: true
+          type: "integer"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Notifications"
+  /notifications/all:
+    get:
+      tags:
+      - "notifications"
+      summary: "Gets all notifications for the current user."
+      description: ""
+      operationId: "getAllNotifications"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfNotifications"
+      x-swagger-router-controller: "Notifications"
+    delete:
+      tags:
+      - "notifications"
+      summary: "Deletes all notifications for the current user."
+      description: ""
+      operationId: "deleteAllNotifications"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Notifications"
+  /notifications/unread:
+    get:
+      tags:
+      - "notifications"
+      summary: "Gets all unread notifications for the current user."
+      description: ""
+      operationId: "getUnreadNotifications"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfNotifications"
+      x-swagger-router-controller: "Notifications"
+  /notifications/unread/markAsRead:
+    put:
+      tags:
+      - "notifications"
+      summary: "Marks all unread notifications as read."
+      description: ""
+      operationId: "markUnreadAsRead"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Notifications"
 securityDefinitions:
   brillder_auth:
     type: "oauth2"
@@ -675,6 +743,10 @@ definitions:
     type: "array"
     items:
       $ref: "#/definitions/Question"
+  ArrayOfNotifications:
+    type: "array"
+    items:
+      $ref: "#/definitions/Notification"
   Question:
     type: "object"
     properties:
@@ -1299,7 +1371,7 @@ definitions:
       text: "This is the text of the notification and it can go on for a while..."
       read: false,
       receiver: 1
-  NotifyResponse:
+  Notification:
     type: "object"
     properties:
       id:
@@ -1336,7 +1408,7 @@ definitions:
         status: 1
       title: "Notification Title"
       text: "This is the text of the notification and it can go on for a while..."
-      read: false,
+      read: false
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
