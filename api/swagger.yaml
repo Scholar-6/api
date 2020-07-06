@@ -655,10 +655,10 @@ paths:
       description: ""
       operationId: "markNotificationAsRead"
       parameters:
-        - name: "notificationId"
-          in: "path"
-          required: true
-          type: "integer"
+      - name: "notificationId"
+        in: "path"
+        required: true
+        type: "integer"
       responses:
         "200":
           description: "ok"
@@ -672,6 +672,7 @@ paths:
       operationId: "getAllNotifications"
       produces:
       - "application/json"
+      parameters: []
       responses:
         "200":
           description: "ok"
@@ -684,6 +685,7 @@ paths:
       summary: "Deletes all notifications for the current user."
       description: ""
       operationId: "deleteAllNotifications"
+      parameters: []
       responses:
         "200":
           description: "ok"
@@ -697,6 +699,7 @@ paths:
       operationId: "getUnreadNotifications"
       produces:
       - "application/json"
+      parameters: []
       responses:
         "200":
           description: "ok"
@@ -710,6 +713,7 @@ paths:
       summary: "Marks all unread notifications as read."
       description: ""
       operationId: "markUnreadAsRead"
+      parameters: []
       responses:
         "200":
           description: "ok"
@@ -1369,7 +1373,7 @@ definitions:
     example:
       title: "Notification Title"
       text: "This is the text of the notification and it can go on for a while..."
-      read: false,
+      read: "false,"
       receiver: 1
   Notification:
     type: "object"
