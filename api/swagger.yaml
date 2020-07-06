@@ -623,6 +623,101 @@ paths:
           schema:
             $ref: "#/definitions/Question"
       x-swagger-router-controller: "Question"
+  /notifications/notify:
+    post:
+      tags:
+      - "notifications"
+      summary: "Send a notification to a user."
+      description: ""
+      operationId: "sendNotification"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Notification data to be sent."
+        required: true
+        schema:
+          $ref: "#/definitions/NotifyRequest"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Notification"
+      x-swagger-router-controller: "Notifications"
+  /notifications/markAsRead/{notificationId}:
+    put:
+      tags:
+      - "notifications"
+      summary: "Marks a single notification as read."
+      description: ""
+      operationId: "markNotificationAsRead"
+      parameters:
+      - name: "notificationId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Notifications"
+  /notifications/all:
+    get:
+      tags:
+      - "notifications"
+      summary: "Gets all notifications for the current user."
+      description: ""
+      operationId: "getAllNotifications"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfNotifications"
+      x-swagger-router-controller: "Notifications"
+    delete:
+      tags:
+      - "notifications"
+      summary: "Deletes all notifications for the current user."
+      description: ""
+      operationId: "deleteAllNotifications"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Notifications"
+  /notifications/unread:
+    get:
+      tags:
+      - "notifications"
+      summary: "Gets all unread notifications for the current user."
+      description: ""
+      operationId: "getUnreadNotifications"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfNotifications"
+      x-swagger-router-controller: "Notifications"
+  /notifications/unread/markAsRead:
+    put:
+      tags:
+      - "notifications"
+      summary: "Marks all unread notifications as read."
+      description: ""
+      operationId: "markUnreadAsRead"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Notifications"
 securityDefinitions:
   brillder_auth:
     type: "oauth2"
@@ -652,6 +747,10 @@ definitions:
     type: "array"
     items:
       $ref: "#/definitions/Question"
+  ArrayOfNotifications:
+    type: "array"
+    items:
+      $ref: "#/definitions/Notification"
   Question:
     type: "object"
     properties:
@@ -1260,6 +1359,60 @@ definitions:
         type: "integer"
     example:
       roleId: 2
+  NotifyRequest:
+    type: "object"
+    properties:
+      title:
+        type: "string"
+      text:
+        type: "string"
+      read:
+        type: "boolean"
+      receiver:
+        type: "number"
+    example:
+      title: "Notification Title"
+      text: "This is the text of the notification and it can go on for a while..."
+      read: "false,"
+      receiver: 1
+  Notification:
+    type: "object"
+    properties:
+      id:
+        type: "number"
+      sender:
+        $ref: "#/definitions/UserShort"
+      receiver:
+        $ref: "#/definitions/UserShort"
+      title:
+        type: "string"
+      text:
+        type: "string"
+      read:
+        type: "boolean"
+    example:
+      id: 1
+      sender:
+        id: 1
+        email: "test1@example.com"
+        firstName: "Test"
+        lastName: "User"
+        subjects:
+        - ""
+        tutorialPassed: false
+        status: 1
+      receiver:
+        id: 2
+        email: "test2@example.com"
+        firstName: "Another"
+        lastName: "Test"
+        subjects:
+        - ""
+        tutorialPassed: false
+        status: 1
+      title: "Notification Title"
+      text: "This is the text of the notification and it can go on for a while..."
+      read: false
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
