@@ -623,6 +623,29 @@ paths:
           schema:
             $ref: "#/definitions/Question"
       x-swagger-router-controller: "Question"
+  /notifications/notify:
+    post:
+      tags:
+      - "notifications"
+      summary: "Send a notification to a user."
+      description: ""
+      operationId: "sendNotification"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Notification data to be sent."
+        required: true
+        schema:
+          $ref: "#/definitions/NotifyRequest"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/NotifyResponse"
 securityDefinitions:
   brillder_auth:
     type: "oauth2"
@@ -1260,6 +1283,60 @@ definitions:
         type: "integer"
     example:
       roleId: 2
+  NotifyRequest:
+    type: "object"
+    properties:
+      title:
+        type: "string"
+      text:
+        type: "string"
+      read:
+        type: "boolean"
+      receiver:
+        type: "number"
+    example:
+      title: "Notification Title"
+      text: "This is the text of the notification and it can go on for a while..."
+      read: false,
+      receiver: 1
+  NotifyResponse:
+    type: "object"
+    properties:
+      id:
+        type: "number"
+      sender:
+        $ref: "#/definitions/UserShort"
+      receiver:
+        $ref: "#/definitions/UserShort"
+      title:
+        type: "string"
+      text:
+        type: "string"
+      read:
+        type: "boolean"
+    example:
+      id: 1
+      sender:
+        id: 1
+        email: "test1@example.com"
+        firstName: "Test"
+        lastName: "User"
+        subjects:
+        - ""
+        tutorialPassed: false
+        status: 1
+      receiver:
+        id: 2
+        email: "test2@example.com"
+        firstName: "Another"
+        lastName: "Test"
+        subjects:
+        - ""
+        tutorialPassed: false
+        status: 1
+      title: "Notification Title"
+      text: "This is the text of the notification and it can go on for a while..."
+      read: false,
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
