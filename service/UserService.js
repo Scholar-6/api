@@ -234,6 +234,19 @@ exports.userPUT = function(body) {
 
 
 /**
+ * Add user profile image link for current user
+ *
+ * profileImageUrl String 
+ * no response value expected for this operation
+ **/
+exports.userProfileImageProfileImageUrlPUT = function(profileImageUrl) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Mark tutorial as showed for current user
  *
  * no response value expected for this operation
