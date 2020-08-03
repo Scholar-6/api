@@ -57,6 +57,17 @@ module.exports.userPUT = function userPUT (req, res, next) {
     });
 };
 
+module.exports.userProfileImageProfileImageUrlPUT = function userProfileImageProfileImageUrlPUT (req, res, next) {
+  var profileImageUrl = req.swagger.params['profileImageUrl'].value;
+  User.userProfileImageProfileImageUrlPUT(profileImageUrl)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.userTutorialShowedPUT = function userTutorialShowedPUT (req, res, next) {
   User.userTutorialShowedPUT()
     .then(function (response) {

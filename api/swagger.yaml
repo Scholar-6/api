@@ -167,6 +167,21 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "User"
+  /user/profileImage/{profileImageUrl}:
+    put:
+      tags:
+      - "user"
+      summary: "Add user profile image link for current user"
+      operationId: "userProfileImageProfileImageUrlPUT"
+      parameters:
+      - name: "profileImageUrl"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
   /user:
     put:
       tags:
