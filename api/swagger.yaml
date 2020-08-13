@@ -1,1221 +1,1076 @@
 ---
-swagger: "2.0"
-info:
-  description: "An API to build, play and teach bricks"
-  version: "1.0.0"
-  title: "Brillder"
-  termsOfService: ""
-  contact:
-    email: "lindsaymacvean@scholar6.org"
-  license:
-    name: "Apache 2.0"
-    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "swagger.scholar6.org"
-tags:
-- name: "brick"
-  description: "Bricks functionality"
-schemes:
-- "https"
-- "http"
-paths:
-  /stripesuccess:
-    get:
-      tags:
-      - "stripe"
-      summary: "Stripe success for connect activation"
-      operationId: "stripesuccessGET"
-      parameters:
-      - name: "code"
-        in: "query"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "Success, your details have been registered"
-      x-swagger-router-controller: "Stripe"
-  /subjects:
-    get:
-      tags:
-      - "subject"
-      summary: "Get all subjects"
-      operationId: "subjectsGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
+  swagger: "2.0"
+  info:
+    description: "An API to build, play and teach bricks"
+    version: "1.0.0"
+    title: "Brillder"
+    termsOfService: ""
+    contact:
+      email: "lindsaymacvean@scholar6.org"
+    license:
+      name: "Apache 2.0"
+      url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  host: "swagger.scholar6.org"
+  tags:
+  - name: "brick"
+    description: "Bricks functionality"
+  schemes:
+  - "https"
+  - "http"
+  paths:
+    /stripesuccess:
+      get:
+        tags:
+        - "stripe"
+        summary: "Stripe success for connect activation"
+        operationId: "stripesuccessGET"
+        parameters:
+        - name: "code"
+          in: "query"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "Success, your details have been registered"
+        x-swagger-router-controller: "Stripe"
+    /subjects:
+      get:
+        tags:
+        - "subject"
+        summary: "Get all subjects"
+        operationId: "subjectsGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfSubjects"
+        x-swagger-router-controller: "Subject"
+    /auth/login:
+      post:
+        tags:
+        - "auth"
+        summary: "Login user"
+        operationId: "authLoginPOST"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "User password"
+          required: true
           schema:
-            $ref: "#/definitions/ArrayOfSubjects"
-      x-swagger-router-controller: "Subject"
-  /auth/login:
-    post:
-      tags:
-      - "auth"
-      summary: "Login user"
-      operationId: "authLoginPOST"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "User password"
-        required: true
-        schema:
-          $ref: "#/definitions/body"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Auth"
-  /auth/login/:userType:
-    post:
-      tags:
-      - "auth"
-      summary: "Login user"
-      operationId: "authLoginuserTypePOST"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "User password"
-        required: true
-        schema:
-          $ref: "#/definitions/body_1"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Auth"
-  /auth/signUp/:userType:
-    post:
-      tags:
-      - "auth"
-      summary: "Login user"
-      operationId: "authSignUpuserTypePOST"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "User password"
-        required: true
-        schema:
-          $ref: "#/definitions/body_2"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Auth"
-  /auth/resetPassword/{email}:
-    post:
-      tags:
-      - "auth"
-      summary: "Reset user password by email."
-      operationId: "authResetPasswordEmailPOST"
-      parameters:
-      - name: "email"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Auth"
-  /auth/logout:
-    post:
-      tags:
-      - "auth"
-      summary: "Login out current user"
-      operationId: "authLogoutPOST"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Auth"
-  /auth/google/login/{returnUrl}:
-    get:
-      tags:
-      - "auth"
-      summary: "Login by Google"
-      operationId: "authGoogleLoginReturnUrlGET"
-      parameters:
-      - name: "returnUrl"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Auth"
-  /fileUpload:
-    post:
-      tags:
-      - "file"
-      summary: "Uploads a file."
-      operationId: "fileUploadPOST"
-      consumes:
-      - "multipart/form-data"
-      parameters:
-      - name: "file"
-        in: "formData"
-        description: "The file to upload."
-        required: false
-        type: "file"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "File"
-  /user/tutorialShowed:
-    put:
-      tags:
-      - "user"
-      summary: "Mark tutorial as showed for current user"
-      operationId: "userTutorialShowedPUT"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "User"
-  /user/profileImage/{profileImageUrl}:
-    put:
-      tags:
-      - "user"
-      summary: "Add user profile image link for current user"
-      operationId: "userProfileImageProfileImageUrlPUT"
-      parameters:
-      - name: "profileImageUrl"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "User"
-  /user:
-    put:
-      tags:
-      - "user"
-      summary: "Update user info"
-      operationId: "userPUT"
-      parameters:
-      - in: "body"
-        name: "body"
-        required: true
-        schema:
-          $ref: "#/definitions/UserUpdateModel"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "User"
-  /user/activate/{userId}:
-    put:
-      tags:
-      - "user"
-      summary: "Activate user by id"
-      operationId: "userActivateUserIdPUT"
-      parameters:
-      - name: "userId"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "User"
-  /user/deactivate/{userId}:
-    put:
-      tags:
-      - "user"
-      summary: "Dectivate user by id"
-      operationId: "userDeactivateUserIdPUT"
-      parameters:
-      - name: "userId"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "User"
-  /user/delete/{userId}:
-    delete:
-      tags:
-      - "user"
-      summary: "Delete user by id"
-      operationId: "userDeleteUserIdDELETE"
-      parameters:
-      - name: "userId"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "User"
-  /user/current:
-    get:
-      tags:
-      - "user"
-      summary: "Get user by id"
-      operationId: "userCurrentGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/body"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Auth"
+    /auth/login/:userType:
+      post:
+        tags:
+        - "auth"
+        summary: "Login user"
+        operationId: "authLoginuserTypePOST"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "User password"
+          required: true
           schema:
-            $ref: "#/definitions/User"
-      x-swagger-router-controller: "User"
-  /users:
-    post:
-      tags:
-      - "user"
-      summary: "Search users"
-      operationId: "usersPOST"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        required: true
-        schema:
-          $ref: "#/definitions/UserSearchModel"
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/body_1"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Auth"
+    /auth/signUp/:userType:
+      post:
+        tags:
+        - "auth"
+        summary: "Login user"
+        operationId: "authSignUpuserTypePOST"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "User password"
+          required: true
           schema:
-            $ref: "#/definitions/inline_response_200"
-      x-swagger-router-controller: "User"
-  /user/:userId:
-    get:
-      tags:
-      - "user"
-      summary: "Get current user"
-      operationId: "useruserIdGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/body_2"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Auth"
+    /auth/resetPassword/{email}:
+      post:
+        tags:
+        - "auth"
+        summary: "Reset user password by email."
+        operationId: "authResetPasswordEmailPOST"
+        parameters:
+        - name: "email"
+          in: "path"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Auth"
+    /auth/logout:
+      post:
+        tags:
+        - "auth"
+        summary: "Login out current user"
+        operationId: "authLogoutPOST"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Auth"
+    /auth/google/login/{returnUrl}:
+      get:
+        tags:
+        - "auth"
+        summary: "Login by Google"
+        operationId: "authGoogleLoginReturnUrlGET"
+        parameters:
+        - name: "returnUrl"
+          in: "path"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Auth"
+    /fileUpload:
+      post:
+        tags:
+        - "file"
+        summary: "Uploads a file."
+        operationId: "fileUploadPOST"
+        consumes:
+        - "multipart/form-data"
+        parameters:
+        - name: "file"
+          in: "formData"
+          description: "The file to upload."
+          required: false
+          type: "file"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "File"
+    /user/tutorialShowed:
+      put:
+        tags:
+        - "user"
+        summary: "Mark tutorial as showed for current user"
+        operationId: "userTutorialShowedPUT"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "User"
+    /user/profileImage/{profileImageUrl}:
+      put:
+        tags:
+        - "user"
+        summary: "Add user profile image link for current user"
+        operationId: "userProfileImageProfileImageUrlPUT"
+        parameters:
+        - name: "profileImageUrl"
+          in: "path"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "User"
+    /user:
+      put:
+        tags:
+        - "user"
+        summary: "Update user info"
+        operationId: "userPUT"
+        parameters:
+        - in: "body"
+          name: "body"
+          required: true
           schema:
-            $ref: "#/definitions/User"
-      x-swagger-router-controller: "User"
-  /play/brickSummary/:brickId:
-    get:
-      tags:
-      - "play"
-      summary: "Get brick summary"
-      operationId: "playBrickSummarybrickIdGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/UserUpdateModel"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "User"
+    /user/activate/{userId}:
+      put:
+        tags:
+        - "user"
+        summary: "Activate user by id"
+        operationId: "userActivateUserIdPUT"
+        parameters:
+        - name: "userId"
+          in: "path"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "User"
+    /user/deactivate/{userId}:
+      put:
+        tags:
+        - "user"
+        summary: "Dectivate user by id"
+        operationId: "userDeactivateUserIdPUT"
+        parameters:
+        - name: "userId"
+          in: "path"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "User"
+    /user/delete/{userId}:
+      delete:
+        tags:
+        - "user"
+        summary: "Delete user by id"
+        operationId: "userDeleteUserIdDELETE"
+        parameters:
+        - name: "userId"
+          in: "path"
+          required: true
+          type: "string"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "User"
+    /user/current:
+      get:
+        tags:
+        - "user"
+        summary: "Get user by id"
+        operationId: "userCurrentGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/User"
+        x-swagger-router-controller: "User"
+    /users:
+      post:
+        tags:
+        - "user"
+        summary: "Search users"
+        operationId: "usersPOST"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          required: true
           schema:
-            $ref: "#/definitions/BrickSummaryModel"
-      x-swagger-router-controller: "Play"
-  /play/attempts:
-    get:
-      tags:
-      - "play"
-      summary: "Get all attempts"
-      operationId: "playAttemptsGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/UserSearchModel"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/inline_response_200"
+        x-swagger-router-controller: "User"
+    /user/:userId:
+      get:
+        tags:
+        - "user"
+        summary: "Get current user"
+        operationId: "useruserIdGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/User"
+        x-swagger-router-controller: "User"
+    /play/brickSummary/:brickId:
+      get:
+        tags:
+        - "play"
+        summary: "Get brick summary"
+        operationId: "playBrickSummarybrickIdGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/BrickSummaryModel"
+        x-swagger-router-controller: "Play"
+    /play/attempts:
+      get:
+        tags:
+        - "play"
+        summary: "Get all attempts"
+        operationId: "playAttemptsGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfBrickAttempts"
+        x-swagger-router-controller: "Play"
+    /play/attempt:
+      post:
+        tags:
+        - "play"
+        summary: "Create attempt"
+        operationId: "playAttemptPOST"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "BrickAttempt object that needs to be created"
+          required: true
           schema:
-            $ref: "#/definitions/ArrayOfBrickAttempts"
-      x-swagger-router-controller: "Play"
-  /play/attempt:
-    post:
-      tags:
-      - "play"
-      summary: "Create attempt"
-      operationId: "playAttemptPOST"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "BrickAttempt object that needs to be created"
-        required: true
-        schema:
-          $ref: "#/definitions/BrickAttempt"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Play"
-    put:
-      tags:
-      - "play"
-      summary: "Update attempt"
-      operationId: "playAttemptPUT"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "BrickAttempt model object that needs to be updated"
-        required: true
-        schema:
-          $ref: "#/definitions/BrickAttemptUpdateModel"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Play"
-  /bricks:
-    get:
-      tags:
-      - "brick"
-      summary: "Get all bricks"
-      operationId: "bricksGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/BrickAttempt"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Play"
+      put:
+        tags:
+        - "play"
+        summary: "Update attempt"
+        operationId: "playAttemptPUT"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "BrickAttempt model object that needs to be updated"
+          required: true
           schema:
-            $ref: "#/definitions/ArrayOfBricks"
-      x-swagger-router-controller: "Brick"
-  /bricks/search:
-    post:
-      tags:
-      - "brick"
-      summary: "Search over all bricks"
-      operationId: "bricksSearchPOST"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Search model"
-        required: true
-        schema:
-          $ref: "#/definitions/SearchModel"
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/BrickAttemptUpdateModel"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Play"
+    /bricks:
+      get:
+        tags:
+        - "brick"
+        summary: "Get all bricks"
+        operationId: "bricksGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfBricks"
+        x-swagger-router-controller: "Brick"
+    /bricks/search:
+      post:
+        tags:
+        - "brick"
+        summary: "Search over all bricks"
+        operationId: "bricksSearchPOST"
+        consumes:
+        - "application/json"
+        - "application/xml"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "Search model"
+          required: true
           schema:
-            $ref: "#/definitions/ArrayOfBricks"
-      x-swagger-router-controller: "Brick"
-  /bricks/byStatus/{status}:
-    get:
-      tags:
-      - "brick"
-      summary: "Get all bricks"
-      operationId: "bricksByStatusStatusGET"
-      parameters:
-      - name: "status"
-        in: "path"
-        required: true
-        type: "integer"
-        enum:
-        - 1
-        - 2
-        - 3
-        - 4
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/ArrayOfBricks"
-      x-swagger-router-controller: "Brick"
-  /bricks/currentUser:
-    get:
-      tags:
-      - "brick"
-      summary: "Get all bricks of current user"
-      operationId: "bricksCurrentUserGET"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/ArrayOfBricks"
-      x-swagger-router-controller: "Brick"
-  /brick/{id}:
-    get:
-      tags:
-      - "brick"
-      summary: "Get specific brick by id"
-      operationId: "brickIdGET"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
+            $ref: "#/definitions/SearchModel"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfBricks"
+        x-swagger-router-controller: "Brick"
+    /bricks/byStatus/{status}:
+      get:
+        tags:
+        - "brick"
+        summary: "Get all bricks"
+        operationId: "bricksByStatusStatusGET"
+        parameters:
+        - name: "status"
+          in: "path"
+          required: true
+          type: "integer"
+          enum:
+          - 1
+          - 2
+          - 3
+          - 4
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfBricks"
+        x-swagger-router-controller: "Brick"
+    /bricks/currentUser:
+      get:
+        tags:
+        - "brick"
+        summary: "Get all bricks of current user"
+        operationId: "bricksCurrentUserGET"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfBricks"
+        x-swagger-router-controller: "Brick"
+    /brick/{id}:
+      get:
+        tags:
+        - "brick"
+        summary: "Get specific brick by id"
+        operationId: "brickIdGET"
+        parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Brick"
+        x-swagger-router-controller: "Brick"
+      delete:
+        tags:
+        - "brick"
+        summary: "Delete specific brick by id"
+        operationId: "brickIdDELETE"
+        parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Brick"
+    /brick/build/{id}:
+      post:
+        tags:
+        - "brick"
+        summary: "Set brick to build status"
+        description: ""
+        operationId: "brickBuildIdPOST"
+        consumes:
+        - "application/json"
+        - "application/xml"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Brick"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+    /brick/review/{id}:
+      post:
+        tags:
+        - "brick"
+        summary: "Set brick to review status"
+        description: ""
+        operationId: "brickReviewIdPOST"
+        consumes:
+        - "application/json"
+        - "application/xml"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Brick"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+    /brick/publish/{id}:
+      post:
+        tags:
+        - "brick"
+        summary: "Set brick to publish status"
+        description: ""
+        operationId: "brickPublishIdPOST"
+        consumes:
+        - "application/json"
+        - "application/xml"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Brick"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+    /brick/assignStudents/{brickId}:
+      post:
+        tags:
+        - "brick"
+        summary: "Assign students to brick"
+        description: ""
+        operationId: "assignStudents"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        parameters:
+        - name: "brickId"
+          in: "path"
+          required: true
+          type: "integer"
+        - name: "studentsIds"
+          in: "body"
+          required: true
+          schema: 
+            type: object
+            properties:
+              studentsIds: 
+                type: array
+                items: 
+                  type: integer
+        responses:
+          "200":
+            description: "ok"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+    /brick/assignClasses/{brickId}:
+      post:
+        tags:
+        - "brick"
+        summary: "Assign classes to brick"
+        description: ""
+        operationId: "assignClasses"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        parameters:
+        - name: "brickId"
+          in: "path"
+          required: true
+          type: "integer"
+        - name: "classesIds"
+          in: "body"
+          required: true
+          schema: 
+            type: object
+            properties:
+              studentsIds: 
+                type: array
+                items: 
+                  type: integer
+        responses:
+          "200":
+            description: "ok"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+    /brick:
+      post:
+        tags:
+        - "brick"
+        summary: "Add a new brick"
+        description: ""
+        operationId: "addBrick"
+        consumes:
+        - "application/json"
+        - "application/xml"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "Brick object that needs to be added"
+          required: true
           schema:
             $ref: "#/definitions/Brick"
-      x-swagger-router-controller: "Brick"
-    delete:
-      tags:
-      - "brick"
-      summary: "Delete specific brick by id"
-      operationId: "brickIdDELETE"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Brick"
-  /brick/build/{id}:
-    post:
-      tags:
-      - "brick"
-      summary: "Set brick to build status"
-      description: ""
-      operationId: "brickBuildIdPOST"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Brick"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+      put:
+        tags:
+        - "brick"
+        summary: "Update an existing brick"
+        description: ""
+        operationId: "updateBrick"
+        consumes:
+        - "application/json"
+        - "application/xml"
+        produces:
+        - "application/xml"
+        - "application/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "Brick object that needs to be updated"
+          required: true
           schema:
             $ref: "#/definitions/Brick"
-      security:
-      - brillder_auth:
-        - "write:bricks"
-        - "read:bricks"
-      x-swagger-router-controller: "Brick"
-  /brick/review/{id}:
-    post:
-      tags:
-      - "brick"
-      summary: "Set brick to review status"
-      description: ""
-      operationId: "brickReviewIdPOST"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/Brick"
-      security:
-      - brillder_auth:
-        - "write:bricks"
-        - "read:bricks"
-      x-swagger-router-controller: "Brick"
-  /brick/publish/{id}:
-    post:
-      tags:
-      - "brick"
-      summary: "Set brick to publish status"
-      description: ""
-      operationId: "brickPublishIdPOST"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/Brick"
-      security:
-      - brillder_auth:
-        - "write:bricks"
-        - "read:bricks"
-      x-swagger-router-controller: "Brick"
-  /brick:
-    post:
-      tags:
-      - "brick"
-      summary: "Add a new brick"
-      description: ""
-      operationId: "addBrick"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Brick object that needs to be added"
-        required: true
-        schema:
-          $ref: "#/definitions/Brick"
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/Brick"
-      security:
-      - brillder_auth:
-        - "write:bricks"
-        - "read:bricks"
-      x-swagger-router-controller: "Brick"
-    put:
-      tags:
-      - "brick"
-      summary: "Update an existing brick"
-      description: ""
-      operationId: "updateBrick"
-      consumes:
-      - "application/json"
-      - "application/xml"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Brick object that needs to be updated"
-        required: true
-        schema:
-          $ref: "#/definitions/Brick"
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/Brick"
-      security:
-      - brillder_auth:
-        - "write:bricks"
-        - "read:bricks"
-      x-swagger-router-controller: "Brick"
-  /question/{id}:
-    get:
-      tags:
-      - "question"
-      summary: "Get specific question by id"
-      operationId: "questionIdGET"
-      parameters:
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Brick"
+        security:
+        - brillder_auth:
+          - "write:bricks"
+          - "read:bricks"
+        x-swagger-router-controller: "Brick"
+    /question/{id}:
+      get:
+        tags:
+        - "question"
+        summary: "Get specific question by id"
+        operationId: "questionIdGET"
+        parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Question"
+        x-swagger-router-controller: "Question"
+    /question:
+      put:
+        tags:
+        - "question"
+        summary: "Update an existing question"
+        description: ""
+        operationId: "updateQuestion"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "Brick object that needs to be updated"
+          required: true
           schema:
             $ref: "#/definitions/Question"
-      x-swagger-router-controller: "Question"
-  /question:
-    put:
-      tags:
-      - "question"
-      summary: "Update an existing question"
-      description: ""
-      operationId: "updateQuestion"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Brick object that needs to be updated"
-        required: true
-        schema:
-          $ref: "#/definitions/Question"
-      responses:
-        "200":
-          description: "ok"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Question"
+        x-swagger-router-controller: "Question"
+    /notifications/notify:
+      post:
+        tags:
+        - "notifications"
+        summary: "Send a notification to a user."
+        description: ""
+        operationId: "sendNotification"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "Notification data to be sent."
+          required: true
           schema:
-            $ref: "#/definitions/Question"
-      x-swagger-router-controller: "Question"
-  /notifications/notify:
-    post:
-      tags:
-      - "notifications"
-      summary: "Send a notification to a user."
-      description: ""
-      operationId: "sendNotification"
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "Notification data to be sent."
-        required: true
-        schema:
-          $ref: "#/definitions/NotifyRequest"
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/Notification"
-      x-swagger-router-controller: "Notifications"
-  /notifications/markAsRead/{notificationId}:
-    put:
-      tags:
-      - "notifications"
-      summary: "Marks a single notification as read."
-      description: ""
-      operationId: "markNotificationAsRead"
-      parameters:
-      - name: "notificationId"
-        in: "path"
-        required: true
-        type: "integer"
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Notifications"
-  /notifications/all:
-    get:
-      tags:
-      - "notifications"
-      summary: "Gets all notifications for the current user."
-      description: ""
-      operationId: "getAllNotifications"
-      produces:
-      - "application/json"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/ArrayOfNotifications"
-      x-swagger-router-controller: "Notifications"
-    delete:
-      tags:
-      - "notifications"
-      summary: "Deletes all notifications for the current user."
-      description: ""
-      operationId: "deleteAllNotifications"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Notifications"
-  /notifications/unread:
-    get:
-      tags:
-      - "notifications"
-      summary: "Gets all unread notifications for the current user."
-      description: ""
-      operationId: "getUnreadNotifications"
-      produces:
-      - "application/json"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-          schema:
-            $ref: "#/definitions/ArrayOfNotifications"
-      x-swagger-router-controller: "Notifications"
-  /notifications/unread/markAsRead:
-    put:
-      tags:
-      - "notifications"
-      summary: "Marks all unread notifications as read."
-      description: ""
-      operationId: "markUnreadAsRead"
-      parameters: []
-      responses:
-        "200":
-          description: "ok"
-      x-swagger-router-controller: "Notifications"
-securityDefinitions:
-  brillder_auth:
-    type: "oauth2"
-    authorizationUrl: "https://example.com/oauth/authorize"
-    flow: "implicit"
-    scopes:
-      write:bricks: "modify bricks in your account"
-      read:bricks: "read your bricks"
-  api_key:
-    type: "apiKey"
-    name: "api_key"
-    in: "header"
-definitions:
-  ArrayOfBricks:
-    type: "array"
-    items:
-      $ref: "#/definitions/Brick"
-  ArrayOfSubjects:
-    type: "array"
-    items:
-      $ref: "#/definitions/Subject"
-  ArrayOfBrickAttempts:
-    type: "array"
-    items:
-      $ref: "#/definitions/BrickAttempt"
-  ArrayOfQuestions:
-    type: "array"
-    items:
-      $ref: "#/definitions/Question"
-  ArrayOfNotifications:
-    type: "array"
-    items:
-      $ref: "#/definitions/Notification"
-  Question:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      order:
-        type: "integer"
-        format: "int64"
-      contentBlocks:
-        type: "string"
-      questionType:
-        type: "string"
-        enum:
-        - "None"
-        - "ShortAnswer"
-        - "ChooseOne"
-        - "ChooseSeveral"
-        - "VerticalShuffle"
-        - "HorizontalShuffle"
-        - "PairMatch"
-        - "Categorise"
-        - "MissingWord"
-        - "WordHighlighting"
-        - "LineHighlighting"
-    xml:
-      name: "Question"
-    example:
-      contentBlocks: "contentBlocks"
-      id: 7
-      questionType: "None"
-      order: 9
-  Brick:
-    type: "object"
-    required:
-    - "questions"
-    - "subTopic"
-    - "subject"
-    - "title"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      attemptsCount:
-        type: "integer"
-        format: "int64"
-      brickLength:
-        type: "string"
-        enum:
-        - "0"
-        - "20"
-        - "40"
-        - "60"
-      subjectId:
-        type: "integer"
-      subject:
-        $ref: "#/definitions/Subject"
-      locked:
-        type: "boolean"
-      alternativeSubject:
-        type: "string"
-      topic:
-        type: "string"
-      subTopic:
-        type: "string"
-      alternativeTopics:
-        type: "string"
-      title:
-        type: "string"
-      brief:
-        type: "string"
-      prep:
-        type: "string"
-      synthesis:
-        type: "string"
-      revisionLog:
-        type: "string"
-      openQuestion:
-        type: "string"
-      created:
-        type: "string"
-        format: "date-time"
-      updated:
-        type: "string"
-        format: "date-time"
-      questions:
-        type: "array"
-        items:
-          $ref: "#/definitions/Question"
-    xml:
-      name: "Brick"
-    example:
-      alternativeSubject: "alternativeSubject"
-      subTopic: "subTopic"
-      brief: "brief"
-      synthesis: "synthesis"
-      openQuestion: "openQuestion"
-      subject:
-        color: "color"
-        name: "name"
-        checked: true
-        id: 5
-        bricksCount: 5
-        publishedBricksCount: 2
-      created: "2000-01-23T04:56:07.000+00:00"
-      questions:
-      - contentBlocks: "contentBlocks"
-        id: 7
-        questionType: "None"
-        order: 9
-      - contentBlocks: "contentBlocks"
-        id: 7
-        questionType: "None"
-        order: 9
-      revisionLog: "revisionLog"
-      title: "title"
-      subjectId: 1
-      attemptsCount: 6
-      brickLength: "0"
-      alternativeTopics: "alternativeTopics"
-      topic: "topic"
-      prep: "prep"
-      id: 0
-      locked: true
-      updated: "2000-01-23T04:56:07.000+00:00"
-  ComponentAttempt:
-    type: "object"
-    properties:
-      answer:
-        type: "object"
-        properties: {}
-      correct:
-        type: "boolean"
-      marks:
-        type: "number"
-      maxMarks:
-        type: "number"
-  BrickAttempt:
-    type: "object"
-    properties:
-      brickId:
-        type: "integer"
-        format: "int64"
-      score:
-        type: "integer"
-        format: "int64"
-      oldScore:
-        type: "integer"
-        format: "int64"
-      maxScore:
-        type: "integer"
-        format: "int64"
-      studentId:
-        type: "integer"
-        format: "int64"
-      answers:
-        type: "array"
-        items:
-          $ref: "#/definitions/ComponentAttempt"
-    xml:
-      name: "BrickAttempt"
-  Subject:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      color:
-        type: "string"
-      checked:
-        type: "boolean"
-      name:
-        type: "string"
-      bricksCount:
-        type: "integer"
-        format: "int32"
-      publishedBricksCount:
-        type: "integer"
-        format: "int32"
-    xml:
-      name: "Subject"
-    example:
-      color: "color"
-      name: "name"
-      checked: true
-      id: 5
-      bricksCount: 5
-      publishedBricksCount: 2
-  User:
-    type: "object"
-    properties:
-      createBricks:
-        type: "array"
-        items:
-          $ref: "#/definitions/Brick"
-      editedBricks:
-        type: "array"
-        items:
-          $ref: "#/definitions/Brick"
-      subjects:
-        type: "array"
-        items:
-          $ref: "#/definitions/ArrayOfSubjects"
-      email:
-        type: "string"
-      firstName:
-        type: "string"
-      id:
-        type: "integer"
-        format: "int64"
-      lastName:
-        type: "string"
-      tutorialPassed:
-        type: "boolean"
-      roles:
-        type: "array"
-        items:
-          $ref: "#/definitions/User_roles"
-    xml:
-      name: "User"
-    example:
-      editedBricks:
-      - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
-        brief: "brief"
-        synthesis: "synthesis"
-        openQuestion: "openQuestion"
-        subject:
-          color: "color"
-          name: "name"
-          checked: true
-          id: 5
-          bricksCount: 5
-          publishedBricksCount: 2
-        created: "2000-01-23T04:56:07.000+00:00"
-        questions:
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        revisionLog: "revisionLog"
-        title: "title"
-        subjectId: 1
-        attemptsCount: 6
-        brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
-        prep: "prep"
-        id: 0
-        locked: true
-        updated: "2000-01-23T04:56:07.000+00:00"
-      - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
-        brief: "brief"
-        synthesis: "synthesis"
-        openQuestion: "openQuestion"
-        subject:
-          color: "color"
-          name: "name"
-          checked: true
-          id: 5
-          bricksCount: 5
-          publishedBricksCount: 2
-        created: "2000-01-23T04:56:07.000+00:00"
-        questions:
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        revisionLog: "revisionLog"
-        title: "title"
-        subjectId: 1
-        attemptsCount: 6
-        brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
-        prep: "prep"
-        id: 0
-        locked: true
-        updated: "2000-01-23T04:56:07.000+00:00"
-      firstName: "firstName"
-      lastName: "lastName"
-      subjects:
-      - ""
-      - ""
-      roles:
-      - roleId: 2
-      - roleId: 2
-      createBricks:
-      - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
-        brief: "brief"
-        synthesis: "synthesis"
-        openQuestion: "openQuestion"
-        subject:
-          color: "color"
-          name: "name"
-          checked: true
-          id: 5
-          bricksCount: 5
-          publishedBricksCount: 2
-        created: "2000-01-23T04:56:07.000+00:00"
-        questions:
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        revisionLog: "revisionLog"
-        title: "title"
-        subjectId: 1
-        attemptsCount: 6
-        brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
-        prep: "prep"
-        id: 0
-        locked: true
-        updated: "2000-01-23T04:56:07.000+00:00"
-      - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
-        brief: "brief"
-        synthesis: "synthesis"
-        openQuestion: "openQuestion"
-        subject:
-          color: "color"
-          name: "name"
-          checked: true
-          id: 5
-          bricksCount: 5
-          publishedBricksCount: 2
-        created: "2000-01-23T04:56:07.000+00:00"
-        questions:
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        - contentBlocks: "contentBlocks"
-          id: 7
-          questionType: "None"
-          order: 9
-        revisionLog: "revisionLog"
-        title: "title"
-        subjectId: 1
-        attemptsCount: 6
-        brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
-        prep: "prep"
-        id: 0
-        locked: true
-        updated: "2000-01-23T04:56:07.000+00:00"
-      id: 3
-      tutorialPassed: true
-      email: "email"
-  UserShort:
-    type: "object"
-    properties:
-      subjects:
-        type: "array"
-        items:
-          $ref: "#/definitions/ArrayOfSubjects"
-      email:
-        type: "string"
-      firstName:
-        type: "string"
-      id:
-        type: "integer"
-        format: "int64"
-      lastName:
-        type: "string"
-      tutorialPassed:
-        type: "boolean"
-      roles:
-        type: "array"
-        items:
-          $ref: "#/definitions/User_roles"
-    xml:
-      name: "User"
-    example:
-      firstName: "firstName"
-      lastName: "lastName"
-      subjects:
-      - ""
-      - ""
-      roles:
-      - roleId: 2
-      - roleId: 2
-      id: 6
-      tutorialPassed: true
-      email: "email"
-  UserUpdateModel:
-    type: "object"
-    properties:
-      subjects:
-        type: "array"
-        items:
+            $ref: "#/definitions/NotifyRequest"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Notification"
+        x-swagger-router-controller: "Notifications"
+    /notifications/markAsRead/{notificationId}:
+      put:
+        tags:
+        - "notifications"
+        summary: "Marks a single notification as read."
+        description: ""
+        operationId: "markNotificationAsRead"
+        parameters:
+        - name: "notificationId"
+          in: "path"
+          required: true
           type: "integer"
-      firstName:
-        type: "string"
-      id:
-        type: "integer"
-        format: "int64"
-      lastName:
-        type: "string"
-      bio:
-        type: "string"
-      email:
-        type: "string"
-      password:
-        type: "string"
-      roles:
-        type: "array"
-        items:
-          type: "integer"
-    xml:
-      name: "User"
-  BrickAttemptUpdateModel:
-    type: "object"
-    properties:
-      id:
-        type: "string"
-      body:
-        $ref: "#/definitions/BrickAttempt"
-  BrickSummaryModel:
-    type: "object"
-    properties:
-      totalUsers:
-        type: "integer"
-      averageScore:
-        type: "integer"
-      highScore:
-        type: "integer"
-      brick:
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Notifications"
+    /notifications/all:
+      get:
+        tags:
+        - "notifications"
+        summary: "Gets all notifications for the current user."
+        description: ""
+        operationId: "getAllNotifications"
+        produces:
+        - "application/json"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfNotifications"
+        x-swagger-router-controller: "Notifications"
+      delete:
+        tags:
+        - "notifications"
+        summary: "Deletes all notifications for the current user."
+        description: ""
+        operationId: "deleteAllNotifications"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Notifications"
+    /notifications/unread:
+      get:
+        tags:
+        - "notifications"
+        summary: "Gets all unread notifications for the current user."
+        description: ""
+        operationId: "getUnreadNotifications"
+        produces:
+        - "application/json"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/ArrayOfNotifications"
+        x-swagger-router-controller: "Notifications"
+    /notifications/unread/markAsRead:
+      put:
+        tags:
+        - "notifications"
+        summary: "Marks all unread notifications as read."
+        description: ""
+        operationId: "markUnreadAsRead"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+        x-swagger-router-controller: "Notifications"
+    /classrooms:
+      get:
+        tags:
+        - "classroom"
+        summary: "Get all classrooms."
+        description: ""
+        operationId: "getAllClassrooms"
+        produces:
+        - "application/json"
+        parameters: []
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              type: array
+              items:
+                $ref: "#/definitions/Classroom"
+        x-swagger-router-controller: "Classroom"
+    /classroom:
+      post:
+        tags:
+        - "classroom"
+        summary: "Create classroom"
+        produces:
+        - "applciation/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "new classroom"
+          required: true
+          schema:
+            $ref: "#/definitions/Classroom"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Classroom"
+      put:
+        tags:
+        - "classroom"
+        summary: "Create classroom"
+        produces:
+        - "applciation/json"
+        parameters:
+        - in: "body"
+          name: "body"
+          description: "updated classroom"
+          required: true
+          schema:
+            $ref: "#/definitions/Classroom"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/Classroom"
+    /classroom/{classroomId}:
+      delete:
+        tags:
+        - "classroom"
+        summary: "Create classroom"
+        produces:
+        - "applciation/json"
+        parameters:
+        - in: "path"
+          name: "classroomId"
+          description: "delete classroom"
+          required: true
+          type: number
+        responses:
+          "200":
+            description: "ok"
+    /classroooms/students:
+      get:
+        tags:
+        - "classroom"
+        summary: "Get all students"
+        produces:
+        - "applciation/json"
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/User"
+    /classroooms/students/{classroomId}:
+      get:
+        tags:
+        - "classroom"
+        summary: "Get classroom students"
+        produces:
+        - "applciation/json"
+        parameters:
+        - in: "path"
+          name: "classroomId"
+          required: true
+          type: number
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/User"
+      post:
+        tags:
+        - "classroom"
+        summary: "Add stundents to the classroom"
+        produces:
+        - "applciation/json"
+        parameters:
+        - name: "classroomId"
+          in: "path"
+          required: true
+          type: number
+        - name: "studentsIds"
+          in: "body"
+          required: true
+          schema: 
+            type: object
+            properties:
+              studentsIds: 
+                type: array
+                items: 
+                  type: integer
+        responses:
+          "200":
+            description: "ok"
+            schema:
+              $ref: "#/definitions/User"
+    /classroooms/students/{classroomId}/{studentId}:
+      delete:
+        tags:
+        - "classroom"
+        summary: "Remove stundent from the classroom"
+        produces:
+        - "applciation/json"
+        parameters:
+        - name: "studentId"
+          in: "path"
+          required: true
+          type: number
+        - name: "classroomId"
+          in: "path"
+          required: true
+          type: number
+        responses:
+          "200":
+            description: "ok"
+  securityDefinitions:
+    brillder_auth:
+      type: "oauth2"
+      authorizationUrl: "https://example.com/oauth/authorize"
+      flow: "implicit"
+      scopes:
+        write:bricks: "modify bricks in your account"
+        read:bricks: "read your bricks"
+    api_key:
+      type: "apiKey"
+      name: "api_key"
+      in: "header"
+  definitions:
+    ArrayOfBricks:
+      type: "array"
+      items:
         $ref: "#/definitions/Brick"
-    example:
-      highScore: 1
-      totalUsers: 0
-      brick:
+    ArrayOfSubjects:
+      type: "array"
+      items:
+        $ref: "#/definitions/Subject"
+    ArrayOfBrickAttempts:
+      type: "array"
+      items:
+        $ref: "#/definitions/BrickAttempt"
+    ArrayOfQuestions:
+      type: "array"
+      items:
+        $ref: "#/definitions/Question"
+    ArrayOfNotifications:
+      type: "array"
+      items:
+        $ref: "#/definitions/Notification"
+    Question:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        order:
+          type: "integer"
+          format: "int64"
+        contentBlocks:
+          type: "string"
+        questionType:
+          type: "string"
+          enum:
+          - "None"
+          - "ShortAnswer"
+          - "ChooseOne"
+          - "ChooseSeveral"
+          - "VerticalShuffle"
+          - "HorizontalShuffle"
+          - "PairMatch"
+          - "Categorise"
+          - "MissingWord"
+          - "WordHighlighting"
+          - "LineHighlighting"
+      xml:
+        name: "Question"
+      example:
+        contentBlocks: "contentBlocks"
+        id: 7
+        questionType: "None"
+        order: 9
+    Brick:
+      type: "object"
+      required:
+      - "questions"
+      - "subTopic"
+      - "subject"
+      - "title"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        attemptsCount:
+          type: "integer"
+          format: "int64"
+        brickLength:
+          type: "string"
+          enum:
+          - "0"
+          - "20"
+          - "40"
+          - "60"
+        subjectId:
+          type: "integer"
+        subject:
+          $ref: "#/definitions/Subject"
+        locked:
+          type: "boolean"
+        alternativeSubject:
+          type: "string"
+        topic:
+          type: "string"
+        subTopic:
+          type: "string"
+        alternativeTopics:
+          type: "string"
+        title:
+          type: "string"
+        brief:
+          type: "string"
+        prep:
+          type: "string"
+        synthesis:
+          type: "string"
+        revisionLog:
+          type: "string"
+        openQuestion:
+          type: "string"
+        created:
+          type: "string"
+          format: "date-time"
+        updated:
+          type: "string"
+          format: "date-time"
+        questions:
+          type: "array"
+          items:
+            $ref: "#/definitions/Question"
+      xml:
+        name: "Brick"
+      example:
         alternativeSubject: "alternativeSubject"
         subTopic: "subTopic"
         brief: "brief"
@@ -1249,185 +1104,575 @@ definitions:
         id: 0
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
-      averageScore: 6
-  SearchModel:
-    type: "object"
-    properties:
-      searchString:
-        type: "string"
-    example:
-      searchString: "searchString"
-  UserSearchModel:
-    type: "object"
-    properties:
-      searchString:
-        type: "string"
-      orderBy:
-        type: "string"
-      isAscending:
-        type: "boolean"
-      subjectFilters:
-        type: "array"
-        items:
+    ComponentAttempt:
+      type: "object"
+      properties:
+        answer:
+          type: "object"
+          properties: {}
+        correct:
+          type: "boolean"
+        marks:
+          type: "number"
+        maxMarks:
+          type: "number"
+    BrickAttempt:
+      type: "object"
+      properties:
+        brickId:
           type: "integer"
-      roleFilters:
-        type: "array"
-        items:
+          format: "int64"
+        score:
           type: "integer"
-      page:
-        type: "integer"
-      pageSize:
-        type: "integer"
-    example:
-      searchString: "searchString"
-      subjectFilters:
-      - 0
-      - 0
-      orderBy: "orderBy"
-      pageSize: 5
-      roleFilters:
-      - 6
-      - 6
-      page: 1
-      isAscending: true
-  ApiResponse:
-    type: "object"
-    properties:
-      code:
-        type: "integer"
-        format: "int32"
-      type:
-        type: "string"
-      message:
-        type: "string"
-  body:
-    type: "object"
-    required:
-    - "email"
-    - "password"
-    properties:
-      email:
-        type: "string"
-      password:
-        type: "string"
-  body_1:
-    type: "object"
-    required:
-    - "email"
-    - "password"
-    properties:
-      email:
-        type: "string"
-      password:
-        type: "string"
-  body_2:
-    type: "object"
-    required:
-    - "confirmPassword"
-    - "email"
-    - "password"
-    properties:
-      email:
-        type: "string"
-      password:
-        type: "string"
-      confirmPassword:
-        type: "string"
-  inline_response_200:
-    type: "object"
-    properties:
-      totalCount:
-        type: "integer"
-      pageData:
-        type: "array"
-        items:
+          format: "int64"
+        oldScore:
+          type: "integer"
+          format: "int64"
+        maxScore:
+          type: "integer"
+          format: "int64"
+        studentId:
+          type: "integer"
+          format: "int64"
+        answers:
+          type: "array"
+          items:
+            $ref: "#/definitions/ComponentAttempt"
+      xml:
+        name: "BrickAttempt"
+    Subject:
+      type: "object"
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        color:
+          type: "string"
+        checked:
+          type: "boolean"
+        name:
+          type: "string"
+        bricksCount:
+          type: "integer"
+          format: "int32"
+        publishedBricksCount:
+          type: "integer"
+          format: "int32"
+      xml:
+        name: "Subject"
+      example:
+        color: "color"
+        name: "name"
+        checked: true
+        id: 5
+        bricksCount: 5
+        publishedBricksCount: 2
+    User:
+      type: "object"
+      properties:
+        createBricks:
+          type: "array"
+          items:
+            $ref: "#/definitions/Brick"
+        editedBricks:
+          type: "array"
+          items:
+            $ref: "#/definitions/Brick"
+        subjects:
+          type: "array"
+          items:
+            $ref: "#/definitions/ArrayOfSubjects"
+        email:
+          type: "string"
+        firstName:
+          type: "string"
+        id:
+          type: "integer"
+          format: "int64"
+        lastName:
+          type: "string"
+        tutorialPassed:
+          type: "boolean"
+        roles:
+          type: "array"
+          items:
+            $ref: "#/definitions/User_roles"
+      xml:
+        name: "User"
+      example:
+        editedBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        createBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        id: 3
+        tutorialPassed: true
+        email: "email"
+    UserShort:
+      type: "object"
+      properties:
+        subjects:
+          type: "array"
+          items:
+            $ref: "#/definitions/ArrayOfSubjects"
+        email:
+          type: "string"
+        firstName:
+          type: "string"
+        id:
+          type: "integer"
+          format: "int64"
+        lastName:
+          type: "string"
+        tutorialPassed:
+          type: "boolean"
+        roles:
+          type: "array"
+          items:
+            $ref: "#/definitions/User_roles"
+      xml:
+        name: "User"
+      example:
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        id: 6
+        tutorialPassed: true
+        email: "email"
+    UserUpdateModel:
+      type: "object"
+      properties:
+        subjects:
+          type: "array"
+          items:
+            type: "integer"
+        firstName:
+          type: "string"
+        id:
+          type: "integer"
+          format: "int64"
+        lastName:
+          type: "string"
+        bio:
+          type: "string"
+        email:
+          type: "string"
+        password:
+          type: "string"
+        roles:
+          type: "array"
+          items:
+            type: "integer"
+      xml:
+        name: "User"
+    BrickAttemptUpdateModel:
+      type: "object"
+      properties:
+        id:
+          type: "string"
+        body:
+          $ref: "#/definitions/BrickAttempt"
+    BrickSummaryModel:
+      type: "object"
+      properties:
+        totalUsers:
+          type: "integer"
+        averageScore:
+          type: "integer"
+        highScore:
+          type: "integer"
+        brick:
+          $ref: "#/definitions/Brick"
+      example:
+        highScore: 1
+        totalUsers: 0
+        brick:
+          alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        averageScore: 6
+    SearchModel:
+      type: "object"
+      properties:
+        searchString:
+          type: "string"
+      example:
+        searchString: "searchString"
+    UserSearchModel:
+      type: "object"
+      properties:
+        searchString:
+          type: "string"
+        orderBy:
+          type: "string"
+        isAscending:
+          type: "boolean"
+        subjectFilters:
+          type: "array"
+          items:
+            type: "integer"
+        roleFilters:
+          type: "array"
+          items:
+            type: "integer"
+        page:
+          type: "integer"
+        pageSize:
+          type: "integer"
+      example:
+        searchString: "searchString"
+        subjectFilters:
+        - 0
+        - 0
+        orderBy: "orderBy"
+        pageSize: 5
+        roleFilters:
+        - 6
+        - 6
+        page: 1
+        isAscending: true
+    ApiResponse:
+      type: "object"
+      properties:
+        code:
+          type: "integer"
+          format: "int32"
+        type:
+          type: "string"
+        message:
+          type: "string"
+    body:
+      type: "object"
+      required:
+      - "email"
+      - "password"
+      properties:
+        email:
+          type: "string"
+        password:
+          type: "string"
+    body_1:
+      type: "object"
+      required:
+      - "email"
+      - "password"
+      properties:
+        email:
+          type: "string"
+        password:
+          type: "string"
+    body_2:
+      type: "object"
+      required:
+      - "confirmPassword"
+      - "email"
+      - "password"
+      properties:
+        email:
+          type: "string"
+        password:
+          type: "string"
+        confirmPassword:
+          type: "string"
+    inline_response_200:
+      type: "object"
+      properties:
+        totalCount:
+          type: "integer"
+        pageData:
+          type: "array"
+          items:
+            $ref: "#/definitions/UserShort"
+      example:
+        pageData:
+        - firstName: "firstName"
+          lastName: "lastName"
+          subjects:
+          - ""
+          - ""
+          roles:
+          - roleId: 2
+          - roleId: 2
+          id: 6
+          tutorialPassed: true
+          email: "email"
+        - firstName: "firstName"
+          lastName: "lastName"
+          subjects:
+          - ""
+          - ""
+          roles:
+          - roleId: 2
+          - roleId: 2
+          id: 6
+          tutorialPassed: true
+          email: "email"
+        totalCount: 0
+    User_roles:
+      type: "object"
+      properties:
+        roleId:
+          type: "integer"
+      example:
+        roleId: 2
+    NotifyRequest:
+      type: "object"
+      properties:
+        title:
+          type: "string"
+        text:
+          type: "string"
+        read:
+          type: "boolean"
+        receiver:
+          type: "number"
+      example:
+        title: "Notification Title"
+        text: "This is the text of the notification and it can go on for a while..."
+        read: "false,"
+        receiver: 1
+    Notification:
+      type: "object"
+      properties:
+        id:
+          type: "number"
+        sender:
           $ref: "#/definitions/UserShort"
-    example:
-      pageData:
-      - firstName: "firstName"
-        lastName: "lastName"
-        subjects:
-        - ""
-        - ""
-        roles:
-        - roleId: 2
-        - roleId: 2
-        id: 6
-        tutorialPassed: true
-        email: "email"
-      - firstName: "firstName"
-        lastName: "lastName"
-        subjects:
-        - ""
-        - ""
-        roles:
-        - roleId: 2
-        - roleId: 2
-        id: 6
-        tutorialPassed: true
-        email: "email"
-      totalCount: 0
-  User_roles:
-    type: "object"
-    properties:
-      roleId:
-        type: "integer"
-    example:
-      roleId: 2
-  NotifyRequest:
-    type: "object"
-    properties:
-      title:
-        type: "string"
-      text:
-        type: "string"
-      read:
-        type: "boolean"
-      receiver:
-        type: "number"
-    example:
-      title: "Notification Title"
-      text: "This is the text of the notification and it can go on for a while..."
-      read: "false,"
-      receiver: 1
-  Notification:
-    type: "object"
-    properties:
-      id:
-        type: "number"
-      sender:
-        $ref: "#/definitions/UserShort"
-      receiver:
-        $ref: "#/definitions/UserShort"
-      title:
-        type: "string"
-      text:
-        type: "string"
-      read:
-        type: "boolean"
-    example:
-      id: 1
-      sender:
+        receiver:
+          $ref: "#/definitions/UserShort"
+        title:
+          type: "string"
+        text:
+          type: "string"
+        read:
+          type: "boolean"
+      example:
         id: 1
-        email: "test1@example.com"
-        firstName: "Test"
-        lastName: "User"
-        subjects:
-        - ""
-        tutorialPassed: false
-        status: 1
-      receiver:
-        id: 2
-        email: "test2@example.com"
-        firstName: "Another"
-        lastName: "Test"
-        subjects:
-        - ""
-        tutorialPassed: false
-        status: 1
-      title: "Notification Title"
-      text: "This is the text of the notification and it can go on for a while..."
-      read: false
-externalDocs:
-  description: "Find out more about Brillder"
-  url: "https://github.com/Scholar-6/brillder"
+        sender:
+          id: 1
+          email: "test1@example.com"
+          firstName: "Test"
+          lastName: "User"
+          subjects:
+          - ""
+          tutorialPassed: false
+          status: 1
+        receiver:
+          id: 2
+          email: "test2@example.com"
+          firstName: "Another"
+          lastName: "Test"
+          subjects:
+          - ""
+          tutorialPassed: false
+          status: 1
+        title: "Notification Title"
+        text: "This is the text of the notification and it can go on for a while..."
+        read: false
+    Classroom:
+      type: object
+      properties:
+        id: 
+          type: number
+        name:
+          type: string
+        created: 
+          type: string
+        updated: 
+          type: string
+        status:
+          type: integer
+          enum:
+          - 0
+          - 1
+          - 2
+        students:
+          type: array
+          items:
+            $ref: "#/definitions/User"
+        teachers:
+          type: array
+          items:
+            $ref: "#/definitions/User"
+        creator:
+            $ref: "#/definitions/User"
+        bricks:
+          type: array
+          items:
+            $ref: "#/definitions/Brick"
+  externalDocs:
+    description: "Find out more about Brillder"
+    url: "https://github.com/Scholar-6/brillder"
+  
