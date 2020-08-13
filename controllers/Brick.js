@@ -14,6 +14,18 @@ module.exports.addBrick = function addBrick (req, res, next) {
     });
 };
 
+module.exports.brickBrickIdCommentCommentIdGET = function brickBrickIdCommentCommentIdGET (req, res, next) {
+  var brickId = req.swagger.params['brickId'].value;
+  var commentId = req.swagger.params['commentId'].value;
+  Brick.brickBrickIdCommentCommentIdGET(brickId,commentId)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.brickBuildIdPOST = function brickBuildIdPOST (req, res, next) {
   var id = req.swagger.params['id'].value;
   Brick.brickBuildIdPOST(id)
@@ -72,6 +84,28 @@ module.exports.brickReviewIdPOST = function brickReviewIdPOST (req, res, next) {
 module.exports.bricksByStatusStatusGET = function bricksByStatusStatusGET (req, res, next) {
   var status = req.swagger.params['status'].value;
   Brick.bricksByStatusStatusGET(status)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.bricksCommentPOST = function bricksCommentPOST (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  Brick.bricksCommentPOST(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.bricksCommentsBrickIdGET = function bricksCommentsBrickIdGET (req, res, next) {
+  var brickId = req.swagger.params['brickId'].value;
+  Brick.bricksCommentsBrickIdGET(brickId)
     .then(function (response) {
       utils.writeJson(res, response);
     })

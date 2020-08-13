@@ -423,6 +423,45 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/comment:
+    post:
+      tags:
+      - "brick"
+      - "comment"
+      summary: "Post a new comment on a brick."
+      operationId: "bricksCommentPOST"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: false
+        schema:
+          $ref: "#/definitions/body_3"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Comment"
+      x-swagger-router-controller: "Brick"
+  /bricks/comments/{brickId}:
+    get:
+      tags:
+      - "brick"
+      - "comment"
+      summary: "Get all comments for a brick."
+      operationId: "bricksCommentsBrickIdGET"
+      parameters:
+      - name: "brickId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Comment"
+      x-swagger-router-controller: "Brick"
   /brick/{id}:
     get:
       tags:
@@ -596,6 +635,28 @@ paths:
       - brillder_auth:
         - "write:bricks"
         - "read:bricks"
+      x-swagger-router-controller: "Brick"
+  /brick/{brickId}/comment/{commentId}:
+    get:
+      tags:
+      - "brick"
+      - "comment"
+      summary: "Get a specific comment on a brick."
+      operationId: "brickBrickIdCommentCommentIdGET"
+      parameters:
+      - name: "brickId"
+        in: "path"
+        required: true
+        type: "integer"
+      - name: "commentId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Comment"
       x-swagger-router-controller: "Brick"
   /question/{id}:
     get:
@@ -891,6 +952,81 @@ definitions:
       id: 0
       locked: true
       updated: "2000-01-23T04:56:07.000+00:00"
+  Comment:
+    type: "object"
+    required:
+    - "author"
+    - "brick"
+    - "id"
+    - "readBy"
+    - "text"
+    - "timestamp"
+    properties:
+      id:
+        type: "number"
+      text:
+        type: "string"
+      brick:
+        $ref: "#/definitions/Brick"
+      question:
+        $ref: "#/definitions/Question"
+      author:
+        $ref: "#/definitions/UserShort"
+      parent:
+        $ref: "#/definitions/Comment"
+      children:
+        type: "array"
+        items:
+          $ref: "#/definitions/Comment"
+      timestamp:
+        type: "string"
+        format: "date-time"
+      readBy:
+        type: "array"
+        items:
+          $ref: "#/definitions/Comment_readBy"
+    example:
+      id: 0
+      text: "Comment text..."
+      brick:
+        alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        created: "2000-01-23T04:56:07.000+00:00"
+        revisionLog: "revisionLog"
+        title: "title"
+        subjectId: 1
+        attemptsCount: 6
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+        updated: "2000-01-23T04:56:07.000+00:00"
+      question:
+        contentBlocks: "contentBlocks"
+        id: 7
+        questionType: "None"
+        order: 9
+      author:
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        id: 6
+        tutorialPassed: true
+        email: "email"
+      children: []
+      timestamp: "2000-01-23T04:56:07.000+00:00"
+      readBy:
+      - id: 1
   ComponentAttempt:
     type: "object"
     properties:
@@ -1428,6 +1564,22 @@ definitions:
       title: "Notification Title"
       text: "This is the text of the notification and it can go on for a while..."
       read: false
+  body_3:
+    type: "object"
+    properties:
+      text:
+        type: "string"
+      brickId:
+        type: "integer"
+      questionId:
+        type: "integer"
+      parentId:
+        type: "integer"
+  Comment_readBy:
+    type: "object"
+    properties:
+      id:
+        type: "number"
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
