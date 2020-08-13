@@ -59,6 +59,36 @@ exports.addBrick = function(body) {
 
 
 /**
+ * Assign classes to brick
+ * 
+ *
+ * brickId Integer 
+ * classesIds ClassesIds 
+ * no response value expected for this operation
+ **/
+exports.assignClasses = function(brickId,classesIds) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
+ * Assign students to brick
+ * 
+ *
+ * brickId Integer 
+ * studentsIds StudentsIds 
+ * no response value expected for this operation
+ **/
+exports.assignStudents = function(brickId,studentsIds) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Get a specific comment on a brick.
  *
  * brickId Integer 
