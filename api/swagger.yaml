@@ -869,7 +869,7 @@ paths:
       summary: "Create classroom"
       operationId: "classroomPOST"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters:
       - in: "body"
         name: "body"
@@ -888,7 +888,7 @@ paths:
       summary: "Update classroom"
       operationId: "classroomPUT"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters:
       - in: "body"
         name: "body"
@@ -909,7 +909,7 @@ paths:
       summary: "Delete classroom"
       operationId: "classroomClassroomIdDELETE"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters:
       - name: "classroomId"
         in: "path"
@@ -926,7 +926,7 @@ paths:
       summary: "Get all students"
       operationId: "classrooomsStudentsGET"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters: []
       responses:
         "200":
@@ -941,7 +941,7 @@ paths:
       summary: "Get classroom students"
       operationId: "classrooomsStudentsClassroomIdGET"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters:
       - name: "classroomId"
         in: "path"
@@ -959,7 +959,7 @@ paths:
       summary: "Add stundents to the classroom"
       operationId: "classrooomsStudentsClassroomIdPOST"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters:
       - name: "classroomId"
         in: "path"
@@ -983,7 +983,7 @@ paths:
       summary: "Remove stundent from the classroom"
       operationId: "classrooomsStudentsClassroomIdStudentIdDELETE"
       produces:
-      - "applciation/json"
+      - "application/json"
       parameters:
       - name: "studentId"
         in: "path"
