@@ -658,6 +658,56 @@ paths:
           schema:
             $ref: "#/definitions/Comment"
       x-swagger-router-controller: "Brick"
+  /brick/assignStudents/{brickId}:
+    post:
+      tags:
+      - "brick"
+      summary: "Assign students to brick"
+      description: ""
+      operationId: "assignStudents"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "brickId"
+        in: "path"
+        required: true
+        type: "integer"
+      - in: "body"
+        name: "studentsIds"
+        required: true
+        schema:
+          $ref: "#/definitions/studentsIds"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
+  /brick/assignClasses/{brickId}:
+    post:
+      tags:
+      - "brick"
+      summary: "Assign classes to brick"
+      description: ""
+      operationId: "assignClasses"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "brickId"
+        in: "path"
+        required: true
+        type: "integer"
+      - in: "body"
+        name: "classesIds"
+        required: true
+        schema:
+          $ref: "#/definitions/classesIds"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
   /question/{id}:
     get:
       tags:
@@ -794,6 +844,159 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Notifications"
+  /classrooms:
+    get:
+      tags:
+      - "classroom"
+      summary: "Get all classrooms."
+      description: ""
+      operationId: "getAllClassrooms"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Classroom"
+      x-swagger-router-controller: "Classroom"
+  /classroom:
+    post:
+      tags:
+      - "classroom"
+      summary: "Create classroom"
+      operationId: "classroomPOST"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/Classroom"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Classroom"
+      x-swagger-router-controller: "Classroom"
+    put:
+      tags:
+      - "classroom"
+      summary: "Update classroom"
+      operationId: "classroomPUT"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "updated classroom"
+        required: true
+        schema:
+          $ref: "#/definitions/Classroom"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Classroom"
+      x-swagger-router-controller: "Classroom"
+  /classroom/{classroomId}:
+    delete:
+      tags:
+      - "classroom"
+      summary: "Delete classroom"
+      operationId: "classroomClassroomIdDELETE"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "classroomId"
+        in: "path"
+        required: true
+        type: "number"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Classroom"
+  /classroooms/students:
+    get:
+      tags:
+      - "classroom"
+      summary: "Get all students"
+      operationId: "classrooomsStudentsGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/User"
+      x-swagger-router-controller: "Classroom"
+  /classroooms/students/{classroomId}:
+    get:
+      tags:
+      - "classroom"
+      summary: "Get classroom students"
+      operationId: "classrooomsStudentsClassroomIdGET"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "classroomId"
+        in: "path"
+        required: true
+        type: "number"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/User"
+      x-swagger-router-controller: "Classroom"
+    post:
+      tags:
+      - "classroom"
+      summary: "Add stundents to the classroom"
+      operationId: "classrooomsStudentsClassroomIdPOST"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "classroomId"
+        in: "path"
+        required: true
+        type: "number"
+      - in: "body"
+        name: "studentsIds"
+        required: true
+        schema:
+          $ref: "#/definitions/studentsIds_1"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/User"
+      x-swagger-router-controller: "Classroom"
+  /classroooms/students/{classroomId}/{studentId}:
+    delete:
+      tags:
+      - "classroom"
+      summary: "Remove stundent from the classroom"
+      operationId: "classrooomsStudentsClassroomIdStudentIdDELETE"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "studentId"
+        in: "path"
+        required: true
+        type: "number"
+      - name: "classroomId"
+        in: "path"
+        required: true
+        type: "number"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Classroom"
 securityDefinitions:
   brillder_auth:
     type: "oauth2"
@@ -1580,6 +1783,855 @@ definitions:
     properties:
       id:
         type: "number"
+  Classroom:
+    type: "object"
+    properties:
+      id:
+        type: "number"
+      name:
+        type: "string"
+      created:
+        type: "string"
+      updated:
+        type: "string"
+      status:
+        type: "integer"
+      students:
+        type: "array"
+        items:
+          $ref: "#/definitions/User"
+      teachers:
+        type: "array"
+        items:
+          $ref: "#/definitions/User"
+      creator:
+        $ref: "#/definitions/User"
+      bricks:
+        type: "array"
+        items:
+          $ref: "#/definitions/Brick"
+    example:
+      bricks:
+      - alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject:
+          color: "color"
+          name: "name"
+          checked: true
+          id: 5
+          bricksCount: 5
+          publishedBricksCount: 2
+        created: "2000-01-23T04:56:07.000+00:00"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 7
+          questionType: "None"
+          order: 9
+        - contentBlocks: "contentBlocks"
+          id: 7
+          questionType: "None"
+          order: 9
+        revisionLog: "revisionLog"
+        title: "title"
+        subjectId: 1
+        attemptsCount: 6
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+        updated: "2000-01-23T04:56:07.000+00:00"
+      - alternativeSubject: "alternativeSubject"
+        subTopic: "subTopic"
+        brief: "brief"
+        synthesis: "synthesis"
+        openQuestion: "openQuestion"
+        subject:
+          color: "color"
+          name: "name"
+          checked: true
+          id: 5
+          bricksCount: 5
+          publishedBricksCount: 2
+        created: "2000-01-23T04:56:07.000+00:00"
+        questions:
+        - contentBlocks: "contentBlocks"
+          id: 7
+          questionType: "None"
+          order: 9
+        - contentBlocks: "contentBlocks"
+          id: 7
+          questionType: "None"
+          order: 9
+        revisionLog: "revisionLog"
+        title: "title"
+        subjectId: 1
+        attemptsCount: 6
+        brickLength: "0"
+        alternativeTopics: "alternativeTopics"
+        topic: "topic"
+        prep: "prep"
+        id: 0
+        locked: true
+        updated: "2000-01-23T04:56:07.000+00:00"
+      creator:
+        editedBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        createBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        id: 3
+        tutorialPassed: true
+        email: "email"
+      created: "created"
+      teachers:
+      - editedBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        createBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        id: 3
+        tutorialPassed: true
+        email: "email"
+      - editedBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        createBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        id: 3
+        tutorialPassed: true
+        email: "email"
+      name: "name"
+      students:
+      - editedBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        createBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        id: 3
+        tutorialPassed: true
+        email: "email"
+      - editedBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        firstName: "firstName"
+        lastName: "lastName"
+        subjects:
+        - ""
+        - ""
+        roles:
+        - roleId: 2
+        - roleId: 2
+        createBricks:
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        - alternativeSubject: "alternativeSubject"
+          subTopic: "subTopic"
+          brief: "brief"
+          synthesis: "synthesis"
+          openQuestion: "openQuestion"
+          subject:
+            color: "color"
+            name: "name"
+            checked: true
+            id: 5
+            bricksCount: 5
+            publishedBricksCount: 2
+          created: "2000-01-23T04:56:07.000+00:00"
+          questions:
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          - contentBlocks: "contentBlocks"
+            id: 7
+            questionType: "None"
+            order: 9
+          revisionLog: "revisionLog"
+          title: "title"
+          subjectId: 1
+          attemptsCount: 6
+          brickLength: "0"
+          alternativeTopics: "alternativeTopics"
+          topic: "topic"
+          prep: "prep"
+          id: 0
+          locked: true
+          updated: "2000-01-23T04:56:07.000+00:00"
+        id: 3
+        tutorialPassed: true
+        email: "email"
+      id: 0.80082819046101150206595775671303272247314453125
+      updated: "updated"
+      status: 6
+  studentsIds:
+    type: "object"
+    properties:
+      studentsIds:
+        type: "array"
+        items:
+          type: "integer"
+  classesIds:
+    type: "object"
+    properties:
+      studentsIds:
+        type: "array"
+        items:
+          type: "integer"
+  studentsIds_1:
+    type: "object"
+    properties:
+      studentsIds:
+        type: "array"
+        items:
+          type: "integer"
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
