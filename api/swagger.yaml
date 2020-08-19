@@ -919,7 +919,7 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Classroom"
-  /classroooms/students:
+  /classrooms/students:
     get:
       tags:
       - "classroom"
@@ -934,7 +934,7 @@ paths:
           schema:
             $ref: "#/definitions/User"
       x-swagger-router-controller: "Classroom"
-  /classroooms/students/{classroomId}:
+  /classrooms/students/{classroomId}:
     get:
       tags:
       - "classroom"
@@ -976,7 +976,7 @@ paths:
           schema:
             $ref: "#/definitions/User"
       x-swagger-router-controller: "Classroom"
-  /classroooms/students/{classroomId}/{studentId}:
+  /classrooms/students/{classroomId}/{studentId}:
     delete:
       tags:
       - "classroom"
@@ -1806,10 +1806,10 @@ definitions:
           $ref: "#/definitions/User"
       creator:
         $ref: "#/definitions/User"
-      bricks:
+      assignments:
         type: "array"
         items:
-          $ref: "#/definitions/Brick"
+          $ref: "#/definitions/Assignment"
     example:
       bricks:
       - alternativeSubject: "alternativeSubject"
@@ -2611,6 +2611,18 @@ definitions:
       id: 0.80082819046101150206595775671303272247314453125
       updated: "updated"
       status: 6
+  Assignment:
+    type: "object"
+    properties:
+      id:
+        type: "number"
+      brick:
+        $ref: "#/definitions/Brick"
+      classroom:
+        $ref: "#/definitions/Classroom"
+      assignedDate:
+        type: "string"
+        format: "date-time"
   studentsIds:
     type: "object"
     properties:
