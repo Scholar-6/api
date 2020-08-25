@@ -105,6 +105,16 @@ module.exports.brickReviewIdPOST = function brickReviewIdPOST (req, res, next) {
     });
 };
 
+module.exports.bricksAssignedGET = function bricksAssignedGET (req, res, next) {
+  Brick.bricksAssignedGET()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.bricksByStatusStatusGET = function bricksByStatusStatusGET (req, res, next) {
   var status = req.swagger.params['status'].value;
   Brick.bricksByStatusStatusGET(status)
