@@ -1846,7 +1846,7 @@ exports.classroomPUT = function(body) {
  * classroomId BigDecimal 
  * returns User
  **/
-exports.classrooomsStudentsClassroomIdGET = function(classroomId) {
+exports.classroomsStudentsClassroomIdGET = function(classroomId) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -2022,13 +2022,13 @@ exports.classrooomsStudentsClassroomIdGET = function(classroomId) {
 
 
 /**
- * Add stundents to the classroom
+ * Add students to the classroom
  *
  * classroomId BigDecimal 
  * studentsIds StudentsIds_1 
  * returns User
  **/
-exports.classrooomsStudentsClassroomIdPOST = function(classroomId,studentsIds) {
+exports.classroomsStudentsClassroomIdPOST = function(classroomId,studentsIds) {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
@@ -2204,13 +2204,13 @@ exports.classrooomsStudentsClassroomIdPOST = function(classroomId,studentsIds) {
 
 
 /**
- * Remove stundent from the classroom
+ * Remove student from the classroom
  *
  * studentId BigDecimal 
  * classroomId BigDecimal 
  * no response value expected for this operation
  **/
-exports.classrooomsStudentsClassroomIdStudentIdDELETE = function(studentId,classroomId) {
+exports.classroomsStudentsClassroomIdStudentIdDELETE = function(studentId,classroomId) {
   return new Promise(function(resolve, reject) {
     resolve();
   });
@@ -2222,7 +2222,7 @@ exports.classrooomsStudentsClassroomIdStudentIdDELETE = function(studentId,class
  *
  * returns User
  **/
-exports.classrooomsStudentsGET = function() {
+exports.classroomsStudentsGET = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {

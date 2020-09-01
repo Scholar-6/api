@@ -36,9 +36,9 @@ module.exports.classroomPUT = function classroomPUT (req, res, next) {
     });
 };
 
-module.exports.classrooomsStudentsClassroomIdGET = function classrooomsStudentsClassroomIdGET (req, res, next) {
+module.exports.classroomsStudentsClassroomIdGET = function classroomsStudentsClassroomIdGET (req, res, next) {
   var classroomId = req.swagger.params['classroomId'].value;
-  Classroom.classrooomsStudentsClassroomIdGET(classroomId)
+  Classroom.classroomsStudentsClassroomIdGET(classroomId)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -47,10 +47,10 @@ module.exports.classrooomsStudentsClassroomIdGET = function classrooomsStudentsC
     });
 };
 
-module.exports.classrooomsStudentsClassroomIdPOST = function classrooomsStudentsClassroomIdPOST (req, res, next) {
+module.exports.classroomsStudentsClassroomIdPOST = function classroomsStudentsClassroomIdPOST (req, res, next) {
   var classroomId = req.swagger.params['classroomId'].value;
   var studentsIds = req.swagger.params['studentsIds'].value;
-  Classroom.classrooomsStudentsClassroomIdPOST(classroomId,studentsIds)
+  Classroom.classroomsStudentsClassroomIdPOST(classroomId,studentsIds)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -59,10 +59,10 @@ module.exports.classrooomsStudentsClassroomIdPOST = function classrooomsStudents
     });
 };
 
-module.exports.classrooomsStudentsClassroomIdStudentIdDELETE = function classrooomsStudentsClassroomIdStudentIdDELETE (req, res, next) {
+module.exports.classroomsStudentsClassroomIdStudentIdDELETE = function classroomsStudentsClassroomIdStudentIdDELETE (req, res, next) {
   var studentId = req.swagger.params['studentId'].value;
   var classroomId = req.swagger.params['classroomId'].value;
-  Classroom.classrooomsStudentsClassroomIdStudentIdDELETE(studentId,classroomId)
+  Classroom.classroomsStudentsClassroomIdStudentIdDELETE(studentId,classroomId)
     .then(function (response) {
       utils.writeJson(res, response);
     })
@@ -71,8 +71,8 @@ module.exports.classrooomsStudentsClassroomIdStudentIdDELETE = function classroo
     });
 };
 
-module.exports.classrooomsStudentsGET = function classrooomsStudentsGET (req, res, next) {
-  Classroom.classrooomsStudentsGET()
+module.exports.classroomsStudentsGET = function classroomsStudentsGET (req, res, next) {
+  Classroom.classroomsStudentsGET()
     .then(function (response) {
       utils.writeJson(res, response);
     })

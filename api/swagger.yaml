@@ -939,7 +939,7 @@ paths:
       tags:
       - "classroom"
       summary: "Get all students"
-      operationId: "classrooomsStudentsGET"
+      operationId: "classroomsStudentsGET"
       produces:
       - "application/json"
       parameters: []
@@ -954,7 +954,7 @@ paths:
       tags:
       - "classroom"
       summary: "Get classroom students"
-      operationId: "classrooomsStudentsClassroomIdGET"
+      operationId: "classroomsStudentsClassroomIdGET"
       produces:
       - "application/json"
       parameters:
@@ -971,8 +971,8 @@ paths:
     post:
       tags:
       - "classroom"
-      summary: "Add stundents to the classroom"
-      operationId: "classrooomsStudentsClassroomIdPOST"
+      summary: "Add students to the classroom"
+      operationId: "classroomsStudentsClassroomIdPOST"
       produces:
       - "application/json"
       parameters:
@@ -995,8 +995,8 @@ paths:
     delete:
       tags:
       - "classroom"
-      summary: "Remove stundent from the classroom"
-      operationId: "classrooomsStudentsClassroomIdStudentIdDELETE"
+      summary: "Remove student from the classroom"
+      operationId: "classroomsStudentsClassroomIdStudentIdDELETE"
       produces:
       - "application/json"
       parameters:
