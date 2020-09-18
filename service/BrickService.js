@@ -395,6 +395,20 @@ exports.brickReviewIdPOST = function(id) {
 
 
 /**
+ * Marks a single notification as read.
+ *
+ * brickId Integer 
+ * isCore Boolean 
+ * no response value expected for this operation
+ **/
+exports.brickSetCoreLibraryBrickIdIsCorePUT = function(brickId,isCore) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Get all assigned bricks for the current user.
  *
  * returns List
@@ -1336,6 +1350,7 @@ exports.bricksAssignedGET = function() {
     "revisionLog" : "revisionLog",
     "title" : "title",
     "subjectId" : 1,
+    "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
@@ -2279,6 +2294,7 @@ exports.bricksAssignedGET = function() {
     "revisionLog" : "revisionLog",
     "title" : "title",
     "subjectId" : 1,
+    "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
     "alternativeTopics" : "alternativeTopics",
