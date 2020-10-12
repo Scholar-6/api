@@ -395,7 +395,7 @@ exports.brickReviewIdPOST = function(id) {
 
 
 /**
- * Marks a single notification as read.
+ * Sets whether a brick is in the core library or not.
  *
  * brickId Integer 
  * isCore Boolean 
