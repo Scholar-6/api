@@ -105,6 +105,18 @@ module.exports.brickReviewIdPOST = function brickReviewIdPOST (req, res, next) {
     });
 };
 
+module.exports.brickSetCoreLibraryBrickIdIsCorePUT = function brickSetCoreLibraryBrickIdIsCorePUT (req, res, next) {
+  var brickId = req.swagger.params['brickId'].value;
+  var isCore = req.swagger.params['isCore'].value;
+  Brick.brickSetCoreLibraryBrickIdIsCorePUT(brickId,isCore)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.bricksAssignedGET = function bricksAssignedGET (req, res, next) {
   Brick.bricksAssignedGET()
     .then(function (response) {

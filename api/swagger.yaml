@@ -350,6 +350,25 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Play"
+  /brick/setCoreLibrary/{brickId}/{isCore}:
+    put:
+      tags:
+      - "brick"
+      summary: "Sets whether a brick is in the core library or not."
+      operationId: "brickSetCoreLibraryBrickIdIsCorePUT"
+      parameters:
+      - name: "brickId"
+        in: "path"
+        required: true
+        type: "integer"
+      - name: "isCore"
+        in: "path"
+        required: true
+        type: "boolean"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
   /bricks:
     get:
       tags:
@@ -1103,6 +1122,8 @@ definitions:
       subject:
         $ref: "#/definitions/Subject"
       locked:
+        type: "boolean"
+      isCore:
         type: "boolean"
       alternativeSubject:
         type: "string"
@@ -3477,6 +3498,7 @@ definitions:
         revisionLog: "revisionLog"
         title: "title"
         subjectId: 1
+        isCore: true
         attemptsCount: 6
         brickLength: "0"
         alternativeTopics: "alternativeTopics"
