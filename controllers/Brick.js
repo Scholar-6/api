@@ -83,6 +83,17 @@ module.exports.brickIdGET = function brickIdGET (req, res, next) {
     });
 };
 
+module.exports.brickPublicIdGET = function brickPublicIdGET (req, res, next) {
+  var id = req.swagger.params['id'].value;
+  Brick.brickPublicIdGET(id)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.brickPublishIdPOST = function brickPublishIdPOST (req, res, next) {
   var id = req.swagger.params['id'].value;
   Brick.brickPublishIdPOST(id)
