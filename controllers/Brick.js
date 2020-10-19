@@ -180,6 +180,16 @@ module.exports.bricksGET = function bricksGET (req, res, next) {
     });
 };
 
+module.exports.bricksGET_1 = function bricksGET_1 (req, res, next) {
+  Brick.bricksGET_1()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.bricksPublicSearchPOST = function bricksPublicSearchPOST (req, res, next) {
   var body = req.swagger.params['body'].value;
   Brick.bricksPublicSearchPOST(body)

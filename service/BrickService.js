@@ -2546,6 +2546,24 @@ exports.bricksGET = function() {
 
 
 /**
+ * Get all public bricks
+ *
+ * returns ArrayOfBricks
+ **/
+exports.bricksGET_0 = function() {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Search over all bricks
  *
  * body SearchModel Search model
