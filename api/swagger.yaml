@@ -382,6 +382,19 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/public:
+    get:
+      tags:
+      - "brick"
+      summary: "Get all public bricks"
+      operationId: "bricksGET"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /bricks/search:
     post:
       tags:
