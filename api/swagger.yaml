@@ -407,6 +407,31 @@ paths:
           schema:
             $ref: "#/definitions/ArrayOfBricks"
       x-swagger-router-controller: "Brick"
+  /bricks/search/public:
+    post:
+      tags:
+      - "brick"
+      summary: "Search over all bricks"
+      operationId: "bricksPublicSearchPOST"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Search model"
+        required: true
+        schema:
+          $ref: "#/definitions/SearchModel"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ArrayOfBricks"
+      x-swagger-router-controller: "Brick"
   /bricks/byStatus/{status}:
     get:
       tags:
