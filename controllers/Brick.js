@@ -180,8 +180,8 @@ module.exports.bricksGET = function bricksGET (req, res, next) {
     });
 };
 
-module.exports.bricksGET_1 = function bricksGET_1 (req, res, next) {
-  Brick.bricksGET_1()
+module.exports.bricksPublicGET = function bricksPublicGET (req, res, next) {
+  Brick.bricksPublicGET()
     .then(function (response) {
       utils.writeJson(res, response);
     })

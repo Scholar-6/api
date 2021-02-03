@@ -387,7 +387,7 @@ paths:
       tags:
       - "brick"
       summary: "Get all public bricks"
-      operationId: "bricksGET"
+      operationId: "bricksPublicGET"
       parameters: []
       responses:
         "200":
@@ -754,6 +754,10 @@ paths:
       responses:
         "200":
           description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Assignment"
       x-swagger-router-controller: "Brick"
   /brick/assignClasses/{brickId}:
     post:
@@ -779,6 +783,10 @@ paths:
       responses:
         "200":
           description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Assignment"
       x-swagger-router-controller: "Brick"
   /question/{id}:
     get:
