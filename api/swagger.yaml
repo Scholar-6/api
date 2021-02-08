@@ -1882,6 +1882,10 @@ definitions:
         type: "array"
         items:
           $ref: "#/definitions/User"
+      studentsInvitations:
+        type: "array"
+        items:
+          $ref: "#/definitions/User"
       teachers:
         type: "array"
         items:
