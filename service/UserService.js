@@ -25,7 +25,6 @@ exports.userCurrentGET = function() {
     examples['application/json'] = {
   "editedBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -54,15 +53,12 @@ exports.userCurrentGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -91,8 +87,6 @@ exports.userCurrentGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -108,7 +102,6 @@ exports.userCurrentGET = function() {
   } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -137,15 +130,12 @@ exports.userCurrentGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -174,8 +164,6 @@ exports.userCurrentGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -315,7 +303,6 @@ exports.useruserIdGET = function() {
     examples['application/json'] = {
   "editedBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -344,15 +331,12 @@ exports.useruserIdGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -381,8 +365,6 @@ exports.useruserIdGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -398,7 +380,6 @@ exports.useruserIdGET = function() {
   } ],
   "createBricks" : [ {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -427,15 +408,12 @@ exports.useruserIdGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
     "updated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -464,8 +442,6 @@ exports.useruserIdGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,

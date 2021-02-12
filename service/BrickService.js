@@ -13,7 +13,7 @@ exports.addBrick = function(body) {
     var examples = {};
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
-  "subTopic" : "subTopic",
+  "academicLevel" : 1,
   "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -26,6 +26,12 @@ exports.addBrick = function(body) {
     "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 7,
@@ -42,8 +48,6 @@ exports.addBrick = function(body) {
   "subjectId" : 1,
   "attemptsCount" : 6,
   "brickLength" : "0",
-  "alternativeTopics" : "alternativeTopics",
-  "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
@@ -74,7 +78,6 @@ exports.assignClasses = function(brickId,classesIds) {
   "classroom" : {
     "bricks" : [ {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -103,15 +106,12 @@ exports.assignClasses = function(brickId,classesIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
       "updated" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -140,8 +140,6 @@ exports.assignClasses = function(brickId,classesIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
@@ -150,7 +148,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "creator" : {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -179,15 +176,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -216,8 +210,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -233,7 +225,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -262,15 +253,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -299,8 +287,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -314,7 +300,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "teachers" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -343,15 +328,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -380,8 +362,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -397,7 +377,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -426,15 +405,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -463,8 +439,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -476,7 +450,6 @@ exports.assignClasses = function(brickId,classesIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -505,15 +478,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -542,8 +512,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -559,7 +527,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -588,15 +555,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -625,8 +589,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -640,7 +602,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "students" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -669,15 +630,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -706,8 +664,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -723,7 +679,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -752,15 +707,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -789,8 +741,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -802,7 +752,6 @@ exports.assignClasses = function(brickId,classesIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -831,15 +780,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -868,8 +814,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -885,7 +829,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -914,15 +857,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -951,8 +891,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -976,7 +914,6 @@ exports.assignClasses = function(brickId,classesIds) {
   "id" : 0.8008281904610115,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -1006,8 +943,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -1018,7 +953,6 @@ exports.assignClasses = function(brickId,classesIds) {
   "classroom" : {
     "bricks" : [ {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -1047,15 +981,12 @@ exports.assignClasses = function(brickId,classesIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
       "updated" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -1084,8 +1015,6 @@ exports.assignClasses = function(brickId,classesIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
@@ -1094,7 +1023,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "creator" : {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1123,15 +1051,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1160,8 +1085,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1177,7 +1100,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1206,15 +1128,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1243,8 +1162,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1258,7 +1175,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "teachers" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1287,15 +1203,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1324,8 +1237,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1341,7 +1252,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1370,15 +1280,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1407,8 +1314,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1420,7 +1325,6 @@ exports.assignClasses = function(brickId,classesIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1449,15 +1353,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1486,8 +1387,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1503,7 +1402,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1532,15 +1430,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1569,8 +1464,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1584,7 +1477,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "students" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1613,15 +1505,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1650,8 +1539,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1667,7 +1554,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1696,15 +1582,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1733,8 +1616,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1746,7 +1627,6 @@ exports.assignClasses = function(brickId,classesIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1775,15 +1655,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1812,8 +1689,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1829,7 +1704,6 @@ exports.assignClasses = function(brickId,classesIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1858,15 +1732,12 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -1895,8 +1766,6 @@ exports.assignClasses = function(brickId,classesIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -1920,7 +1789,6 @@ exports.assignClasses = function(brickId,classesIds) {
   "id" : 0.8008281904610115,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -1950,8 +1818,6 @@ exports.assignClasses = function(brickId,classesIds) {
     "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -1983,7 +1849,6 @@ exports.assignStudents = function(brickId,studentsIds) {
   "classroom" : {
     "bricks" : [ {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -2012,15 +1877,12 @@ exports.assignStudents = function(brickId,studentsIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
       "updated" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -2049,8 +1911,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
@@ -2059,7 +1919,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "creator" : {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2088,15 +1947,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2125,8 +1981,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2142,7 +1996,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2171,15 +2024,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2208,8 +2058,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2223,7 +2071,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "teachers" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2252,15 +2099,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2289,8 +2133,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2306,7 +2148,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2335,15 +2176,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2372,8 +2210,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2385,7 +2221,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2414,15 +2249,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2451,8 +2283,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2468,7 +2298,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2497,15 +2326,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2534,8 +2360,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2549,7 +2373,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "students" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2578,15 +2401,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2615,8 +2435,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2632,7 +2450,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2661,15 +2478,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2698,8 +2512,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2711,7 +2523,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2740,15 +2551,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2777,8 +2585,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2794,7 +2600,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2823,15 +2628,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -2860,8 +2662,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -2885,7 +2685,6 @@ exports.assignStudents = function(brickId,studentsIds) {
   "id" : 0.8008281904610115,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -2915,8 +2714,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -2927,7 +2724,6 @@ exports.assignStudents = function(brickId,studentsIds) {
   "classroom" : {
     "bricks" : [ {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -2956,15 +2752,12 @@ exports.assignStudents = function(brickId,studentsIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
       "updated" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -2993,8 +2786,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
@@ -3003,7 +2794,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "creator" : {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3032,15 +2822,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3069,8 +2856,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3086,7 +2871,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3115,15 +2899,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3152,8 +2933,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3167,7 +2946,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "teachers" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3196,15 +2974,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3233,8 +3008,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3250,7 +3023,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3279,15 +3051,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3316,8 +3085,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3329,7 +3096,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3358,15 +3124,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3395,8 +3158,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3412,7 +3173,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3441,15 +3201,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3478,8 +3235,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3493,7 +3248,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "students" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3522,15 +3276,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3559,8 +3310,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3576,7 +3325,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3605,15 +3353,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3642,8 +3387,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3655,7 +3398,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3684,15 +3426,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3721,8 +3460,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3738,7 +3475,6 @@ exports.assignStudents = function(brickId,studentsIds) {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3767,15 +3503,12 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -3804,8 +3537,6 @@ exports.assignStudents = function(brickId,studentsIds) {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -3829,7 +3560,6 @@ exports.assignStudents = function(brickId,studentsIds) {
   "id" : 0.8008281904610115,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -3859,8 +3589,6 @@ exports.assignStudents = function(brickId,studentsIds) {
     "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -3891,7 +3619,6 @@ exports.brickBrickIdCommentCommentIdGET = function(brickId,commentId) {
   "text" : "Comment text...",
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -3901,8 +3628,6 @@ exports.brickBrickIdCommentCommentIdGET = function(brickId,commentId) {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -3954,7 +3679,7 @@ exports.brickBuildIdPOST = function(id) {
     var examples = {};
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
-  "subTopic" : "subTopic",
+  "academicLevel" : 1,
   "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -3967,6 +3692,12 @@ exports.brickBuildIdPOST = function(id) {
     "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 7,
@@ -3983,8 +3714,6 @@ exports.brickBuildIdPOST = function(id) {
   "subjectId" : 1,
   "attemptsCount" : 6,
   "brickLength" : "0",
-  "alternativeTopics" : "alternativeTopics",
-  "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
@@ -4023,7 +3752,7 @@ exports.brickIdGET = function(id) {
     var examples = {};
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
-  "subTopic" : "subTopic",
+  "academicLevel" : 1,
   "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -4036,6 +3765,12 @@ exports.brickIdGET = function(id) {
     "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 7,
@@ -4052,8 +3787,6 @@ exports.brickIdGET = function(id) {
   "subjectId" : 1,
   "attemptsCount" : 6,
   "brickLength" : "0",
-  "alternativeTopics" : "alternativeTopics",
-  "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
@@ -4080,7 +3813,7 @@ exports.brickPublishIdPOST = function(id) {
     var examples = {};
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
-  "subTopic" : "subTopic",
+  "academicLevel" : 1,
   "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -4093,6 +3826,12 @@ exports.brickPublishIdPOST = function(id) {
     "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 7,
@@ -4109,8 +3848,6 @@ exports.brickPublishIdPOST = function(id) {
   "subjectId" : 1,
   "attemptsCount" : 6,
   "brickLength" : "0",
-  "alternativeTopics" : "alternativeTopics",
-  "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
@@ -4137,7 +3874,7 @@ exports.brickReviewIdPOST = function(id) {
     var examples = {};
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
-  "subTopic" : "subTopic",
+  "academicLevel" : 1,
   "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -4150,6 +3887,12 @@ exports.brickReviewIdPOST = function(id) {
     "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 7,
@@ -4166,8 +3909,6 @@ exports.brickReviewIdPOST = function(id) {
   "subjectId" : 1,
   "attemptsCount" : 6,
   "brickLength" : "0",
-  "alternativeTopics" : "alternativeTopics",
-  "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
   "locked" : true,
@@ -4209,7 +3950,6 @@ exports.bricksAssignedGET = function() {
   "classroom" : {
     "bricks" : [ {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -4238,15 +3978,12 @@ exports.bricksAssignedGET = function() {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
       "updated" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -4275,8 +4012,6 @@ exports.bricksAssignedGET = function() {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
@@ -4285,7 +4020,6 @@ exports.bricksAssignedGET = function() {
     "creator" : {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4314,15 +4048,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4351,8 +4082,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4368,7 +4097,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4397,15 +4125,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4434,8 +4159,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4449,7 +4172,6 @@ exports.bricksAssignedGET = function() {
     "teachers" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4478,15 +4200,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4515,8 +4234,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4532,7 +4249,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4561,15 +4277,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4598,8 +4311,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4611,7 +4322,6 @@ exports.bricksAssignedGET = function() {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4640,15 +4350,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4677,8 +4384,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4694,7 +4399,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4723,15 +4427,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4760,8 +4461,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4775,7 +4474,6 @@ exports.bricksAssignedGET = function() {
     "students" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4804,15 +4502,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4841,8 +4536,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4858,7 +4551,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4887,15 +4579,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4924,8 +4613,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -4937,7 +4624,6 @@ exports.bricksAssignedGET = function() {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -4966,15 +4652,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5003,8 +4686,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5020,7 +4701,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5049,15 +4729,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5086,8 +4763,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5111,7 +4786,6 @@ exports.bricksAssignedGET = function() {
   "id" : 0.8008281904610115,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -5141,8 +4815,6 @@ exports.bricksAssignedGET = function() {
     "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -5153,7 +4825,6 @@ exports.bricksAssignedGET = function() {
   "classroom" : {
     "bricks" : [ {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -5182,15 +4853,12 @@ exports.bricksAssignedGET = function() {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
       "updated" : "2000-01-23T04:56:07.000+00:00"
     }, {
       "alternativeSubject" : "alternativeSubject",
-      "subTopic" : "subTopic",
       "brief" : "brief",
       "synthesis" : "synthesis",
       "openQuestion" : "openQuestion",
@@ -5219,8 +4887,6 @@ exports.bricksAssignedGET = function() {
       "subjectId" : 1,
       "attemptsCount" : 6,
       "brickLength" : "0",
-      "alternativeTopics" : "alternativeTopics",
-      "topic" : "topic",
       "prep" : "prep",
       "id" : 0,
       "locked" : true,
@@ -5229,7 +4895,6 @@ exports.bricksAssignedGET = function() {
     "creator" : {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5258,15 +4923,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5295,8 +4957,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5312,7 +4972,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5341,15 +5000,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5378,8 +5034,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5393,7 +5047,6 @@ exports.bricksAssignedGET = function() {
     "teachers" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5422,15 +5075,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5459,8 +5109,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5476,7 +5124,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5505,15 +5152,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5542,8 +5186,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5555,7 +5197,6 @@ exports.bricksAssignedGET = function() {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5584,15 +5225,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5621,8 +5259,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5638,7 +5274,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5667,15 +5302,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5704,8 +5336,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5719,7 +5349,6 @@ exports.bricksAssignedGET = function() {
     "students" : [ {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5748,15 +5377,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5785,8 +5411,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5802,7 +5426,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5831,15 +5454,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5868,8 +5488,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5881,7 +5499,6 @@ exports.bricksAssignedGET = function() {
     }, {
       "editedBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5910,15 +5527,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5947,8 +5561,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -5964,7 +5576,6 @@ exports.bricksAssignedGET = function() {
       } ],
       "createBricks" : [ {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -5993,15 +5604,12 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
         "updated" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "alternativeSubject" : "alternativeSubject",
-        "subTopic" : "subTopic",
         "brief" : "brief",
         "synthesis" : "synthesis",
         "openQuestion" : "openQuestion",
@@ -6030,8 +5638,6 @@ exports.bricksAssignedGET = function() {
         "subjectId" : 1,
         "attemptsCount" : 6,
         "brickLength" : "0",
-        "alternativeTopics" : "alternativeTopics",
-        "topic" : "topic",
         "prep" : "prep",
         "id" : 0,
         "locked" : true,
@@ -6055,7 +5661,6 @@ exports.bricksAssignedGET = function() {
   "id" : 0.8008281904610115,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -6085,8 +5690,6 @@ exports.bricksAssignedGET = function() {
     "isCore" : true,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -6135,7 +5738,6 @@ exports.bricksCommentPOST = function(body) {
   "text" : "Comment text...",
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -6145,8 +5747,6 @@ exports.bricksCommentPOST = function(body) {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -6200,7 +5800,6 @@ exports.bricksCommentsBrickIdGET = function(brickId) {
   "text" : "Comment text...",
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -6210,8 +5809,6 @@ exports.bricksCommentsBrickIdGET = function(brickId) {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -6246,7 +5843,6 @@ exports.bricksCommentsBrickIdGET = function(brickId) {
   "text" : "Comment text...",
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -6256,8 +5852,6 @@ exports.bricksCommentsBrickIdGET = function(brickId) {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
@@ -6401,7 +5995,7 @@ exports.updateBrick = function(body) {
     var examples = {};
     examples['application/json'] = {
   "alternativeSubject" : "alternativeSubject",
-  "subTopic" : "subTopic",
+  "academicLevel" : 1,
   "brief" : "brief",
   "synthesis" : "synthesis",
   "openQuestion" : "openQuestion",
@@ -6414,6 +6008,12 @@ exports.updateBrick = function(body) {
     "publishedBricksCount" : 2
   },
   "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
   "questions" : [ {
     "contentBlocks" : "contentBlocks",
     "id" : 7,
@@ -6430,8 +6030,6 @@ exports.updateBrick = function(body) {
   "subjectId" : 1,
   "attemptsCount" : 6,
   "brickLength" : "0",
-  "alternativeTopics" : "alternativeTopics",
-  "topic" : "topic",
   "prep" : "prep",
   "id" : 0,
   "locked" : true,

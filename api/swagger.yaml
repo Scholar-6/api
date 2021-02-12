@@ -1146,7 +1146,6 @@ definitions:
     type: "object"
     required:
     - "questions"
-    - "subTopic"
     - "subject"
     - "title"
     properties:
@@ -1173,12 +1172,8 @@ definitions:
         type: "boolean"
       alternativeSubject:
         type: "string"
-      topic:
-        type: "string"
-      subTopic:
-        type: "string"
-      alternativeTopics:
-        type: "string"
+      academicLevel:
+        type: "number"
       title:
         type: "string"
       brief:
@@ -1201,11 +1196,15 @@ definitions:
         type: "array"
         items:
           $ref: "#/definitions/Question"
+      keywords:
+        type: "array"
+        items:
+          $ref: "#/definitions/Keyword"
     xml:
       name: "Brick"
     example:
       alternativeSubject: "alternativeSubject"
-      subTopic: "subTopic"
+      academicLevel: 1
       brief: "brief"
       synthesis: "synthesis"
       openQuestion: "openQuestion"
@@ -1217,6 +1216,10 @@ definitions:
         bricksCount: 5
         publishedBricksCount: 2
       created: "2000-01-23T04:56:07.000+00:00"
+      keywords:
+      - name: "batterfly"
+        id: 1
+      - name: "new"
       questions:
       - contentBlocks: "contentBlocks"
         id: 7
@@ -1231,8 +1234,6 @@ definitions:
       subjectId: 1
       attemptsCount: 6
       brickLength: "0"
-      alternativeTopics: "alternativeTopics"
-      topic: "topic"
       prep: "prep"
       id: 0
       locked: true
@@ -1275,7 +1276,6 @@ definitions:
       text: "Comment text..."
       brick:
         alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1285,8 +1285,6 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
@@ -1375,6 +1373,19 @@ definitions:
       id: 5
       bricksCount: 5
       publishedBricksCount: 2
+  Keyword:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+    xml:
+      name: "Keyword"
+    example:
+      name: "butterfly"
+      id: 5
   User:
     type: "object"
     properties:
@@ -1410,7 +1421,6 @@ definitions:
     example:
       editedBricks:
       - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1436,14 +1446,11 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
       - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1469,8 +1476,6 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
@@ -1485,7 +1490,6 @@ definitions:
       - roleId: 2
       createBricks:
       - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1511,14 +1515,11 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
       - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1544,8 +1545,6 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
@@ -1638,7 +1637,6 @@ definitions:
       totalUsers: 0
       brick:
         alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1664,8 +1662,6 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
@@ -1885,7 +1881,7 @@ definitions:
       studentsInvitations:
         type: "array"
         items:
-          $ref: "#/definitions/User"
+          $ref: "#/definitions/UserShort"
       teachers:
         type: "array"
         items:
@@ -1899,7 +1895,6 @@ definitions:
     example:
       bricks:
       - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1925,14 +1920,11 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
       - alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -1958,8 +1950,6 @@ definitions:
         subjectId: 1
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true
@@ -1967,7 +1957,6 @@ definitions:
       creator:
         editedBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -1993,14 +1982,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2026,8 +2012,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2042,7 +2026,6 @@ definitions:
         - roleId: 2
         createBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2068,14 +2051,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2101,8 +2081,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2114,7 +2092,6 @@ definitions:
       teachers:
       - editedBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2140,14 +2117,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2173,8 +2147,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2189,7 +2161,6 @@ definitions:
         - roleId: 2
         createBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2215,14 +2186,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2248,8 +2216,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2259,7 +2225,6 @@ definitions:
         email: "email"
       - editedBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2285,14 +2250,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2318,8 +2280,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2334,7 +2294,6 @@ definitions:
         - roleId: 2
         createBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2360,14 +2319,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2393,8 +2349,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2406,7 +2360,6 @@ definitions:
       students:
       - editedBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2432,14 +2385,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2465,8 +2415,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2481,7 +2429,6 @@ definitions:
         - roleId: 2
         createBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2507,14 +2454,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2540,8 +2484,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2551,7 +2493,6 @@ definitions:
         email: "email"
       - editedBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2577,14 +2518,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2610,8 +2548,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2626,7 +2562,6 @@ definitions:
         - roleId: 2
         createBricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2652,14 +2587,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2685,8 +2617,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2718,7 +2648,6 @@ definitions:
       classroom:
         bricks:
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2744,14 +2673,11 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
           updated: "2000-01-23T04:56:07.000+00:00"
         - alternativeSubject: "alternativeSubject"
-          subTopic: "subTopic"
           brief: "brief"
           synthesis: "synthesis"
           openQuestion: "openQuestion"
@@ -2777,8 +2703,6 @@ definitions:
           subjectId: 1
           attemptsCount: 6
           brickLength: "0"
-          alternativeTopics: "alternativeTopics"
-          topic: "topic"
           prep: "prep"
           id: 0
           locked: true
@@ -2786,7 +2710,6 @@ definitions:
         creator:
           editedBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -2812,14 +2735,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -2845,8 +2765,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -2861,7 +2779,6 @@ definitions:
           - roleId: 2
           createBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -2887,14 +2804,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -2920,8 +2834,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -2933,7 +2845,6 @@ definitions:
         teachers:
         - editedBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -2959,14 +2870,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -2992,8 +2900,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3008,7 +2914,6 @@ definitions:
           - roleId: 2
           createBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3034,14 +2939,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3067,8 +2969,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3078,7 +2978,6 @@ definitions:
           email: "email"
         - editedBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3104,14 +3003,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3137,8 +3033,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3153,7 +3047,6 @@ definitions:
           - roleId: 2
           createBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3179,14 +3072,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3212,8 +3102,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3225,7 +3113,6 @@ definitions:
         students:
         - editedBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3251,14 +3138,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3284,8 +3168,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3300,7 +3182,6 @@ definitions:
           - roleId: 2
           createBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3326,14 +3207,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3359,8 +3237,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3370,7 +3246,6 @@ definitions:
           email: "email"
         - editedBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3396,14 +3271,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3429,8 +3301,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3445,7 +3315,6 @@ definitions:
           - roleId: 2
           createBricks:
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3471,14 +3340,11 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
             updated: "2000-01-23T04:56:07.000+00:00"
           - alternativeSubject: "alternativeSubject"
-            subTopic: "subTopic"
             brief: "brief"
             synthesis: "synthesis"
             openQuestion: "openQuestion"
@@ -3504,8 +3370,6 @@ definitions:
             subjectId: 1
             attemptsCount: 6
             brickLength: "0"
-            alternativeTopics: "alternativeTopics"
-            topic: "topic"
             prep: "prep"
             id: 0
             locked: true
@@ -3524,7 +3388,6 @@ definitions:
       id: 0.80082819046101150206595775671303272247314453125
       brick:
         alternativeSubject: "alternativeSubject"
-        subTopic: "subTopic"
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
@@ -3551,8 +3414,6 @@ definitions:
         isCore: true
         attemptsCount: 6
         brickLength: "0"
-        alternativeTopics: "alternativeTopics"
-        topic: "topic"
         prep: "prep"
         id: 0
         locked: true

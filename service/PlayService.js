@@ -58,7 +58,6 @@ exports.playBrickSummarybrickIdGET = function() {
   "totalUsers" : 0,
   "brick" : {
     "alternativeSubject" : "alternativeSubject",
-    "subTopic" : "subTopic",
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
@@ -87,8 +86,6 @@ exports.playBrickSummarybrickIdGET = function() {
     "subjectId" : 1,
     "attemptsCount" : 6,
     "brickLength" : "0",
-    "alternativeTopics" : "alternativeTopics",
-    "topic" : "topic",
     "prep" : "prep",
     "id" : 0,
     "locked" : true,
