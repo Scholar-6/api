@@ -29,7 +29,7 @@ exports.classroomPOST = function(body) {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "type" : 1,
+    "type" : 0,
     "subject" : {
       "color" : "color",
       "name" : "name",
@@ -877,7 +877,7 @@ exports.classroomPUT = function(body) {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "type" : 1,
+    "type" : 0,
     "subject" : {
       "color" : "color",
       "name" : "name",
@@ -2246,7 +2246,7 @@ exports.getAllClassrooms = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "type" : 1,
+    "type" : 0,
     "subject" : {
       "color" : "color",
       "name" : "name",
@@ -3075,7 +3075,7 @@ exports.getAllClassrooms = function() {
     "brief" : "brief",
     "synthesis" : "synthesis",
     "openQuestion" : "openQuestion",
-    "type" : 1,
+    "type" : 0,
     "subject" : {
       "color" : "color",
       "name" : "name",

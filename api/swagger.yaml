@@ -1900,7 +1900,7 @@ definitions:
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
-        type: 1
+        type: 0
         subject:
           color: "color"
           name: "name"
