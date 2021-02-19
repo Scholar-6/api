@@ -1874,6 +1874,8 @@ definitions:
         type: "string"
       status:
         type: "integer"
+      type:
+        type: "integer"
       students:
         type: "array"
         items:
@@ -1898,6 +1900,7 @@ definitions:
         brief: "brief"
         synthesis: "synthesis"
         openQuestion: "openQuestion"
+        type: 1
         subject:
           color: "color"
           name: "name"
