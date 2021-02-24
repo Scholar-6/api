@@ -18,6 +18,25 @@ schemes:
 - "https"
 - "http"
 paths:
+  /keywords/suggest:
+    get:
+      tags:
+      - "keywords"
+      summary: "Get keyword suggestions"
+      operationId: "keywordsSuggest"
+      parameters:
+      - name: "suggestion"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Keyword"
+      x-swagger-router-controller: "Keywords"
   /stripesuccess:
     get:
       tags:
