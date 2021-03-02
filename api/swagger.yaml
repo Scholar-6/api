@@ -217,6 +217,22 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "User"
+  /user/termsAndConditions:
+    post:
+      tags:
+      - "user"
+      summary: "set accepted terms and conditions version"
+      operationId: "userTermsAndConditionsPOST"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/body_4"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
   /user/activate/{userId}:
     put:
       tags:
@@ -1421,6 +1437,8 @@ definitions:
         items:
           $ref: "#/definitions/ArrayOfSubjects"
       email:
+        type: "string"
+      termsAndConditionsAcceptedVersion:
         type: "string"
       firstName:
         type: "string"
@@ -3471,6 +3489,13 @@ definitions:
     example:
       studentId: 6.02745618307040320615897144307382404804229736328125
       status: 1.46581298050294517310021547018550336360931396484375
+  body_4:
+    type: "object"
+    required:
+    - "termsAndConditionsAcceptedVersion"
+    properties:
+      termsAndConditionsAcceptedVersion:
+        type: "string"
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"

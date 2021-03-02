@@ -235,6 +235,19 @@ exports.userProfileImageProfileImageUrlPUT = function(profileImageUrl) {
 
 
 /**
+ * set accepted terms and conditions version
+ *
+ * body Body_4 
+ * no response value expected for this operation
+ **/
+exports.userTermsAndConditionsPOST = function(body) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Mark tutorial as showed for current user
  *
  * no response value expected for this operation
