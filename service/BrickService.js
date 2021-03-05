@@ -1838,7 +1838,7 @@ exports.assignClasses = function(brickId,classesIds) {
  * 
  *
  * brickId Integer 
- * studentsIds StudentsIds 
+ * studentsIds StudentsIds  (optional)
  * returns List
  **/
 exports.assignStudents = function(brickId,studentsIds) {
@@ -5897,6 +5897,24 @@ exports.bricksCommentsBrickIdGET = function(brickId) {
  * returns ArrayOfBricks
  **/
 exports.bricksCurrentUserGET = function() {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = "";
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Get all basic data of bricks of current user
+ *
+ * returns ArrayOfShortBricks
+ **/
+exports.bricksCurrentUserShortGET = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = "";

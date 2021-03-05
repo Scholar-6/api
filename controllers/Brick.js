@@ -170,6 +170,16 @@ module.exports.bricksCurrentUserGET = function bricksCurrentUserGET (req, res, n
     });
 };
 
+module.exports.bricksCurrentUserShortGET = function bricksCurrentUserShortGET (req, res, next) {
+  Brick.bricksCurrentUserShortGET()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.bricksGET = function bricksGET (req, res, next) {
   Brick.bricksGET()
     .then(function (response) {
