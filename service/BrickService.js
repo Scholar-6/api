@@ -63,6 +63,20 @@ exports.addBrick = function(body) {
 
 
 /**
+ * Archive assignment
+ * 
+ *
+ * assignmentId Integer 
+ * no response value expected for this operation
+ **/
+exports.archiveAssignment = function(assignmentId) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Assign classes to brick
  * 
  *

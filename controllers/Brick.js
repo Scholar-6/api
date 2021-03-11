@@ -14,6 +14,17 @@ module.exports.addBrick = function addBrick (req, res, next) {
     });
 };
 
+module.exports.archiveAssignment = function archiveAssignment (req, res, next) {
+  var assignmentId = req.swagger.params['assignmentId'].value;
+  Brick.archiveAssignment(assignmentId)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.assignClasses = function assignClasses (req, res, next) {
   var brickId = req.swagger.params['brickId'].value;
   var classesIds = req.swagger.params['classesIds'].value;

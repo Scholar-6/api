@@ -778,6 +778,22 @@ paths:
           schema:
             $ref: "#/definitions/Comment"
       x-swagger-router-controller: "Brick"
+  /brick/assignment/{assignmentId}/archive:
+    post:
+      tags:
+      - "brick"
+      summary: "Archive assignment"
+      description: ""
+      operationId: "archiveAssignment"
+      parameters:
+      - name: "assignmentId"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
   /brick/assignStudents/{brickId}:
     post:
       tags:
