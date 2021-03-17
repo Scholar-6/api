@@ -18,6 +18,21 @@ schemes:
 - "https"
 - "http"
 paths:
+  /marketing/mailchimp/addEmail/{email}:
+    post:
+      tags:
+      - "marketing"
+      summary: "Add email to mailchimp"
+      operationId: "addEmailToMailchimp"
+      parameters:
+      - name: "email"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Marketing"
   /keywords/suggest/{suggestion}:
     get:
       tags:
