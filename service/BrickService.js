@@ -63,6 +63,66 @@ exports.addBrick = function(body) {
 
 
 /**
+ * add brick cover image with description
+ *
+ * body CoverImageModel Brick Cover Image Model
+ * returns Brick
+ **/
+exports.addBrickCover = function(body) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "alternativeSubject" : "alternativeSubject",
+  "academicLevel" : 1,
+  "brief" : "brief",
+  "synthesis" : "synthesis",
+  "openQuestion" : "openQuestion",
+  "subject" : {
+    "color" : "color",
+    "name" : "name",
+    "checked" : true,
+    "id" : 5,
+    "bricksCount" : 5,
+    "publishedBricksCount" : 2
+  },
+  "created" : "2000-01-23T04:56:07.000+00:00",
+  "keywords" : [ {
+    "name" : "batterfly",
+    "id" : 1
+  }, {
+    "name" : "new"
+  } ],
+  "questions" : [ {
+    "contentBlocks" : "contentBlocks",
+    "id" : 7,
+    "questionType" : "None",
+    "order" : 9
+  }, {
+    "contentBlocks" : "contentBlocks",
+    "id" : 7,
+    "questionType" : "None",
+    "order" : 9
+  } ],
+  "revisionLog" : "revisionLog",
+  "title" : "title",
+  "subjectId" : 1,
+  "attemptsCount" : 6,
+  "brickLength" : "0",
+  "prep" : "prep",
+  "id" : 0,
+  "locked" : true,
+  "updated" : "2000-01-23T04:56:07.000+00:00"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Archive assignment
  * 
  *

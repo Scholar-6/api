@@ -400,6 +400,25 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Play"
+  /brick/cover:
+    post:
+      tags:
+      - "brick"
+      summary: "add brick cover image with description"
+      operationId: "addBrickCover"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Brick Cover Image Model"
+        required: true
+        schema:
+          $ref: "#/definitions/CoverImageModel"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      x-swagger-router-controller: "Brick"
   /brick/setCoreLibrary/{brickId}/{isCore}:
     put:
       tags:
@@ -1854,6 +1873,17 @@ definitions:
         locked: true
         updated: "2000-01-23T04:56:07.000+00:00"
       averageScore: 6
+  CoverImageModel:
+    type: "object"
+    properties:
+      brickId:
+        type: "integer"
+      coverImage:
+        type: "string"
+      coverImageSource:
+        type: "string"
+      coverImageCaption:
+        type: "string"
   SearchModel:
     type: "object"
     properties:
