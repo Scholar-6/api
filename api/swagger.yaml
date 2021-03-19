@@ -2829,6 +2829,10 @@ definitions:
       assignedDate:
         type: "string"
         format: "date-time"
+      isInvitation:
+        type: "boolean"
+      isArchived:
+        type: "boolean"
       studentStatus:
         type: "array"
         items:
