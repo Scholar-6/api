@@ -438,6 +438,58 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Brick"
+  /brick/assignEditor:
+    put:
+      tags:
+      - "brick"
+      summary: "Assign editors to brick"
+      operationId: "assignEditor"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          type: "object"
+          required:
+          - "brickId"
+          - "editorIds"
+          properties:
+            brickId:
+              type: "integer"
+            editorIds:
+              type: "array"
+              items:
+                type: "integer"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
+  /brick/assignCoAuthor:
+    put:
+      tags:
+      - "brick"
+      summary: "Assign co-authors to brick"
+      operationId: "assignCoAuthor"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          type: "object"
+          required:
+          - "brickId"
+          - "coAuthors"
+          properties:
+            brickId:
+              type: "integer"
+            coAuthors:
+              type: "array"
+              items:
+                type: "integer"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
   /bricks:
     get:
       tags:

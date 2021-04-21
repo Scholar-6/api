@@ -1908,6 +1908,32 @@ exports.assignClasses = function(brickId,classesIds) {
 
 
 /**
+ * Assign co-authors to brick
+ *
+ * body Body 
+ * no response value expected for this operation
+ **/
+exports.assignCoAuthor = function(body) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
+ * Assign editors to brick
+ *
+ * body Body 
+ * no response value expected for this operation
+ **/
+exports.assignEditor = function(body) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Assign students to brick
  * 
  *

@@ -48,6 +48,28 @@ module.exports.assignClasses = function assignClasses (req, res, next) {
     });
 };
 
+module.exports.assignCoAuthor = function assignCoAuthor (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  Brick.assignCoAuthor(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
+module.exports.assignEditor = function assignEditor (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  Brick.assignEditor(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.assignStudents = function assignStudents (req, res, next) {
   var brickId = req.swagger.params['brickId'].value;
   var studentsIds = req.swagger.params['studentsIds'].value;
