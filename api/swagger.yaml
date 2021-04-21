@@ -1668,6 +1668,8 @@ definitions:
         format: "int64"
       lastName:
         type: "string"
+      isNewTeacher:
+        type: "boolean"
       tutorialPassed:
         type: "boolean"
       roles:
