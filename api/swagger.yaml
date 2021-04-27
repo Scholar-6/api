@@ -1352,6 +1352,10 @@ definitions:
         type: "string"
       brief:
         type: "string"
+      sponsorLogo:
+        type: "string"
+      sponsorUrl:
+        type: "string"
       prep:
         type: "string"
       synthesis:
