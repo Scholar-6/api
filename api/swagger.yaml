@@ -18,6 +18,19 @@ schemes:
 - "https"
 - "http"
 paths:
+  /version:
+    get:
+      tags:
+      - "tools"
+      summary: "Get api version"
+      operationId: "getVersion"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "number"
+      x-swagger-router-controller: "Brick"
   /marketing/mailchimp/addEmail/{email}:
     post:
       tags:
