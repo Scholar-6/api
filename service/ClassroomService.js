@@ -3907,3 +3907,1681 @@ exports.getAllClassrooms = function() {
   });
 }
 
+
+/**
+ * Search classrooms.
+ * 
+ *
+ * body SearchModel 
+ * returns List
+ **/
+exports.searchClassrooms = function(body) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = [ {
+  "bricks" : [ {
+    "alternativeSubject" : "alternativeSubject",
+    "brief" : "brief",
+    "synthesis" : "synthesis",
+    "openQuestion" : "openQuestion",
+    "type" : 0,
+    "subject" : {
+      "color" : "color",
+      "name" : "name",
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
+    },
+    "created" : "2000-01-23T04:56:07.000+00:00",
+    "questions" : [ {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    }, {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    } ],
+    "revisionLog" : "revisionLog",
+    "title" : "title",
+    "subjectId" : 1,
+    "attemptsCount" : 6,
+    "brickLength" : "0",
+    "prep" : "prep",
+    "id" : 0,
+    "locked" : true,
+    "updated" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "alternativeSubject" : "alternativeSubject",
+    "brief" : "brief",
+    "synthesis" : "synthesis",
+    "openQuestion" : "openQuestion",
+    "subject" : {
+      "color" : "color",
+      "name" : "name",
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
+    },
+    "created" : "2000-01-23T04:56:07.000+00:00",
+    "questions" : [ {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    }, {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    } ],
+    "revisionLog" : "revisionLog",
+    "title" : "title",
+    "subjectId" : 1,
+    "attemptsCount" : 6,
+    "brickLength" : "0",
+    "prep" : "prep",
+    "id" : 0,
+    "locked" : true,
+    "updated" : "2000-01-23T04:56:07.000+00:00"
+  } ],
+  "creator" : {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  },
+  "created" : "created",
+  "teachers" : [ {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  }, {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  } ],
+  "name" : "name",
+  "students" : [ {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  }, {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  } ],
+  "id" : 0.8008281904610115,
+  "updated" : "updated",
+  "status" : 6
+}, {
+  "bricks" : [ {
+    "alternativeSubject" : "alternativeSubject",
+    "brief" : "brief",
+    "synthesis" : "synthesis",
+    "openQuestion" : "openQuestion",
+    "type" : 0,
+    "subject" : {
+      "color" : "color",
+      "name" : "name",
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
+    },
+    "created" : "2000-01-23T04:56:07.000+00:00",
+    "questions" : [ {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    }, {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    } ],
+    "revisionLog" : "revisionLog",
+    "title" : "title",
+    "subjectId" : 1,
+    "attemptsCount" : 6,
+    "brickLength" : "0",
+    "prep" : "prep",
+    "id" : 0,
+    "locked" : true,
+    "updated" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "alternativeSubject" : "alternativeSubject",
+    "brief" : "brief",
+    "synthesis" : "synthesis",
+    "openQuestion" : "openQuestion",
+    "subject" : {
+      "color" : "color",
+      "name" : "name",
+      "checked" : true,
+      "id" : 5,
+      "bricksCount" : 5,
+      "publishedBricksCount" : 2
+    },
+    "created" : "2000-01-23T04:56:07.000+00:00",
+    "questions" : [ {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    }, {
+      "contentBlocks" : "contentBlocks",
+      "id" : 7,
+      "questionType" : "None",
+      "order" : 9
+    } ],
+    "revisionLog" : "revisionLog",
+    "title" : "title",
+    "subjectId" : 1,
+    "attemptsCount" : 6,
+    "brickLength" : "0",
+    "prep" : "prep",
+    "id" : 0,
+    "locked" : true,
+    "updated" : "2000-01-23T04:56:07.000+00:00"
+  } ],
+  "creator" : {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  },
+  "created" : "created",
+  "teachers" : [ {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  }, {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  } ],
+  "name" : "name",
+  "students" : [ {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  }, {
+    "editedBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "firstName" : "firstName",
+    "lastName" : "lastName",
+    "subjects" : [ "", "" ],
+    "roles" : [ {
+      "roleId" : 2
+    }, {
+      "roleId" : 2
+    } ],
+    "createBricks" : [ {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "alternativeSubject" : "alternativeSubject",
+      "brief" : "brief",
+      "synthesis" : "synthesis",
+      "openQuestion" : "openQuestion",
+      "subject" : {
+        "color" : "color",
+        "name" : "name",
+        "checked" : true,
+        "id" : 5,
+        "bricksCount" : 5,
+        "publishedBricksCount" : 2
+      },
+      "created" : "2000-01-23T04:56:07.000+00:00",
+      "questions" : [ {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      }, {
+        "contentBlocks" : "contentBlocks",
+        "id" : 7,
+        "questionType" : "None",
+        "order" : 9
+      } ],
+      "revisionLog" : "revisionLog",
+      "title" : "title",
+      "subjectId" : 1,
+      "attemptsCount" : 6,
+      "brickLength" : "0",
+      "prep" : "prep",
+      "id" : 0,
+      "locked" : true,
+      "updated" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "id" : 3,
+    "tutorialPassed" : true,
+    "email" : "email"
+  } ],
+  "id" : 0.8008281904610115,
+  "updated" : "updated",
+  "status" : 6
+} ];
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+

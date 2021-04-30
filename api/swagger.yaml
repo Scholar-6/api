@@ -1149,7 +1149,6 @@ paths:
             items:
               $ref: "#/definitions/Classroom"
       x-swagger-router-controller: "Classroom"
-
   /classroom:
     post:
       tags:

@@ -90,3 +90,14 @@ module.exports.getAllClassrooms = function getAllClassrooms (req, res, next) {
       utils.writeJson(res, response);
     });
 };
+
+module.exports.searchClassrooms = function searchClassrooms (req, res, next) {
+  var body = req.swagger.params['body'].value;
+  Classroom.searchClassrooms(body)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
