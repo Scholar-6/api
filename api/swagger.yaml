@@ -1125,6 +1125,31 @@ paths:
             items:
               $ref: "#/definitions/Classroom"
       x-swagger-router-controller: "Classroom"
+    post:
+      tags:
+      - "classroom"
+      summary: "Search classrooms."
+      description: ""
+      operationId: "searchClassrooms"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/SearchModel"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Classroom"
+      x-swagger-router-controller: "Classroom"
+
   /classroom:
     post:
       tags:
