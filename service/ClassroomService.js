@@ -3909,6 +3909,37 @@ exports.getAllClassrooms = function() {
 
 
 /**
+ * Get all pending students
+ *
+ * body SearchModel Search model
+ * returns UserShort
+ **/
+exports.getClassroomsInvitations = function(body) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "firstName" : "firstName",
+  "lastName" : "lastName",
+  "subjects" : [ "", "" ],
+  "roles" : [ {
+    "roleId" : 2
+  }, {
+    "roleId" : 2
+  } ],
+  "id" : 6,
+  "tutorialPassed" : true,
+  "email" : "email"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
  * Search classrooms.
  * 
  *

@@ -1221,6 +1221,27 @@ paths:
           schema:
             $ref: "#/definitions/User"
       x-swagger-router-controller: "Classroom"
+  /classrooms/studentsInvitations:
+    post:
+      tags:
+      - "classroom"
+      summary: "Get all pending students"
+      operationId: "getClassroomsInvitations"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Search model"
+        required: true
+        schema:
+          $ref: "#/definitions/SearchModel"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/UserShort"
+      x-swagger-router-controller: "Classroom"
   /classrooms/students/{classroomId}:
     get:
       tags:
