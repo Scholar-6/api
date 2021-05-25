@@ -266,6 +266,16 @@ module.exports.bricksSearchPOST = function bricksSearchPOST (req, res, next) {
     });
 };
 
+module.exports.getLastest = function getLastest (req, res, next) {
+  Brick.getLastest()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.updateBrick = function updateBrick (req, res, next) {
   var body = req.swagger.params['body'].value;
   Brick.updateBrick(body)

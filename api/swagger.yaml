@@ -768,6 +768,19 @@ paths:
         - "write:bricks"
         - "read:bricks"
       x-swagger-router-controller: "Brick"
+  /brick/public/lastest:
+    get:
+      tags:
+      - "brick"
+      summary: "Get lastest public brick of users subjects"
+      operationId: "getLastest"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      x-swagger-router-controller: "Brick"
   /brick/publish/{id}:
     post:
       tags:
