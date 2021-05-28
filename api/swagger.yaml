@@ -42,6 +42,14 @@ paths:
         in: "path"
         required: true
         type: "string"
+      - in: "body"
+        name: "tags"
+        description: "Tags"
+        required: false
+        schema:
+          type: "array"
+          items:
+            type: "string"
       responses:
         "200":
           description: "ok"
