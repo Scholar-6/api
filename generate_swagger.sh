@@ -1,1 +1,1 @@
-java -jar swagger-codegen-cli.jar generate -i swagger.json -l nodejs-server
+java -jar swagger-codegen-cli.jar generate -i api/swagger.yaml -l nodejs-server
