@@ -470,17 +470,7 @@ paths:
         name: "body"
         required: true
         schema:
-          type: "object"
-          required:
-          - "brickId"
-          - "editorIds"
-          properties:
-            brickId:
-              type: "integer"
-            editorIds:
-              type: "array"
-              items:
-                type: "integer"
+          $ref: "#/definitions/body_5"
       responses:
         "200":
           description: "ok"
@@ -496,17 +486,7 @@ paths:
         name: "body"
         required: true
         schema:
-          type: "object"
-          required:
-          - "brickId"
-          - "coAuthors"
-          properties:
-            brickId:
-              type: "integer"
-            coAuthors:
-              type: "array"
-              items:
-                type: "integer"
+          $ref: "#/definitions/body_6"
       responses:
         "200":
           description: "ok"
@@ -776,12 +756,12 @@ paths:
         - "write:bricks"
         - "read:bricks"
       x-swagger-router-controller: "Brick"
-  /brick/public/lastest:
+  /brick/public/latest:
     get:
       tags:
       - "brick"
-      summary: "Get lastest public brick of users subjects"
-      operationId: "getLastest"
+      summary: "Get latest public brick of users subjects"
+      operationId: "getLatest"
       parameters: []
       responses:
         "200":
@@ -934,17 +914,7 @@ paths:
         name: "studentsIds"
         required: false
         schema:
-          type: "object"
-          required:
-          - "studentsIds"
-          properties:
-            studentsIds:
-              type: "array"
-              items:
-                type: "integer"
-            deadline:
-              type: "string"
-              format: "date-time"
+          $ref: "#/definitions/studentsIds"
       responses:
         "200":
           description: "ok"
@@ -973,17 +943,7 @@ paths:
         name: "classesIds"
         required: true
         schema:
-          type: "object"
-          required:
-          - "classesIds"
-          properties:
-            classesIds:
-              type: "array"
-              items:
-                type: "integer"
-            deadline:
-              type: "string"
-              format: "date-time"
+          $ref: "#/definitions/classesIds"
       responses:
         "200":
           description: "ok"
@@ -1693,23 +1653,9 @@ definitions:
         format: "int64"
       group:
         type: "integer"
-        enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        description: >
-          Subject group:
-            * `0` - None
-            * `1` - Arts
-            * `2` - Languages
-            * `3` - HumanitiesAndSocialSciences
-            * `4` - GeneralTopical
-            * `5` - Science
-            * `6` - MathsAndComputing
+        description: "Subject group:\n  * `0` - None\n  * `1` - Arts\n  * `2` - Languages\n\
+          \  * `3` - HumanitiesAndSocialSciences\n  * `4` - GeneralTopical\n  * `5`\
+          \ - Science\n  * `6` - MathsAndComputing\n"
       color:
         type: "string"
       checked:
@@ -3823,6 +3769,54 @@ definitions:
     properties:
       termsAndConditionsAcceptedVersion:
         type: "string"
+  body_5:
+    type: "object"
+    required:
+    - "brickId"
+    - "editorIds"
+    properties:
+      brickId:
+        type: "integer"
+      editorIds:
+        type: "array"
+        items:
+          type: "integer"
+  body_6:
+    type: "object"
+    required:
+    - "brickId"
+    - "coAuthors"
+    properties:
+      brickId:
+        type: "integer"
+      coAuthors:
+        type: "array"
+        items:
+          type: "integer"
+  studentsIds:
+    type: "object"
+    required:
+    - "studentsIds"
+    properties:
+      studentsIds:
+        type: "array"
+        items:
+          type: "integer"
+      deadline:
+        type: "string"
+        format: "date-time"
+  classesIds:
+    type: "object"
+    required:
+    - "classesIds"
+    properties:
+      classesIds:
+        type: "array"
+        items:
+          type: "integer"
+      deadline:
+        type: "string"
+        format: "date-time"
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
