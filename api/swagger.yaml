@@ -256,7 +256,7 @@ paths:
   /user/addSubject/{subjectId}:
     put:
       tags:
-      - "addSubject "
+      - "user "
       summary: "Add user subject"
       operationId: "addSubject"
       parameters:
