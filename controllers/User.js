@@ -3,6 +3,17 @@
 var utils = require('../utils/writer.js');
 var User = require('../service/UserService');
 
+module.exports.addSubject = function addSubject (req, res, next) {
+  var subjectId = req.swagger.params['subjectId'].value;
+  User.addSubject(subjectId)
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.userActivateUserIdPUT = function userActivateUserIdPUT (req, res, next) {
   var userId = req.swagger.params['userId'].value;
   User.userActivateUserIdPUT(userId)
