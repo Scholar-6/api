@@ -266,8 +266,8 @@ module.exports.bricksSearchPOST = function bricksSearchPOST (req, res, next) {
     });
 };
 
-module.exports.getLastest = function getLastest (req, res, next) {
-  Brick.getLastest()
+module.exports.getLatest = function getLatest (req, res, next) {
+  Brick.getLatest()
     .then(function (response) {
       utils.writeJson(res, response);
     })

@@ -253,6 +253,21 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "User"
+  /user/addSubject/{subjectId}:
+    put:
+      tags:
+      - "addSubject "
+      summary: "Add user subject"
+      operationId: "addSubject"
+      parameters:
+      - name: "subjectId"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "User"
   /user/termsAndConditions:
     post:
       tags:

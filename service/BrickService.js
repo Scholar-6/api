@@ -1910,7 +1910,7 @@ exports.assignClasses = function(brickId,classesIds) {
 /**
  * Assign co-authors to brick
  *
- * body Body 
+ * body Body_6 
  * no response value expected for this operation
  **/
 exports.assignCoAuthor = function(body) {
@@ -1923,7 +1923,7 @@ exports.assignCoAuthor = function(body) {
 /**
  * Assign editors to brick
  *
- * body Body 
+ * body Body_5 
  * no response value expected for this operation
  **/
 exports.assignEditor = function(body) {
@@ -6102,11 +6102,11 @@ exports.bricksSearchPOST = function(body) {
 
 
 /**
- * Get lastest public brick of users subjects
+ * Get latest public brick of users subjects
  *
  * returns Brick
  **/
-exports.getLastest = function() {
+exports.getLatest = function() {
   return new Promise(function(resolve, reject) {
     var examples = {};
     examples['application/json'] = {
