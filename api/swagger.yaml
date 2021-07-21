@@ -73,7 +73,7 @@ paths:
             items:
               $ref: "#/definitions/Keyword"
       x-swagger-router-controller: "Keywords"
-  /stripesuccesstest:
+  /stripesuccess:
     get:
       tags:
       - "stripe"
