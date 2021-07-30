@@ -287,6 +287,16 @@ module.exports.getLatest = function getLatest (req, res, next) {
     });
 };
 
+module.exports.migrateFromElasticToMongodb = function migrateFromElasticToMongodb (req, res, next) {
+  Brick.migrateFromElasticToMongodb()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
+
 module.exports.updateBrick = function updateBrick (req, res, next) {
   var body = req.swagger.params['body'].value;
   Brick.updateBrick(body)

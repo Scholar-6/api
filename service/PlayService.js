@@ -101,3 +101,15 @@ exports.playBrickSummarybrickIdGET = function() {
   });
 }
 
+
+/**
+ * reindex brick-attemps to elasticsearch
+ *
+ * no response value expected for this operation
+ **/
+exports.reindexPOST = function() {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+

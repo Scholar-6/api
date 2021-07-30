@@ -6175,6 +6175,19 @@ exports.getLatest = function() {
 
 
 /**
+ * migrateFromElasticToMongodb
+ * 
+ *
+ * no response value expected for this operation
+ **/
+exports.migrateFromElasticToMongodb = function() {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
  * Update an existing brick
  * 
  *

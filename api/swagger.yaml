@@ -377,6 +377,17 @@ paths:
           schema:
             $ref: "#/definitions/User"
       x-swagger-router-controller: "User"
+  /play/reindex:
+    post:
+      tags:
+      - "play"
+      summary: "reindex brick-attemps to elasticsearch"
+      operationId: "reindexPOST"
+      parameters: []
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Play"
   /play/brickSummary/:brickId:
     get:
       tags:
@@ -905,6 +916,18 @@ paths:
         in: "path"
         required: true
         type: "integer"
+      responses:
+        "200":
+          description: "ok"
+      x-swagger-router-controller: "Brick"
+  /bricks/migrateFromElasticToMongodb:
+    post:
+      tags:
+      - "brick"
+      summary: "migrateFromElasticToMongodb"
+      description: ""
+      operationId: "migrateFromElasticToMongodb"
+      parameters: []
       responses:
         "200":
           description: "ok"

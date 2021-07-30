@@ -44,3 +44,13 @@ module.exports.playBrickSummarybrickIdGET = function playBrickSummarybrickIdGET 
       utils.writeJson(res, response);
     });
 };
+
+module.exports.reindexPOST = function reindexPOST (req, res, next) {
+  Play.reindexPOST()
+    .then(function (response) {
+      utils.writeJson(res, response);
+    })
+    .catch(function (response) {
+      utils.writeJson(res, response);
+    });
+};
