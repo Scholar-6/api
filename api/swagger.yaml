@@ -726,6 +726,23 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Brick"
+  /brick/public/{id}:
+    get:
+      tags:
+      - "brick"
+      summary: "Get specific public brick by id"
+      operationId: "brickPublicIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            $ref: "#/definitions/Brick"
+      x-swagger-router-controller: "Brick"
   /brick/build/{id}:
     post:
       tags:
