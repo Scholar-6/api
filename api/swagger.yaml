@@ -1148,7 +1148,7 @@ paths:
       - "classroom"
       summary: "Get all classroom assignments"
       description: ""
-      operationId: "getAllClassrooms"
+      operationId: "getClassroomAssignments"
       produces:
       - "application/json"
       parameters:
