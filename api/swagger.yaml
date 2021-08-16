@@ -1142,6 +1142,36 @@ paths:
         "200":
           description: "ok"
       x-swagger-router-controller: "Notifications"
+  /classroom/assignments/{page}/{pageSize}/{classroomId}:
+    get:
+      tags:
+      - "classroom"
+      summary: "Get all classroom assignments"
+      description: ""
+      operationId: "getAllClassrooms"
+      produces:
+      - "application/json"
+      parameters:
+        - name: "page"
+          in: "path"
+          required: true
+          type: "number"
+        - name: "pageSize"
+          in: "path"
+          required: true
+          type: "number"
+        - name: "classroomId"
+          in: "path"
+          required: false
+          type: "number"
+      responses:
+        "200":
+          description: "ok"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Classroom"
+      x-swagger-router-controller: "Classroom"
   /classrooms:
     get:
       tags:
@@ -3874,4 +3904,3 @@ definitions:
 externalDocs:
   description: "Find out more about Brillder"
   url: "https://github.com/Scholar-6/brillder"
- 
