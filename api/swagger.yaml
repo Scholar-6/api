@@ -1152,18 +1152,18 @@ paths:
       produces:
       - "application/json"
       parameters:
-        - name: "page"
-          in: "path"
-          required: true
-          type: "number"
-        - name: "pageSize"
-          in: "path"
-          required: true
-          type: "number"
-        - name: "classroomId"
-          in: "path"
-          required: false
-          type: "number"
+      - name: "page"
+        in: "path"
+        required: true
+        type: "number"
+      - name: "pageSize"
+        in: "path"
+        required: true
+        type: "number"
+      - name: "classroomId"
+        in: "path"
+        required: true
+        type: "number"
       responses:
         "200":
           description: "ok"
