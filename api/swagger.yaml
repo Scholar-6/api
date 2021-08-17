@@ -2265,6 +2265,35 @@ definitions:
     properties:
       id:
         type: "number"
+  ClassroomShort:
+    type: "object"
+    properties:
+      id:
+        type: "number"
+      name:
+        type: "string"
+      created:
+        type: "string"
+      updated:
+        type: "string"
+      status:
+        type: "integer"
+      assignmentsCount:
+        type: "integer"
+      type:
+        type: "integer"
+      students:
+        type: "array"
+        items:
+          $ref: "#/definitions/UserShort"
+      studentsInvitations:
+        type: "array"
+        items:
+          $ref: "#/definitions/UserShort"
+      teachers:
+        type: "array"
+        items:
+          $ref: "#/definitions/UserShort"
   Classroom:
     type: "object"
     properties:
